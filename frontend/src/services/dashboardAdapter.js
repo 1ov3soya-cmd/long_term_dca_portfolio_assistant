@@ -3,6 +3,7 @@ import { deepGet, firstDefined, isNonEmptyString } from '../utils/safeAccess.js'
 import { loadSharedReportJson, loadSharedReportText } from './fileLoader.js';
 import { buildCompareCardData, loadLatestCompareBundle } from './compareAdapter.js';
 import { createEmptyRunBundle, loadLatestRunBundle } from './runAdapter.js';
+import { readSnapshotJson } from './staticSnapshotLoader.js';
 
 function cloneDefaultDashboardData() {
   return JSON.parse(JSON.stringify(emptyDashboardData));
@@ -423,6 +424,11 @@ function buildConfigSummary(configSnapshot) {
 }
 
 export async function getDashboardData() {
+  const staticDashboardSnapshot = await readSnapshotJson('dashboard_snapshot.json');
+  if (staticDashboardSnapshot?.dashboard_data) {
+    return staticDashboardSnapshot.dashboard_data;
+  }
+
   const latestIndex = await loadSharedReportJson('reports/runs/latest_index.json');
   const robustnessJsonPromise = loadSharedReportJson('reports/robustness_summary.json');
   const manualValidationJsonPromise = loadSharedReportJson('reports/manual/manual_risk_flags_validation.json');

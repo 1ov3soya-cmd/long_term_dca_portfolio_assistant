@@ -7,7 +7,9 @@
 
 from __future__ import annotations
 
+import csv
 from datetime import datetime
+from io import StringIO
 import json
 from pathlib import Path
 from typing import Any
@@ -140,9 +142,12 @@ class FrontendSnapshotBuilder:
         """构建 Dashboard 专用快照摘要。"""
 
         json_files = compat.get("json_files", {})
+        text_files = compat.get("text_files", {})
+        dashboard_data = self._build_dashboard_data(json_files, text_files)
         return {
             "generated_at": generated_at,
             "snapshot_type": "dashboard",
+            "dashboard_data": dashboard_data,
             "latest_runs_index": json_files.get("reports/runs/latest_index.json"),
             "latest_compare_index": json_files.get("reports/run_compare/latest_compare_index.json"),
             "monthly_research_index": json_files.get("reports/agent_research/monthly/latest_monthly_research_index.json"),
@@ -150,6 +155,99 @@ class FrontendSnapshotBuilder:
             "robustness_summary": json_files.get("reports/robustness_summary.json"),
             "manual_acceptance_report": json_files.get("reports/manual/manual_logic_risk_acceptance_report.json"),
             "warnings": warnings,
+        }
+
+    def _build_dashboard_data(self, json_files: dict[str, Any], text_files: dict[str, str]) -> dict[str, Any]:
+        """构建 Dashboard 可直接消费的页面级数据。"""
+
+        latest_index = json_files.get("reports/runs/latest_index.json") or {}
+        end_date = str(self._get_config_value(["backtest", "backtest", "end_date"], ""))
+        date_suffix = end_date.replace("-", "")
+        suggestion_csv = text_files.get(f"reports/monthly/monthly_suggestion_{date_suffix}.csv", "")
+        if not suggestion_csv:
+            monthly_candidates = sorted(
+                key for key in text_files if key.startswith("reports/monthly/monthly_suggestion_") and key.endswith(".csv")
+            )
+            suggestion_csv = text_files.get(monthly_candidates[-1], "") if monthly_candidates else ""
+        suggestion_rows = self._parse_csv_rows(suggestion_csv)
+
+        manual_validation = json_files.get("reports/manual/manual_risk_flags_validation.json") or {}
+        manual_flags = manual_validation.get("flags") if isinstance(manual_validation.get("flags"), list) else []
+        manual_paused = [row.get("symbol", "") for row in manual_flags if row.get("manual_pause_buy")]
+        manual_review = [row.get("symbol", "") for row in manual_flags if row.get("manual_force_review")]
+        manual_broken = [row.get("symbol", "") for row in manual_flags if row.get("thesis_broken")]
+
+        monthly_budget = float(self._get_config_value(["portfolio", "portfolio", "monthly_budget"], 0) or 0)
+        etf_weight = float(self._get_config_value(["portfolio", "asset_allocation", "etf_total_weight"], 0.8) or 0)
+        stock_weight = float(self._get_config_value(["portfolio", "asset_allocation", "stock_total_weight"], 0.2) or 0)
+        suggested_targets = [self._map_suggested_target(row) for row in suggestion_rows]
+        buy_targets = sum(1 for row in suggested_targets if float(row.get("baseSuggestedAmount", 0) or 0) > 0)
+
+        compare_snapshot = self._build_compare_card_snapshot(json_files)
+        robustness = json_files.get("reports/robustness_summary.json") or {}
+        backtest_metrics = self._parse_csv_rows(text_files.get("reports/backtest/metrics.csv", ""))
+        backtest_row = backtest_metrics[0] if backtest_metrics else {}
+
+        return {
+            "overview": {
+                "latestSuggest": self._latest_finished_at(latest_index, "suggest") or self._latest_monthly_report_time(text_files) or "N/A",
+                "latestBacktest": self._latest_finished_at(latest_index, "backtest") or "N/A",
+                "latestRobustness": self._latest_finished_at(latest_index, "summarize-robustness") or "N/A",
+                "latestCompare": self._latest_finished_at(latest_index, "compare-runs") or "N/A",
+                "mode": "real",
+                "adjMode": self._get_config_value(["app", "efinance", "adjustment_mode"], "N/A"),
+                "riskFileStatus": "active" if manual_validation else "unknown",
+            },
+            "configSummary": {
+                "allocation": f"ETF {round(etf_weight * 100)}% / Stock {round(stock_weight * 100)}%",
+                "monthlyRule": self._get_config_value(["app", "schedule", "monthly_invest_day_rule"], "first_trading_day"),
+                "etfRiskLevel": self._risk_level_text("etf"),
+                "stockRiskLevel": self._risk_level_text("stock"),
+                "manualRiskEnabled": bool(self._get_config_value(["risk", "risk", "use_logic_redline"], True)),
+                "env": f"Local Archive / {self._get_config_value(['app', 'runtime', 'data_provider'], 'N/A')}",
+            },
+            "suggestSummary": {
+                "budgetTotal": monthly_budget,
+                "budgetEtf": monthly_budget * etf_weight,
+                "budgetStock": monthly_budget * stock_weight,
+                "buyTargets": buy_targets,
+                "pausedTargets": sum(1 for row in suggested_targets if row.get("pauseBuy")),
+                "forceReviewTargets": sum(1 for row in suggested_targets if row.get("forceReview")),
+                "thesisBrokenTargets": sum(1 for row in suggested_targets if row.get("thesisBroken")),
+            },
+            "suggestedTargets": suggested_targets,
+            "backtestSummary": {
+                "cumulativeReturn": self._number_or_na(backtest_row.get("cumulative_return") or backtest_row.get("total_return")),
+                "annualizedReturn": self._number_or_na(backtest_row.get("annualized_return")),
+                "maxDrawdown": self._number_or_na(backtest_row.get("max_drawdown")),
+                "investedRatio": self._number_or_na(backtest_row.get("invested_ratio")),
+                "unfilledAmount": self._number_or_zero(backtest_row.get("unfilled_amount") or backtest_row.get("total_uninvested_cash")),
+                "yellowTriggers": self._number_or_zero(backtest_row.get("total_yellow_triggers")),
+                "redTriggers": self._number_or_zero(backtest_row.get("total_red_triggers")),
+            },
+            "riskLights": {
+                "GREEN": max(len(manual_flags) - len(manual_paused) - len(manual_review) - len(manual_broken), 0),
+                "YELLOW": 0,
+                "RED": 0,
+                "MANUAL_PAUSE": len(manual_paused),
+                "FORCE_REVIEW": len(manual_review),
+                "THESIS_BROKEN": len(manual_broken),
+            },
+            "manualRisk": {
+                "paused": manual_paused,
+                "forceReview": manual_review,
+                "thesisBroken": manual_broken,
+                "effectiveFrom": self._first_effective_from(manual_flags),
+                "notePreview": self._first_note(manual_flags),
+            },
+            "robustness": {
+                "isBaselineRobust": bool(robustness.get("baseline_assessment")),
+                "keepDefaultParams": True,
+                "mostSensitive": self._first_nested_label(robustness, ["parameter_classification", "high_sensitive"]),
+                "mostRobust": self._first_nested_label(robustness, ["parameter_classification", "robust"]),
+                "label": self._get_nested(robustness, ["baseline_assessment", "label"], "N/A"),
+            },
+            "compare": compare_snapshot,
         }
 
     def _build_monthly_research_snapshot(
@@ -335,6 +433,155 @@ class FrontendSnapshotBuilder:
             "priority_level": priority,
             "attention_reason": "Research suggestion is not yet reflected in manual risk.",
         }
+
+    def _parse_csv_rows(self, csv_text: str) -> list[dict[str, str]]:
+        """解析 CSV 文本为字典列表。"""
+
+        if not csv_text:
+            return []
+        reader = csv.DictReader(StringIO(csv_text))
+        return [dict(row) for row in reader]
+
+    def _map_suggested_target(self, row: dict[str, str]) -> dict[str, Any]:
+        """把月度建议 CSV 行映射为 Dashboard 明细行。"""
+
+        pause_buy = self._bool_value(row.get("pause_buy")) or self._bool_value(row.get("final_pause_buy")) or self._bool_value(row.get("manual_pause_buy"))
+        force_review = self._bool_value(row.get("manual_review")) or self._bool_value(row.get("final_force_review")) or self._bool_value(row.get("manual_force_review"))
+        thesis_broken = self._bool_value(row.get("thesis_broken"))
+        return {
+            "symbol": row.get("symbol") or "N/A",
+            "assetType": (row.get("asset_type") or "").upper() or "N/A",
+            "baseSuggestedAmount": self._number_or_zero(row.get("recommended_amount")),
+            "action": row.get("final_human_readable_action") or ("Pause Buy" if pause_buy else "Normal"),
+            "riskStatus": row.get("status") or "N/A",
+            "note": row.get("logic_note") or row.get("reasons") or "",
+            "pauseBuy": pause_buy,
+            "forceReview": force_review,
+            "thesisBroken": thesis_broken,
+        }
+
+    def _bool_value(self, value: Any) -> bool:
+        """兼容布尔、数字和字符串布尔值。"""
+
+        if isinstance(value, bool):
+            return value
+        if isinstance(value, (int, float)):
+            return value != 0
+        if isinstance(value, str):
+            return value.strip().lower() in {"true", "1", "yes", "y"}
+        return False
+
+    def _number_or_zero(self, value: Any) -> float:
+        """将数值转换为 float；真实缺失时返回 0。"""
+
+        if value is None or value == "":
+            return 0.0
+        try:
+            return float(value)
+        except (TypeError, ValueError):
+            return 0.0
+
+    def _number_or_na(self, value: Any) -> float | str:
+        """数值存在时保留数值，真实缺失时返回 N/A。"""
+
+        if value is None or value == "":
+            return "N/A"
+        try:
+            return float(value)
+        except (TypeError, ValueError):
+            return "N/A"
+
+    def _latest_finished_at(self, latest_index: dict[str, Any], command: str) -> str:
+        """从 latest_index 中读取某个命令的完成时间。"""
+
+        value = latest_index.get(command) if isinstance(latest_index, dict) else None
+        return str(value.get("finished_at", "")) if isinstance(value, dict) else ""
+
+    def _latest_monthly_report_time(self, text_files: dict[str, str]) -> str:
+        """月度报告没有对应 run 时，使用最新月度报告文件名作为弱时间线索。"""
+
+        candidates = sorted(
+            key for key in text_files if key.startswith("reports/monthly/monthly_report_") and key.endswith(".md")
+        )
+        if not candidates:
+            return ""
+        return candidates[-1].replace("reports/monthly/monthly_report_", "").replace(".md", "")
+
+    def _risk_level_text(self, asset_type: str) -> str:
+        """读取红线阈值并格式化。"""
+
+        if asset_type == "etf":
+            yellow = self._get_config_value(["risk", "etf", "yellow_drawdown_from_high"], None)
+            red = self._get_config_value(["risk", "etf", "red_drawdown_from_high"], None)
+        else:
+            yellow = self._get_config_value(["risk", "stock", "yellow_drawdown_from_cost"], None)
+            red = self._get_config_value(["risk", "stock", "red_drawdown_from_cost"], None)
+        if yellow is None or red is None:
+            return "N/A"
+        return f"Y {round(float(yellow) * 100)}% / R {round(float(red) * 100)}%"
+
+    def _first_effective_from(self, rows: list[dict[str, Any]]) -> str:
+        """读取第一条有效起始日。"""
+
+        values = sorted(str(row.get("effective_from", "")) for row in rows if row.get("effective_from"))
+        return values[0] if values else "N/A"
+
+    def _first_note(self, rows: list[dict[str, Any]]) -> str:
+        """读取第一条人工红线备注。"""
+
+        for row in rows:
+            note = str(row.get("note", "")).strip()
+            if note:
+                return note
+        return "暂无人工红线备注"
+
+    def _build_compare_card_snapshot(self, json_files: dict[str, Any]) -> dict[str, Any]:
+        """构建 Dashboard compare 卡片所需的最小数据。"""
+
+        index = json_files.get("reports/run_compare/latest_compare_index.json") or {}
+        latest = self._latest_from_index(index)
+        compare_id = str(latest.get("compare_id") or latest.get("id") or latest.get("latest_compare_id") or "")
+        manifest = json_files.get(f"reports/run_compare/{compare_id}/compare_manifest.json") if compare_id else {}
+        summary = json_files.get(f"reports/run_compare/{compare_id}/compare_summary.json") if compare_id else {}
+        top_config = (summary or {}).get("top_config_changes", [{}])
+        top_summary = (summary or {}).get("top_summary_changes", [{}])
+        top_config_item = top_config[0] if top_config else {}
+        top_summary_item = top_summary[0] if top_summary else {}
+        return {
+            "runA": self._get_nested(manifest or {}, ["run_a", "run_ref"], "N/A"),
+            "runB": self._get_nested(manifest or {}, ["run_b", "run_ref"], "N/A"),
+            "comparableLevel": str(
+                self._get_nested(summary or {}, ["comparability_assessment", "level"], "")
+                or (manifest or {}).get("comparable_level")
+                or "N/A"
+            ).upper(),
+            "topConfigChange": f"{top_config_item.get('path') or top_config_item.get('key') or 'config'} -> {top_config_item.get('change_type') or 'changed'}"
+            if top_config_item
+            else "暂无显著配置差异",
+            "topSummaryChange": f"{top_summary_item.get('key') or 'summary'} -> {top_summary_item.get('direction') or top_summary_item.get('change_type') or 'changed'}"
+            if top_summary_item
+            else "暂无显著结果差异",
+        }
+
+    def _get_nested(self, payload: dict[str, Any], keys: list[str], default: Any = "") -> Any:
+        """安全读取嵌套字典。"""
+
+        value: Any = payload
+        for key in keys:
+            if not isinstance(value, dict):
+                return default
+            value = value.get(key)
+        return default if value is None else value
+
+    def _first_nested_label(self, payload: dict[str, Any], keys: list[str]) -> str:
+        """读取 robustness 分类中的第一条标签。"""
+
+        value = self._get_nested(payload, keys, [])
+        if isinstance(value, list) and value:
+            first = value[0]
+            if isinstance(first, dict):
+                return str(first.get("family_label") or first.get("label") or "N/A")
+        return "N/A"
 
     def _extract_manual_items(self, manual_risk: dict[str, Any]) -> list[dict[str, Any]]:
         """从不同 manual risk 快照结构中提取条目。"""

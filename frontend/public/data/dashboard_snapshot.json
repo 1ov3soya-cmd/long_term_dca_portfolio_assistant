@@ -1,6 +1,173 @@
 {
-  "generated_at": "2026-04-30 11:27:44",
+  "generated_at": "2026-04-30 11:46:28",
   "snapshot_type": "dashboard",
+  "dashboard_data": {
+    "overview": {
+      "latestSuggest": "20260331",
+      "latestBacktest": "N/A",
+      "latestRobustness": "2026-04-02 21:12:32",
+      "latestCompare": "2026-04-02 21:12:26",
+      "mode": "real",
+      "adjMode": "forward",
+      "riskFileStatus": "active"
+    },
+    "configSummary": {
+      "allocation": "ETF 80% / Stock 20%",
+      "monthlyRule": "first_trading_day",
+      "etfRiskLevel": "Y 15% / R 25%",
+      "stockRiskLevel": "Y 12% / R 20%",
+      "manualRiskEnabled": true,
+      "env": "Local Archive / efinance"
+    },
+    "suggestSummary": {
+      "budgetTotal": 10000.0,
+      "budgetEtf": 8000.0,
+      "budgetStock": 2000.0,
+      "buyTargets": 6,
+      "pausedTargets": 3,
+      "forceReviewTargets": 2,
+      "thesisBrokenTargets": 1
+    },
+    "suggestedTargets": [
+      {
+        "symbol": "510300",
+        "assetType": "ETF",
+        "baseSuggestedAmount": 4000.0,
+        "action": "正常",
+        "riskStatus": "GREEN",
+        "note": "ETF 风险状态正常",
+        "pauseBuy": false,
+        "forceReview": false,
+        "thesisBroken": false
+      },
+      {
+        "symbol": "510500",
+        "assetType": "ETF",
+        "baseSuggestedAmount": 2666.666666666667,
+        "action": "正常",
+        "riskStatus": "GREEN",
+        "note": "ETF 风险状态正常",
+        "pauseBuy": false,
+        "forceReview": false,
+        "thesisBroken": false
+      },
+      {
+        "symbol": "515180",
+        "assetType": "ETF",
+        "baseSuggestedAmount": 0.0,
+        "action": "暂停新增，强制人工复核",
+        "riskStatus": "RED",
+        "note": "用于验收强制复核逻辑，并观察与价格红线合并后的最终动作",
+        "pauseBuy": true,
+        "forceReview": true,
+        "thesisBroken": false
+      },
+      {
+        "symbol": "518880",
+        "assetType": "ETF",
+        "baseSuggestedAmount": 1333.3333333333335,
+        "action": "正常",
+        "riskStatus": "GREEN",
+        "note": "ETF 风险状态正常",
+        "pauseBuy": false,
+        "forceReview": false,
+        "thesisBroken": false
+      },
+      {
+        "symbol": "600519",
+        "assetType": "STOCK",
+        "baseSuggestedAmount": 0.0,
+        "action": "暂停新增，等待人工解除",
+        "riskStatus": "YELLOW",
+        "note": "用于验收暂停新增逻辑",
+        "pauseBuy": true,
+        "forceReview": false,
+        "thesisBroken": false
+      },
+      {
+        "symbol": "000858",
+        "assetType": "STOCK",
+        "baseSuggestedAmount": 0.0,
+        "action": "停止新增，最高优先级人工处理",
+        "riskStatus": "RED",
+        "note": "用于验收逻辑失效处理；故意不额外打开 manual_force_review，以验证 thesis_broken 可独立生效",
+        "pauseBuy": true,
+        "forceReview": true,
+        "thesisBroken": true
+      },
+      {
+        "symbol": "600036",
+        "assetType": "STOCK",
+        "baseSuggestedAmount": 666.6666666666667,
+        "action": "正常",
+        "riskStatus": "GREEN",
+        "note": "尚无持仓成本，允许按计划定投",
+        "pauseBuy": false,
+        "forceReview": false,
+        "thesisBroken": false
+      },
+      {
+        "symbol": "000333",
+        "assetType": "STOCK",
+        "baseSuggestedAmount": 666.6666666666667,
+        "action": "正常",
+        "riskStatus": "GREEN",
+        "note": "尚无持仓成本，允许按计划定投",
+        "pauseBuy": false,
+        "forceReview": false,
+        "thesisBroken": false
+      },
+      {
+        "symbol": "601318",
+        "assetType": "STOCK",
+        "baseSuggestedAmount": 666.6666666666667,
+        "action": "正常",
+        "riskStatus": "GREEN",
+        "note": "尚无持仓成本，允许按计划定投",
+        "pauseBuy": false,
+        "forceReview": false,
+        "thesisBroken": false
+      }
+    ],
+    "backtestSummary": {
+      "cumulativeReturn": 0.419373596809524,
+      "annualizedReturn": 0.053502590035558795,
+      "maxDrawdown": 0.20476984518500582,
+      "investedRatio": "N/A",
+      "unfilledAmount": 0.0,
+      "yellowTriggers": 0.0,
+      "redTriggers": 0.0
+    },
+    "riskLights": {
+      "GREEN": 9,
+      "YELLOW": 0,
+      "RED": 0,
+      "MANUAL_PAUSE": 0,
+      "FORCE_REVIEW": 0,
+      "THESIS_BROKEN": 0
+    },
+    "manualRisk": {
+      "paused": [],
+      "forceReview": [],
+      "thesisBroken": [],
+      "effectiveFrom": "1900-01-01",
+      "notePreview": "暂无人工红线备注"
+    },
+    "robustness": {
+      "isBaselineRobust": true,
+      "keepDefaultParams": true,
+      "mostSensitive": "ETF 红线",
+      "mostRobust": "月度定投执行日",
+      "label": "中性可用"
+    },
+    "compare": {
+      "runA": "20260402_204500_886643_validate_manual_risk_flags",
+      "runB": "20260402_204500_906783_summarize_robustness",
+      "comparableLevel": "LOW",
+      "topConfigChange": "暂无显著配置差异",
+      "topSummaryChange": "baseline_assessment -> added"
+    }
+  },
   "latest_runs_index": {
     "summarize-robustness": {
       "run_id": "20260402_211232_442927_summarize_robustness",
@@ -33,10 +200,10 @@
       "finished_at": "2026-04-13 16:03:54"
     },
     "build-frontend-snapshot": {
-      "run_id": "20260430_102828_930961_build_frontend_snapshot",
-      "run_dir": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\runs\\20260430_102828_930961_build_frontend_snapshot",
+      "run_id": "20260430_112744_218394_build_frontend_snapshot",
+      "run_dir": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\runs\\20260430_112744_218394_build_frontend_snapshot",
       "status": "success",
-      "finished_at": "2026-04-30 10:28:29"
+      "finished_at": "2026-04-30 11:27:44"
     }
   },
   "latest_compare_index": {

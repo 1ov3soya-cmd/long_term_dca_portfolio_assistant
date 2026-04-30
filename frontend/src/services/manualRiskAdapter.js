@@ -4,6 +4,7 @@ import {
   readArchiveText,
 } from './fileLoader.js';
 import { loadLatestRunBundle } from './runAdapter.js';
+import { readSnapshotJson } from './staticSnapshotLoader.js';
 
 function normalizeBoolean(value) {
   if (typeof value === 'boolean') {
@@ -245,6 +246,75 @@ function buildMissingFiles(files) {
 }
 
 export async function loadManualRiskPageData() {
+  const staticSnapshot = await readSnapshotJson('manual_risk_snapshot.json');
+  if (staticSnapshot && staticSnapshot.source_type && staticSnapshot.source_type !== 'missing') {
+    const acceptanceReport = staticSnapshot.acceptance_report;
+    const previewCsvText = staticSnapshot.acceptance_preview_csv || '';
+    const validationJson = staticSnapshot.validation_report;
+    const checklistMarkdown = staticSnapshot.acceptance_checklist_preview || '';
+    const validationMarkdown = staticSnapshot.validation_preview || '';
+    const picked = pickRows({
+      acceptanceReport,
+      previewCsvText,
+      validationJson,
+      latestRunBundle: null,
+      fallbackConfig: null,
+      fallbackSampleConfig: null,
+    });
+    const rows = picked.rows;
+    const effectiveEndDate = acceptanceReport?.end_date || '';
+    const files = {
+      acceptanceReport: Boolean(acceptanceReport),
+      previewCsv: Boolean(previewCsvText),
+      validationReport: Boolean(validationJson || validationMarkdown),
+      checklist: Boolean(checklistMarkdown),
+      latestRun: false,
+      fallbackConfig: false,
+    };
+    const pausedCount = rows.filter((row) => row.pauseBuy).length;
+    const forceReviewCount = rows.filter((row) => row.forceReview).length;
+    const thesisBrokenCount = rows.filter((row) => row.thesisBroken).length;
+    const effectiveInRangeCount = countEffectiveInRange(rows, effectiveEndDate);
+    const hasData = rows.length > 0 || files.checklist || files.validationReport;
+
+    return {
+      empty: !hasData,
+      partial: false,
+      meta: {
+        sourceType: picked.sourceType,
+        lastUpdated: staticSnapshot.generated_at || latestUpdatedAt(rows, [acceptanceReport?.end_date]),
+        hasData,
+        currentSourceLabel: picked.sourceType,
+        endDate: effectiveEndDate || 'N/A',
+      },
+      summary: {
+        pausedCount,
+        forceReviewCount,
+        thesisBrokenCount,
+        effectiveInRangeCount,
+      },
+      rows,
+      status: {
+        acceptanceReport: files.acceptanceReport,
+        previewCsv: files.previewCsv,
+        validationReport: files.validationReport,
+        checklist: files.checklist,
+        latestRun: files.latestRun,
+        fallbackConfig: files.fallbackConfig,
+        validationValid: validationJson?.valid ?? null,
+        validationIssueCount: Array.isArray(validationJson?.issues) ? validationJson.issues.length : 0,
+      },
+      notes: {
+        checklistPreview: previewMarkdown(checklistMarkdown),
+        validationPreview: previewMarkdown(validationMarkdown),
+      },
+      files: {
+        available: buildAvailableFiles(files),
+        missing: [],
+      },
+    };
+  }
+
   const latestRunsIndex = await loadLatestRunsIndex();
 
   const [

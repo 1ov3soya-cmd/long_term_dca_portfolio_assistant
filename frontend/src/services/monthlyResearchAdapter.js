@@ -5,6 +5,7 @@ import {
   readArchiveText,
 } from './fileLoader.js';
 import { loadLatestRunBundle } from './runAdapter.js';
+import { readSnapshotJson } from './staticSnapshotLoader.js';
 import {
   buildSymbolDisplayTitle,
   buildSymbolNameMapFromPortfolioConfig,
@@ -194,6 +195,19 @@ function normalizeItem(item = {}) {
   };
 }
 
+function extractItems(payload) {
+  if (Array.isArray(payload)) {
+    return payload;
+  }
+  if (Array.isArray(payload?.items)) {
+    return payload.items;
+  }
+  if (Array.isArray(payload?.debate_items)) {
+    return payload.debate_items;
+  }
+  return [];
+}
+
 function enrichDisplayName(item, symbolNameMap) {
   const displayName = pickDisplayName(
     item.symbol,
@@ -278,6 +292,51 @@ function buildFeaturedItems(items, topAttentionSymbols) {
 }
 
 export async function loadMonthlyResearchPageData() {
+  const staticSnapshot = await readSnapshotJson('monthly_research_snapshot.json');
+  if (staticSnapshot && (Array.isArray(staticSnapshot.debate_items) || staticSnapshot.summary)) {
+    const portfolioConfig = await loadSharedReportJson('config/portfolio_config.json');
+    const symbolNameMap = mergeSymbolNameMaps(buildSymbolNameMapFromPortfolioConfig(portfolioConfig));
+    const summaryPayload = staticSnapshot.summary || {};
+    const items = extractItems(staticSnapshot.debate_items)
+      .map(normalizeItem)
+      .map((item) => enrichDisplayName(item, symbolNameMap));
+    const topAttentionSymbols = Array.isArray(summaryPayload.top_attention_symbols)
+      ? summaryPayload.top_attention_symbols
+      : [];
+
+    return {
+      empty: items.length === 0 && !summaryPayload.batch_id,
+      partial: false,
+      meta: {
+        sourceType: staticSnapshot.source_files ? 'staticSnapshot' : 'monthlyResearchSnapshot',
+        updatedAt: staticSnapshot.generated_at || summaryPayload.generated_at || '',
+        batchId: summaryPayload.batch_id || staticSnapshot.batch_meta?.batch_id || '',
+        sourceSuggestRun: summaryPayload.source_suggest_run || staticSnapshot.batch_meta?.source_suggest_run || '',
+        totalItems: items.length,
+        generatedAt: summaryPayload.generated_at || staticSnapshot.generated_at || '',
+      },
+      summary: {
+        totalTargets: Number(summaryPayload.total_targets ?? items.length),
+        processedTargets: Number(summaryPayload.processed_targets ?? items.length),
+        pauseCandidateCount: Number(summaryPayload.pause_candidate_count ?? 0),
+        forceReviewCandidateCount: Number(summaryPayload.force_review_candidate_count ?? 0),
+        thesisBrokenCandidateCount: Number(summaryPayload.thesis_broken_candidate_count ?? 0),
+        averageConfidence: Number(summaryPayload.average_confidence ?? 0),
+        topAttentionSymbols,
+      },
+      dashboardSummary: {
+        featuredItems: buildFeaturedItems(items, topAttentionSymbols),
+      },
+      items,
+      reportPreview: previewMarkdown(staticSnapshot.report_preview || ''),
+      files: {
+        available: Object.values(staticSnapshot.source_files || {}).filter(Boolean),
+        missing: [],
+      },
+      manifest: staticSnapshot.batch_meta || {},
+    };
+  }
+
   const latestRunsIndex = await loadLatestRunsIndex();
   const [latestIndex, latestRunBundle, portfolioConfig] = await Promise.all([
     loadSharedReportJson('reports/agent_research/monthly/latest_monthly_research_index.json'),

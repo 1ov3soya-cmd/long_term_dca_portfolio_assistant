@@ -5,6 +5,7 @@ import {
   readArchiveText,
 } from './fileLoader.js';
 import { loadLatestRunBundle } from './runAdapter.js';
+import { readSnapshotJson } from './staticSnapshotLoader.js';
 import {
   buildSymbolDisplayTitle,
   buildSymbolNameMapFromPortfolioConfig,
@@ -258,6 +259,103 @@ async function loadMonthlyEtfFallbackItems(symbolNameMap) {
  * 读取 TradingAgents PoC 的研究归档，并映射成前端页面直接消费的结构。
  */
 export async function loadResearchPageData() {
+  const staticSnapshot = await readSnapshotJson('research_snapshot.json');
+  if (staticSnapshot && Array.isArray(staticSnapshot.items) && staticSnapshot.items.length > 0) {
+    const portfolioConfig = await loadSharedReportJson('config/portfolio_config.json');
+    const symbolNameMap = buildSymbolNameMap(portfolioConfig);
+    const items = staticSnapshot.items.map((snapshotItem) => {
+      const detailJson = snapshotItem.detail || {};
+      const indexEntry = snapshotItem.index_entry || {};
+      const analystDebate = buildAnalystDebate(detailJson || {});
+      const symbol = detailJson.symbol || indexEntry.symbol || 'N/A';
+      const displayName = pickDisplayName(
+        symbol,
+        [
+          detailJson.name,
+          detailJson.symbol_name,
+          detailJson.company_name,
+          detailJson.display_name,
+          detailJson.security_name,
+          detailJson.cn_name,
+        ],
+        symbolNameMap,
+      );
+
+      return {
+        id: `${symbol}-${detailJson.analysis_date || indexEntry.analysis_date || 'na'}`,
+        symbol,
+        displayName,
+        fullTitle: buildSymbolDisplayTitle(symbol, displayName),
+        analysisDate: detailJson.analysis_date || indexEntry.analysis_date || '',
+        finalResearchLabel: detailJson.final_research_label || indexEntry.final_research_label || 'N/A',
+        suggestPauseBuy: Boolean(detailJson.suggest_manual_pause_buy ?? indexEntry.suggest_manual_pause_buy),
+        suggestForceReview: Boolean(detailJson.suggest_force_review ?? indexEntry.suggest_force_review),
+        suggestThesisBroken: Boolean(detailJson.suggest_thesis_broken ?? indexEntry.suggest_thesis_broken),
+        confidence: Number(detailJson.confidence ?? indexEntry.confidence ?? 0),
+        source: detailJson.source || indexEntry.source || '',
+        sourceRun: detailJson.source_run_id || indexEntry.source_run_id || '',
+        memoAvailable: Boolean(snapshotItem.memo_preview),
+        bullCase: analystDebate.bull.summary,
+        bearCase: analystDebate.bear.summary,
+        riskSummary: analystDebate.riskSummary,
+        bullCaseFull: analystDebate.bull.summary,
+        bearCaseFull: analystDebate.bear.summary,
+        riskSummaryFull: analystDebate.riskSummary,
+        bullCasePreview: analystDebate.bull.summaryPreview,
+        bearCasePreview: analystDebate.bear.summaryPreview,
+        riskSummaryPreview: analystDebate.riskSummaryPreview,
+        debateFocus: analystDebate.debateFocus,
+        keyUncertainty: analystDebate.keyUncertainty,
+        bullEvidencePoints: analystDebate.bull.evidencePoints,
+        bearEvidencePoints: analystDebate.bear.evidencePoints,
+        bullActionImplication: analystDebate.bull.actionImplication,
+        bearActionImplication: analystDebate.bear.actionImplication,
+        recommendationRationale: analystDebate.recommendationRationale,
+        analystDebate,
+        notes: sanitizeDebateText(detailJson.notes || ''),
+        memoPreview: snapshotItem.memo_preview || '',
+        archivePaths: {
+          json: snapshotItem.source_files?.json || '',
+          markdown: snapshotItem.source_files?.markdown || '',
+        },
+        updatedAt: indexEntry.updated_at || staticSnapshot.generated_at || '',
+        missing: {
+          json: !detailJson,
+          markdown: !snapshotItem.memo_preview,
+        },
+      };
+    });
+    const latest = latestItem(items);
+    const totalCount = items.length;
+    const averageConfidence = totalCount > 0
+      ? items.reduce((sum, item) => sum + Number(item.confidence || 0), 0) / totalCount
+      : 0;
+
+    return {
+      empty: false,
+      partial: false,
+      meta: {
+        sourceType: 'staticSnapshot',
+        updatedAt: staticSnapshot.generated_at || '',
+        totalItems: totalCount,
+        latestSymbol: latest?.symbol || '',
+        latestAnalysisDate: latest?.analysisDate || '',
+      },
+      summary: {
+        totalCount,
+        pauseCandidateCount: items.filter((item) => item.finalResearchLabel === 'pause_candidate').length,
+        forceReviewCandidateCount: items.filter((item) => item.finalResearchLabel === 'force_review_candidate').length,
+        thesisBrokenCandidateCount: items.filter((item) => item.finalResearchLabel === 'thesis_broken_candidate').length,
+        averageConfidence,
+      },
+      items,
+      files: {
+        available: ['research_snapshot.json'],
+        missing: [],
+      },
+    };
+  }
+
   const latestRunsIndex = await loadLatestRunsIndex();
   const [researchIndex, latestRunBundle, portfolioConfig] = await Promise.all([
     loadSharedReportJson('reports/agent_research/research_index.json'),

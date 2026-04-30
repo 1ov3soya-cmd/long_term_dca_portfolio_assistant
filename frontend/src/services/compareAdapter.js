@@ -3,6 +3,7 @@ import {
   readCompareJson,
   readCompareText,
 } from './fileLoader.js';
+import { readSnapshotJson } from './staticSnapshotLoader.js';
 
 function createEmptyCompareBundle() {
   return {
@@ -98,6 +99,28 @@ function normalizeBooleanLabel(value) {
  * 读取最新 compare 归档。
  */
 export async function loadLatestCompareBundle() {
+  const staticSnapshot = await readSnapshotJson('run_compare_snapshot.json');
+  if (staticSnapshot && (staticSnapshot.compare_id || staticSnapshot.manifest || staticSnapshot.summary)) {
+    const missingFiles = [];
+    if (!staticSnapshot.manifest) missingFiles.push('compare_manifest.json');
+    if (!staticSnapshot.summary) missingFiles.push('compare_summary.json');
+    if (!staticSnapshot.config_diff) missingFiles.push('config_diff.json');
+    if (!staticSnapshot.summary_diff_csv) missingFiles.push('summary_diff.csv');
+    if (!staticSnapshot.report_preview) missingFiles.push('compare_report.md');
+
+    return {
+      exists: true,
+      compareId: staticSnapshot.compare_id || '',
+      latestCompareIndex: staticSnapshot.index || null,
+      manifest: staticSnapshot.manifest || null,
+      summary: staticSnapshot.summary || null,
+      configDiff: staticSnapshot.config_diff || null,
+      summaryDiffRows: parseCsvToRows(staticSnapshot.summary_diff_csv || ''),
+      reportMarkdown: staticSnapshot.report_preview || '',
+      missingFiles,
+    };
+  }
+
   const latestCompareIndex = await loadLatestCompareIndex();
   const compareId = latestCompareIndex?.compare_id;
 
