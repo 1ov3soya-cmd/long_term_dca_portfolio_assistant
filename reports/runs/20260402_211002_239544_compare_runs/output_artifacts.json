@@ -1,0 +1,10 @@
+{
+  "original_outputs": {
+    "compare_manifest": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\run_compare\\20260402_211002_250638_20260402_204500_886643_validate_manual_risk_flags_vs_20260402_204500_906783_summarize_robustness\\compare_manifest.json",
+    "compare_summary": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\run_compare\\20260402_211002_250638_20260402_204500_886643_validate_manual_risk_flags_vs_20260402_204500_906783_summarize_robustness\\compare_summary.json",
+    "compare_report": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\run_compare\\20260402_211002_250638_20260402_204500_886643_validate_manual_risk_flags_vs_20260402_204500_906783_summarize_robustness\\compare_report.md",
+    "config_diff": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\run_compare\\20260402_211002_250638_20260402_204500_886643_validate_manual_risk_flags_vs_20260402_204500_906783_summarize_robustness\\config_diff.json",
+    "summary_diff": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\run_compare\\20260402_211002_250638_20260402_204500_886643_validate_manual_risk_flags_vs_20260402_204500_906783_summarize_robustness\\summary_diff.csv"
+  },
+  "copied_outputs": {}
+}

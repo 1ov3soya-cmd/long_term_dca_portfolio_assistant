@@ -1,0 +1,10 @@
+{
+  "command": "validate-manual-risk-flags",
+  "end_date": "2025-12-31",
+  "manual_risk_file": null,
+  "all_args": {
+    "command": "validate-manual-risk-flags",
+    "end_date": "2025-12-31",
+    "manual_risk_file": null
+  }
+}

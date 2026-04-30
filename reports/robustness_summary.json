@@ -1,0 +1,403 @@
+{
+  "generated_at": "2026-04-02 20:45:01",
+  "baseline_name": "baseline",
+  "input_files": {
+    "summary_csv": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\sensitivity_summary.csv",
+    "baseline_diff_csv": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\sensitivity_baseline_diff.csv",
+    "details_json": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\sensitivity_details.json"
+  },
+  "summary_context": {
+    "end_date_argument": "2025-12-31",
+    "success_group_count": 7,
+    "failed_group_count": 1,
+    "failed_groups": [
+      {
+        "group_name": "adj_none",
+        "error": "eFinance 获取历史行情失败: symbol=510300, asset_type=etf, error=HTTPSConnectionPool(host='push2his.eastmoney.com', port=443): Max retries exceeded with url: /api/qt/stock/kline/get?fields1=f1%2Cf2%2Cf3%2Cf4%2Cf5%2Cf6%2Cf7%2Cf8%2Cf9%2Cf10%2Cf11%2Cf12%2Cf13&fields2=f51%2Cf52%2Cf53%2Cf54%2Cf55%2Cf56%2Cf57%2Cf58%2Cf59%2Cf60%2Cf61&beg=20190101&end=20251231&rtntype=6&secid=1.510300&klt=101&fqt=0 (Caused by ProxyError('Unable to connect to proxy', NewConnectionError(\"HTTPSConnection(host='127.0.0.1', port=9): Failed to establish a new connection: [WinError 10061] 由于目标计算机积极拒绝，无法连接。\")))"
+      }
+    ]
+  },
+  "baseline_configuration": {
+    "group_name": "baseline",
+    "data_mode": "real",
+    "provider": "efinance",
+    "source_api": "stock.get_quote_history",
+    "backtest_start_date": "2019-01-01",
+    "backtest_end_date": "2025-12-31",
+    "adjustment_mode": "forward",
+    "monthly_buy_rule": "first_trading_day",
+    "etf_yellow": 0.15,
+    "etf_red": 0.25,
+    "stock_yellow": 0.12,
+    "stock_red": 0.2,
+    "effective_config": {
+      "data_mode": "real",
+      "backtest_range": {
+        "start_date": "2019-01-01",
+        "end_date": "2025-12-31"
+      },
+      "provider": "efinance",
+      "source_api": "stock.get_quote_history",
+      "adjustment_mode": "forward",
+      "transaction_cost": {
+        "etf": {
+          "buy_commission": 0.0003,
+          "sell_commission": 0.0003,
+          "sell_stamp_tax": 0.0,
+          "slippage": 0.001
+        },
+        "stock": {
+          "buy_commission": 0.0003,
+          "sell_commission": 0.0003,
+          "sell_stamp_tax": 0.001,
+          "slippage": 0.002
+        }
+      },
+      "execution_rule": "first_trading_day",
+      "risk_check_rule": "last_trading_day_of_week",
+      "risk_thresholds": {
+        "etf_yellow": 0.15,
+        "etf_red": 0.25,
+        "stock_yellow": 0.12,
+        "stock_red": 0.2
+      }
+    }
+  },
+  "baseline_assessment": {
+    "label": "中性可用",
+    "in_middle_band": false,
+    "positions": {
+      "annualized_return": 0.9977941941882374,
+      "max_drawdown": 0.7317744959118747,
+      "invested_ratio": 0.9800812723174923,
+      "total_uninvested_cash": 0.01991872768250654
+    },
+    "sensitive_family_count": 1,
+    "notes": [
+      "baseline 在部分指标上带有方向性偏好，因此更像中性默认值，而不是严格的中位解。",
+      "本轮没有出现“轻微改动后全面明显更优”的成功参数组。",
+      "成功扰动组 6 个，失败组 1 个；失败组不会推翻已有结论，但会降低部分结论强度。"
+    ]
+  },
+  "metric_rankings": {
+    "annualized_return": [
+      {
+        "family": "etf_redline",
+        "family_label": "ETF 红线",
+        "group_name": "etf_redline_tighter",
+        "impact": -0.0050555177168261,
+        "abs_impact": 0.0050555177168261
+      },
+      {
+        "family": "monthly_buy_rule",
+        "family_label": "月度定投执行日",
+        "group_name": "monthly_buy_last_trading_day",
+        "impact": -0.0011740624052167,
+        "abs_impact": 0.0011740624052167
+      },
+      {
+        "family": "slippage",
+        "family_label": "滑点",
+        "group_name": "higher_slippage",
+        "impact": 1.1176142761915033e-05,
+        "abs_impact": 1.1176142761915033e-05
+      },
+      {
+        "family": "stock_redline",
+        "family_label": "股票红线",
+        "group_name": "stock_redline_tighter",
+        "impact": 0.0,
+        "abs_impact": 0.0
+      }
+    ],
+    "max_drawdown": [
+      {
+        "family": "etf_redline",
+        "family_label": "ETF 红线",
+        "group_name": "etf_redline_tighter",
+        "impact": -0.0106879324238487,
+        "abs_impact": 0.0106879324238487
+      },
+      {
+        "family": "monthly_buy_rule",
+        "family_label": "月度定投执行日",
+        "group_name": "monthly_buy_last_trading_day",
+        "impact": 0.0004465360192968,
+        "abs_impact": 0.0004465360192968
+      },
+      {
+        "family": "slippage",
+        "family_label": "滑点",
+        "group_name": "higher_slippage",
+        "impact": 8.925419319211203e-05,
+        "abs_impact": 8.925419319211203e-05
+      },
+      {
+        "family": "stock_redline",
+        "family_label": "股票红线",
+        "group_name": "stock_redline_tighter",
+        "impact": 0.0,
+        "abs_impact": 0.0
+      }
+    ],
+    "invested_ratio": [
+      {
+        "family": "etf_redline",
+        "family_label": "ETF 红线",
+        "group_name": "etf_redline_tighter",
+        "impact": -0.0549983097380952,
+        "abs_impact": 0.0549983097380952
+      },
+      {
+        "family": "monthly_buy_rule",
+        "family_label": "月度定投执行日",
+        "group_name": "monthly_buy_last_trading_day",
+        "impact": 0.0004565451190473,
+        "abs_impact": 0.0004565451190473
+      },
+      {
+        "family": "slippage",
+        "family_label": "滑点",
+        "group_name": "higher_slippage",
+        "impact": 0.0001045413214286,
+        "abs_impact": 0.0001045413214286
+      },
+      {
+        "family": "stock_redline",
+        "family_label": "股票红线",
+        "group_name": "stock_redline_tighter",
+        "impact": 0.0,
+        "abs_impact": 0.0
+      }
+    ],
+    "total_uninvested_cash": [
+      {
+        "family": "etf_redline",
+        "family_label": "ETF 红线",
+        "group_name": "etf_redline_tighter",
+        "impact": 46198.58018000008,
+        "abs_impact": 46198.58018000008
+      },
+      {
+        "family": "monthly_buy_rule",
+        "family_label": "月度定投执行日",
+        "group_name": "monthly_buy_last_trading_day",
+        "impact": -383.49789999995846,
+        "abs_impact": 383.49789999995846
+      },
+      {
+        "family": "slippage",
+        "family_label": "滑点",
+        "group_name": "higher_slippage",
+        "impact": -87.81471000003512,
+        "abs_impact": 87.81471000003512
+      },
+      {
+        "family": "stock_redline",
+        "family_label": "股票红线",
+        "group_name": "stock_redline_tighter",
+        "impact": 0.0,
+        "abs_impact": 0.0
+      }
+    ],
+    "unfilled_amount": [
+      {
+        "family": "etf_redline",
+        "family_label": "ETF 红线",
+        "group_name": "etf_redline_tighter",
+        "impact": 816.0704611192632,
+        "abs_impact": 816.0704611192632
+      },
+      {
+        "family": "monthly_buy_rule",
+        "family_label": "月度定投执行日",
+        "group_name": "monthly_buy_last_trading_day",
+        "impact": 461.84209988446673,
+        "abs_impact": 461.84209988446673
+      },
+      {
+        "family": "slippage",
+        "family_label": "滑点",
+        "group_name": "higher_slippage",
+        "impact": -22.41987898378284,
+        "abs_impact": 22.41987898378284
+      },
+      {
+        "family": "stock_redline",
+        "family_label": "股票红线",
+        "group_name": "stock_redline_tighter",
+        "impact": 0.0,
+        "abs_impact": 0.0
+      }
+    ],
+    "total_red_triggers": [
+      {
+        "family": "etf_redline",
+        "family_label": "ETF 红线",
+        "group_name": "etf_redline_looser",
+        "impact": -100.0,
+        "abs_impact": 100.0
+      },
+      {
+        "family": "monthly_buy_rule",
+        "family_label": "月度定投执行日",
+        "group_name": "monthly_buy_last_trading_day",
+        "impact": -24.0,
+        "abs_impact": 24.0
+      },
+      {
+        "family": "slippage",
+        "family_label": "滑点",
+        "group_name": "higher_slippage",
+        "impact": 0.0,
+        "abs_impact": 0.0
+      },
+      {
+        "family": "stock_redline",
+        "family_label": "股票红线",
+        "group_name": "stock_redline_tighter",
+        "impact": 0.0,
+        "abs_impact": 0.0
+      }
+    ]
+  },
+  "directional_findings": [
+    {
+      "topic": "复权模式",
+      "summary": "本轮 `adj_none` 失败，当前证据不足以否定 forward 默认值，同时提示复权模式切换仍受真实数据可用性影响。"
+    },
+    {
+      "topic": "ETF 红线方向性",
+      "summary": "ETF 红线更紧时，现金拖累与 RED 触发通常上升，回撤可能下降；更松时，触发次数下降、资金利用率略改善，但回撤更容易抬升。15% / 25% 更像中性折中。"
+    },
+    {
+      "topic": "股票红线方向性",
+      "summary": "当前样本下，股票红线收紧或放宽几乎没有改变量化结果，更像当前样本证据不足，而不是股票红线永远不重要。"
+    },
+    {
+      "topic": "月度定投执行日",
+      "summary": "月末买入在当前样本下年化收益略低、回撤略高，但 RED 触发更少，说明执行日会改变路径表现，不过影响量级中等。"
+    },
+    {
+      "topic": "滑点敏感性",
+      "summary": "轻量上调滑点后，各项结果变化很小，说明这组轻量滑点扰动不是当前低频定投框架的主要敏感源。"
+    }
+  ],
+  "parameter_classification": {
+    "high_sensitive": [
+      {
+        "family": "etf_redline",
+        "family_label": "ETF 红线",
+        "sensitivity_score": 2.186175654313742
+      }
+    ],
+    "moderate": [],
+    "robust": [
+      {
+        "family": "monthly_buy_rule",
+        "family_label": "月度定投执行日",
+        "sensitivity_score": 0.21508929182192776
+      },
+      {
+        "family": "slippage",
+        "family_label": "滑点",
+        "sensitivity_score": 0.005350923899251045
+      },
+      {
+        "family": "stock_redline",
+        "family_label": "股票红线",
+        "sensitivity_score": 0.0
+      }
+    ]
+  },
+  "default_parameter_recommendations": {
+    "adjustment_mode": {
+      "label": "保留，但需备注限制",
+      "recommended_value": "forward",
+      "reason": "当前 `adj_none` 未成功完成，证据不足以支持更换默认复权模式；应继续保留 forward，并在报告中注明 none 模式证据不完整。"
+    },
+    "monthly_buy_rule": {
+      "label": "保留",
+      "recommended_value": "first_trading_day",
+      "reason": "月末买入在当前样本下收益略弱、回撤略高，说明每月第 1 个交易日更贴近 baseline 的平衡表现。"
+    },
+    "etf_redline": {
+      "label": "保留",
+      "recommended_value": "YELLOW=0.15, RED=0.25",
+      "reason": "ETF 红线收紧会明显增加现金拖累与 RED 触发，放宽则会降低触发但抬升回撤；15% / 25% 更符合长期定投且不轻易卖出的定位。"
+    },
+    "stock_redline": {
+      "label": "证据不足，暂不调整",
+      "recommended_value": "YELLOW=0.12, RED=0.20",
+      "reason": "当前测试几乎未观察到股票红线变动对结果的影响，更像样本证据不足；在股票仅占 20% 且当前仓位利用有限的前提下，暂不建议主动改动默认值。"
+    },
+    "baseline_default": {
+      "label": "建议保留但需备注限制",
+      "recommended_value": "baseline",
+      "reason": "baseline 当前更像可执行的中性默认配置：ETF 红线与月初执行日有明确支撑，但复权模式与股票红线仍存在证据不完整的备注项。",
+      "baseline_assessment_label": "中性可用"
+    }
+  },
+  "key_findings": [
+    {
+      "section": "baseline",
+      "target": "baseline_default",
+      "label": "中性可用",
+      "summary": "baseline 在部分指标上带有方向性偏好，因此更像中性默认值，而不是严格的中位解。；本轮没有出现“轻微改动后全面明显更优”的成功参数组。；成功扰动组 6 个，失败组 1 个；失败组不会推翻已有结论，但会降低部分结论强度。"
+    },
+    {
+      "section": "sensitivity",
+      "target": "etf_redline",
+      "label": "ETF 红线",
+      "summary": "敏感度得分=2.186"
+    },
+    {
+      "section": "sensitivity",
+      "target": "monthly_buy_rule",
+      "label": "月度定投执行日",
+      "summary": "敏感度得分=0.215"
+    },
+    {
+      "section": "sensitivity",
+      "target": "slippage",
+      "label": "滑点",
+      "summary": "敏感度得分=0.005"
+    },
+    {
+      "section": "sensitivity",
+      "target": "stock_redline",
+      "label": "股票红线",
+      "summary": "敏感度得分=0.000"
+    },
+    {
+      "section": "recommendation",
+      "target": "adjustment_mode",
+      "label": "保留，但需备注限制",
+      "summary": "当前 `adj_none` 未成功完成，证据不足以支持更换默认复权模式；应继续保留 forward，并在报告中注明 none 模式证据不完整。"
+    },
+    {
+      "section": "recommendation",
+      "target": "monthly_buy_rule",
+      "label": "保留",
+      "summary": "月末买入在当前样本下收益略弱、回撤略高，说明每月第 1 个交易日更贴近 baseline 的平衡表现。"
+    },
+    {
+      "section": "recommendation",
+      "target": "etf_redline",
+      "label": "保留",
+      "summary": "ETF 红线收紧会明显增加现金拖累与 RED 触发，放宽则会降低触发但抬升回撤；15% / 25% 更符合长期定投且不轻易卖出的定位。"
+    },
+    {
+      "section": "recommendation",
+      "target": "stock_redline",
+      "label": "证据不足，暂不调整",
+      "summary": "当前测试几乎未观察到股票红线变动对结果的影响，更像样本证据不足；在股票仅占 20% 且当前仓位利用有限的前提下，暂不建议主动改动默认值。"
+    },
+    {
+      "section": "recommendation",
+      "target": "baseline_default",
+      "label": "建议保留但需备注限制",
+      "summary": "baseline 当前更像可执行的中性默认配置：ETF 红线与月初执行日有明确支撑，但复权模式与股票红线仍存在证据不完整的备注项。"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "command": "summarize-robustness",
+  "end_date": "2025-12-31",
+  "manual_risk_file": null,
+  "all_args": {
+    "command": "summarize-robustness",
+    "end_date": "2025-12-31",
+    "manual_risk_file": null
+  }
+}

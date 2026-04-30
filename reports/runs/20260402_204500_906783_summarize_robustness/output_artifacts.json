@@ -1,0 +1,9 @@
+{
+  "original_outputs": {
+    "summary_markdown": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\robustness_summary.md",
+    "recommendation_markdown": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\default_parameter_recommendation.md",
+    "summary_json": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\robustness_summary.json",
+    "key_findings_csv": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\robustness_key_findings.csv"
+  },
+  "copied_outputs": {}
+}

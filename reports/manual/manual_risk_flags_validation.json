@@ -1,0 +1,105 @@
+{
+  "valid": true,
+  "issues": [],
+  "flags": [
+    {
+      "symbol": "510300",
+      "asset_type": "etf",
+      "effective_from": "1900-01-01",
+      "manual_pause_buy": false,
+      "manual_force_review": false,
+      "thesis_broken": false,
+      "note": "",
+      "updated_at": "2026-04-01",
+      "updated_by": "user"
+    },
+    {
+      "symbol": "510500",
+      "asset_type": "etf",
+      "effective_from": "1900-01-01",
+      "manual_pause_buy": false,
+      "manual_force_review": false,
+      "thesis_broken": false,
+      "note": "",
+      "updated_at": "2026-04-01",
+      "updated_by": "user"
+    },
+    {
+      "symbol": "515180",
+      "asset_type": "etf",
+      "effective_from": "1900-01-01",
+      "manual_pause_buy": false,
+      "manual_force_review": false,
+      "thesis_broken": false,
+      "note": "",
+      "updated_at": "2026-04-01",
+      "updated_by": "user"
+    },
+    {
+      "symbol": "518880",
+      "asset_type": "etf",
+      "effective_from": "1900-01-01",
+      "manual_pause_buy": false,
+      "manual_force_review": false,
+      "thesis_broken": false,
+      "note": "",
+      "updated_at": "2026-04-01",
+      "updated_by": "user"
+    },
+    {
+      "symbol": "600519",
+      "asset_type": "stock",
+      "effective_from": "1900-01-01",
+      "manual_pause_buy": false,
+      "manual_force_review": false,
+      "thesis_broken": false,
+      "note": "",
+      "updated_at": "2026-04-01",
+      "updated_by": "user"
+    },
+    {
+      "symbol": "000858",
+      "asset_type": "stock",
+      "effective_from": "1900-01-01",
+      "manual_pause_buy": false,
+      "manual_force_review": false,
+      "thesis_broken": false,
+      "note": "",
+      "updated_at": "2026-04-01",
+      "updated_by": "user"
+    },
+    {
+      "symbol": "600036",
+      "asset_type": "stock",
+      "effective_from": "1900-01-01",
+      "manual_pause_buy": false,
+      "manual_force_review": false,
+      "thesis_broken": false,
+      "note": "",
+      "updated_at": "2026-04-01",
+      "updated_by": "user"
+    },
+    {
+      "symbol": "000333",
+      "asset_type": "stock",
+      "effective_from": "1900-01-01",
+      "manual_pause_buy": false,
+      "manual_force_review": false,
+      "thesis_broken": false,
+      "note": "",
+      "updated_at": "2026-04-01",
+      "updated_by": "user"
+    },
+    {
+      "symbol": "601318",
+      "asset_type": "stock",
+      "effective_from": "1900-01-01",
+      "manual_pause_buy": false,
+      "manual_force_review": false,
+      "thesis_broken": false,
+      "note": "",
+      "updated_at": "2026-04-01",
+      "updated_by": "user"
+    }
+  ]
+}

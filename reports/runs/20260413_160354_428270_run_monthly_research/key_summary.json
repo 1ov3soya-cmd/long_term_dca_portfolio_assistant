@@ -1,0 +1,15 @@
+{
+  "batch_id": "20260413_160354_428270_run_monthly_research",
+  "source_suggest_run": "",
+  "total_targets": 9,
+  "processed_targets": 9,
+  "pause_candidate_count": 2,
+  "force_review_candidate_count": 2,
+  "thesis_broken_candidate_count": 1,
+  "average_confidence": 0.6744,
+  "top_attention_symbols": [
+    "000858",
+    "600036",
+    "600519"
+  ]
+}

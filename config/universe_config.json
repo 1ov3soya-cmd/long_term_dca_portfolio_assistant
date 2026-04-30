@@ -1,0 +1,26 @@
+{
+  "universe": {
+    "benchmark_symbol": "510300",
+    "market": "CN",
+    "frequency": "1d",
+    "price_field": "close",
+    "start_date": "2019-01-01",
+    "end_date": "2026-03-31"
+  },
+  "field_mapping": {
+    "date": "date",
+    "open": "open",
+    "high": "high",
+    "low": "low",
+    "close": "close",
+    "volume": "volume",
+    "amount": "amount",
+    "symbol": "symbol"
+  },
+  "manual_flags": {
+    "logic_risk_flag_file": "config/manual_risk_flags.yaml",
+    "thesis_flag_file": "data/manual/thesis_flags.csv",
+    "holdings_file": "data/manual/holdings.csv",
+    "notes_file": "data/manual/manual_notes.csv"
+  }
+}

@@ -1,0 +1,10 @@
+﻿symbol,asset_type,status,reasons,pause_buy,manual_review,metric_value,price_status,price_reasons,manual_pause_buy,manual_force_review,thesis_broken,logic_reasons,final_pause_buy,final_force_review,final_priority_level,final_reason_codes,final_human_readable_action,logic_note,effective_from,updated_at,updated_by
+510300,etf,GREEN,ETF 风险状态正常,False,False,0.14068299925760952,GREEN,ETF 风险状态正常,False,False,False,,False,False,6,green,正常,,,,
+510500,etf,GREEN,ETF 风险状态正常,False,False,0.008040068538289171,GREEN,ETF 风险状态正常,False,False,False,,False,False,6,green,正常,,,,
+515180,etf,RED,人工标记 manual_force_review=true；相对参考高点回撤 4.72%，进入 YELLOW 区域；跌破长期均线且持续弱势,True,True,0.04722222222222211,YELLOW,相对参考高点回撤 4.72%，进入 YELLOW 区域；跌破长期均线且持续弱势,False,True,False,人工标记 manual_force_review=true,True,True,2,"manual_force_review,price_yellow",暂停新增，强制人工复核,用于验收强制复核逻辑，并观察与价格红线合并后的最终动作,2025-06-01,2026-04-01,acceptance_sample
+518880,etf,GREEN,ETF 风险状态正常,False,False,0.03616580310880831,GREEN,ETF 风险状态正常,False,False,False,,False,False,6,green,正常,,,,
+600519,stock,YELLOW,人工标记 manual_pause_buy=true；尚无持仓成本，允许按计划定投,True,False,,GREEN,尚无持仓成本，允许按计划定投,True,False,False,人工标记 manual_pause_buy=true,True,False,3,manual_pause_buy,暂停新增，等待人工解除,用于验收暂停新增逻辑,2025-01-01,2026-04-01,acceptance_sample
+000858,stock,RED,人工标记 thesis_broken=true；尚无持仓成本，允许按计划定投,True,True,,GREEN,尚无持仓成本，允许按计划定投,False,False,True,人工标记 thesis_broken=true,True,True,1,thesis_broken,停止新增，最高优先级人工处理,用于验收逻辑失效处理；故意不额外打开 manual_force_review，以验证 thesis_broken 可独立生效,2025-03-01,2026-04-01,acceptance_sample
+600036,stock,GREEN,尚无持仓成本，允许按计划定投,False,False,,GREEN,尚无持仓成本，允许按计划定投,False,False,False,,False,False,6,green,正常,,,,
+000333,stock,GREEN,尚无持仓成本，允许按计划定投,False,False,,GREEN,尚无持仓成本，允许按计划定投,False,False,False,,False,False,6,green,正常,,,,
+601318,stock,GREEN,尚无持仓成本，允许按计划定投,False,False,,GREEN,尚无持仓成本，允许按计划定投,False,False,False,,False,False,6,green,正常,,,,

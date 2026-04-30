@@ -1,0 +1,16 @@
+{
+  "original_outputs": {
+    "validation_report": {
+      "markdown": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\manual\\manual_risk_flags_validation.md",
+      "csv": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\manual\\manual_risk_flags_validation.csv",
+      "json": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\manual\\manual_risk_flags_validation.json"
+    },
+    "acceptance_artifacts": {
+      "preview_csv": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\manual\\manual_logic_risk_acceptance_preview.csv",
+      "report_markdown": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\manual\\manual_logic_risk_acceptance_report.md",
+      "report_json": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\manual\\manual_logic_risk_acceptance_report.json",
+      "checklist_markdown": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\manual_logic_risk_acceptance_checklist.md"
+    }
+  },
+  "copied_outputs": {}
+}

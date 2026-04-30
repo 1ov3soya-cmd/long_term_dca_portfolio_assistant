@@ -1,0 +1,16 @@
+{
+  "run_id": "20260430_102448_685532_build_frontend_snapshot",
+  "command_name": "build-frontend-snapshot",
+  "started_at": "2026-04-30 10:24:48",
+  "finished_at": "2026-04-30 10:24:48",
+  "duration_seconds": 0.203,
+  "status": "success",
+  "end_date": "2025-12-31",
+  "data_mode": "static_snapshot",
+  "provider_name": "frontend_snapshot_builder",
+  "adj_mode": "forward",
+  "manual_risk_file": "config/manual_risk_flags.yaml",
+  "code_version_hint": "",
+  "warnings_count": 0,
+  "errors_count": 0
+}

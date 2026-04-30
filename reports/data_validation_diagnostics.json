@@ -1,0 +1,246 @@
+{
+  "metadata": {
+    "data_mode": "real",
+    "provider": "efinance",
+    "source_api": "stock.get_quote_history",
+    "adjustment_mode": "forward",
+    "latest_data_date": "2025-12-31",
+    "data_updated_at": "2026-03-31 21:07:41",
+    "start_date": "2019-01-01",
+    "end_date": "2025-12-31",
+    "calendar_days": 1699
+  },
+  "symbol_diagnostics": [
+    {
+      "symbol": "510300",
+      "asset_type": "etf",
+      "date_sorted": true,
+      "duplicate_dates": 0,
+      "ohlc_numeric": true,
+      "high_below_low_rows": 0,
+      "close_out_of_range_rows": 0,
+      "price_missing_rows": 0,
+      "negative_or_missing_volume_rows": 0,
+      "negative_or_missing_amount_rows": 0,
+      "negative_volume_rows": 0,
+      "negative_amount_rows": 0,
+      "raw_columns": "股票名称,股票代码,日期,开盘,收盘,最高,最低,成交量,成交额,振幅,涨跌幅,涨跌额,换手率",
+      "standardized_columns": "date,symbol,asset_type,name,open,high,low,close,adj_close,volume,amount,pct_chg,chg,turnover_rate,amplitude,adjustment_mode,source_api",
+      "note": ""
+    },
+    {
+      "symbol": "510500",
+      "asset_type": "etf",
+      "date_sorted": true,
+      "duplicate_dates": 0,
+      "ohlc_numeric": true,
+      "high_below_low_rows": 0,
+      "close_out_of_range_rows": 0,
+      "price_missing_rows": 0,
+      "negative_or_missing_volume_rows": 0,
+      "negative_or_missing_amount_rows": 0,
+      "negative_volume_rows": 0,
+      "negative_amount_rows": 0,
+      "raw_columns": "股票名称,股票代码,日期,开盘,收盘,最高,最低,成交量,成交额,振幅,涨跌幅,涨跌额,换手率",
+      "standardized_columns": "date,symbol,asset_type,name,open,high,low,close,adj_close,volume,amount,pct_chg,chg,turnover_rate,amplitude,adjustment_mode,source_api",
+      "note": ""
+    },
+    {
+      "symbol": "515180",
+      "asset_type": "etf",
+      "date_sorted": true,
+      "duplicate_dates": 0,
+      "ohlc_numeric": true,
+      "high_below_low_rows": 0,
+      "close_out_of_range_rows": 0,
+      "price_missing_rows": 0,
+      "negative_or_missing_volume_rows": 0,
+      "negative_or_missing_amount_rows": 0,
+      "negative_volume_rows": 0,
+      "negative_amount_rows": 0,
+      "raw_columns": "股票名称,股票代码,日期,开盘,收盘,最高,最低,成交量,成交额,振幅,涨跌幅,涨跌额,换手率",
+      "standardized_columns": "date,symbol,asset_type,name,open,high,low,close,adj_close,volume,amount,pct_chg,chg,turnover_rate,amplitude,adjustment_mode,source_api",
+      "note": ""
+    },
+    {
+      "symbol": "518880",
+      "asset_type": "etf",
+      "date_sorted": true,
+      "duplicate_dates": 0,
+      "ohlc_numeric": true,
+      "high_below_low_rows": 0,
+      "close_out_of_range_rows": 0,
+      "price_missing_rows": 0,
+      "negative_or_missing_volume_rows": 0,
+      "negative_or_missing_amount_rows": 0,
+      "negative_volume_rows": 0,
+      "negative_amount_rows": 0,
+      "raw_columns": "股票名称,股票代码,日期,开盘,收盘,最高,最低,成交量,成交额,振幅,涨跌幅,涨跌额,换手率",
+      "standardized_columns": "date,symbol,asset_type,name,open,high,low,close,adj_close,volume,amount,pct_chg,chg,turnover_rate,amplitude,adjustment_mode,source_api",
+      "note": ""
+    },
+    {
+      "symbol": "600519",
+      "asset_type": "stock",
+      "date_sorted": true,
+      "duplicate_dates": 0,
+      "ohlc_numeric": true,
+      "high_below_low_rows": 0,
+      "close_out_of_range_rows": 0,
+      "price_missing_rows": 0,
+      "negative_or_missing_volume_rows": 0,
+      "negative_or_missing_amount_rows": 0,
+      "negative_volume_rows": 0,
+      "negative_amount_rows": 0,
+      "raw_columns": "股票名称,股票代码,日期,开盘,收盘,最高,最低,成交量,成交额,振幅,涨跌幅,涨跌额,换手率",
+      "standardized_columns": "date,symbol,asset_type,name,open,high,low,close,adj_close,volume,amount,pct_chg,chg,turnover_rate,amplitude,adjustment_mode,source_api",
+      "note": ""
+    },
+    {
+      "symbol": "000858",
+      "asset_type": "stock",
+      "date_sorted": true,
+      "duplicate_dates": 0,
+      "ohlc_numeric": true,
+      "high_below_low_rows": 0,
+      "close_out_of_range_rows": 0,
+      "price_missing_rows": 0,
+      "negative_or_missing_volume_rows": 0,
+      "negative_or_missing_amount_rows": 0,
+      "negative_volume_rows": 0,
+      "negative_amount_rows": 0,
+      "raw_columns": "股票名称,股票代码,日期,开盘,收盘,最高,最低,成交量,成交额,振幅,涨跌幅,涨跌额,换手率",
+      "standardized_columns": "date,symbol,asset_type,name,open,high,low,close,adj_close,volume,amount,pct_chg,chg,turnover_rate,amplitude,adjustment_mode,source_api",
+      "note": ""
+    },
+    {
+      "symbol": "600036",
+      "asset_type": "stock",
+      "date_sorted": true,
+      "duplicate_dates": 0,
+      "ohlc_numeric": true,
+      "high_below_low_rows": 0,
+      "close_out_of_range_rows": 0,
+      "price_missing_rows": 0,
+      "negative_or_missing_volume_rows": 0,
+      "negative_or_missing_amount_rows": 0,
+      "negative_volume_rows": 0,
+      "negative_amount_rows": 0,
+      "raw_columns": "股票名称,股票代码,日期,开盘,收盘,最高,最低,成交量,成交额,振幅,涨跌幅,涨跌额,换手率",
+      "standardized_columns": "date,symbol,asset_type,name,open,high,low,close,adj_close,volume,amount,pct_chg,chg,turnover_rate,amplitude,adjustment_mode,source_api",
+      "note": ""
+    },
+    {
+      "symbol": "000333",
+      "asset_type": "stock",
+      "date_sorted": true,
+      "duplicate_dates": 0,
+      "ohlc_numeric": true,
+      "high_below_low_rows": 0,
+      "close_out_of_range_rows": 0,
+      "price_missing_rows": 0,
+      "negative_or_missing_volume_rows": 0,
+      "negative_or_missing_amount_rows": 0,
+      "negative_volume_rows": 0,
+      "negative_amount_rows": 0,
+      "raw_columns": "股票名称,股票代码,日期,开盘,收盘,最高,最低,成交量,成交额,振幅,涨跌幅,涨跌额,换手率",
+      "standardized_columns": "date,symbol,asset_type,name,open,high,low,close,adj_close,volume,amount,pct_chg,chg,turnover_rate,amplitude,adjustment_mode,source_api",
+      "note": ""
+    },
+    {
+      "symbol": "601318",
+      "asset_type": "stock",
+      "date_sorted": true,
+      "duplicate_dates": 0,
+      "ohlc_numeric": true,
+      "high_below_low_rows": 0,
+      "close_out_of_range_rows": 0,
+      "price_missing_rows": 0,
+      "negative_or_missing_volume_rows": 0,
+      "negative_or_missing_amount_rows": 0,
+      "negative_volume_rows": 0,
+      "negative_amount_rows": 0,
+      "raw_columns": "股票名称,股票代码,日期,开盘,收盘,最高,最低,成交量,成交额,振幅,涨跌幅,涨跌额,换手率",
+      "standardized_columns": "date,symbol,asset_type,name,open,high,low,close,adj_close,volume,amount,pct_chg,chg,turnover_rate,amplitude,adjustment_mode,source_api",
+      "note": ""
+    }
+  ],
+  "alignment": [
+    {
+      "symbol": "510300",
+      "asset_type": "etf",
+      "aligned_days": 1699,
+      "calendar_days": 1699,
+      "alignment_ratio": 1.0
+    },
+    {
+      "symbol": "510500",
+      "asset_type": "etf",
+      "aligned_days": 1699,
+      "calendar_days": 1699,
+      "alignment_ratio": 1.0
+    },
+    {
+      "symbol": "515180",
+      "asset_type": "etf",
+      "aligned_days": 1463,
+      "calendar_days": 1699,
+      "alignment_ratio": 0.8611
+    },
+    {
+      "symbol": "518880",
+      "asset_type": "etf",
+      "aligned_days": 1699,
+      "calendar_days": 1699,
+      "alignment_ratio": 1.0
+    },
+    {
+      "symbol": "600519",
+      "asset_type": "stock",
+      "aligned_days": 1699,
+      "calendar_days": 1699,
+      "alignment_ratio": 1.0
+    },
+    {
+      "symbol": "000858",
+      "asset_type": "stock",
+      "aligned_days": 1699,
+      "calendar_days": 1699,
+      "alignment_ratio": 1.0
+    },
+    {
+      "symbol": "600036",
+      "asset_type": "stock",
+      "aligned_days": 1699,
+      "calendar_days": 1699,
+      "alignment_ratio": 1.0
+    },
+    {
+      "symbol": "000333",
+      "asset_type": "stock",
+      "aligned_days": 1688,
+      "calendar_days": 1699,
+      "alignment_ratio": 0.9935
+    },
+    {
+      "symbol": "601318",
+      "asset_type": "stock",
+      "aligned_days": 1699,
+      "calendar_days": 1699,
+      "alignment_ratio": 1.0
+    }
+  ],
+  "coverage_gaps": [
+    {
+      "symbol": "515180",
+      "asset_type": "etf",
+      "missing_start_period": "2019-01-02 ~ 2019-12-19",
+      "current_handling": "标的在该时段不可用时，回测保留现金，直到出现可交易数据。"
+    }
+  ],
+  "adjustment_note": {
+    "mode": "forward",
+    "adj_close_definition": "adj_close 当前等于所选复权模式下的 close。",
+    "cache_isolation": "缓存按复权模式隔离保存，不同复权模式不能直接横向对比。"
+  }
+}

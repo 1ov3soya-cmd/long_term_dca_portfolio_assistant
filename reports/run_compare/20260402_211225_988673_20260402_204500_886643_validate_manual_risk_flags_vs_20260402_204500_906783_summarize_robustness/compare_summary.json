@@ -1,0 +1,72 @@
+{
+  "top_config_changes": [],
+  "top_summary_changes": [
+    {
+      "key": "baseline_assessment",
+      "value_a": null,
+      "value_b": "中性可用",
+      "change_type": "added",
+      "absolute_change": "",
+      "relative_change": "",
+      "direction": "added"
+    },
+    {
+      "key": "effective_in_range_count",
+      "value_a": 9.0,
+      "value_b": null,
+      "change_type": "removed",
+      "absolute_change": "",
+      "relative_change": "",
+      "direction": "removed"
+    },
+    {
+      "key": "etf_risk_rule_recommendation",
+      "value_a": null,
+      "value_b": "保留",
+      "change_type": "added",
+      "absolute_change": "",
+      "relative_change": "",
+      "direction": "added"
+    },
+    {
+      "key": "force_review_count",
+      "value_a": 0.0,
+      "value_b": null,
+      "change_type": "removed",
+      "absolute_change": "",
+      "relative_change": "",
+      "direction": "removed"
+    },
+    {
+      "key": "keep_first_trading_day_default",
+      "value_a": null,
+      "value_b": "保留",
+      "change_type": "added",
+      "absolute_change": "",
+      "relative_change": "",
+      "direction": "added"
+    }
+  ],
+  "manual_risk_changed": false,
+  "adj_mode_changed": false,
+  "data_mode_changed": true,
+  "comparability_assessment": {
+    "level": "low",
+    "reason": "两次运行的 command_name 不一致，不建议直接比较核心结果。",
+    "command_match": false,
+    "end_date_match": true,
+    "data_mode_match": false,
+    "provider_match": true,
+    "adj_mode_match": true,
+    "manual_risk_match": true
+  },
+  "top_attention_points": [
+    "可比性判断: low，原因：两次运行的 command_name 不一致，不建议直接比较核心结果。",
+    "最大结果差异: baseline_assessment，value_a=，value_b=中性可用",
+    "输出产物存在路径差异，请先区分路径变化与结果变化。"
+  ],
+  "missing_files": {
+    "run_a": [],
+    "run_b": []
+  }
+}

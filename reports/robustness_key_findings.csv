@@ -1,0 +1,11 @@
+﻿section,target,label,summary
+baseline,baseline_default,中性可用,baseline 在部分指标上带有方向性偏好，因此更像中性默认值，而不是严格的中位解。；本轮没有出现“轻微改动后全面明显更优”的成功参数组。；成功扰动组 6 个，失败组 1 个；失败组不会推翻已有结论，但会降低部分结论强度。
+sensitivity,etf_redline,ETF 红线,敏感度得分=2.186
+sensitivity,monthly_buy_rule,月度定投执行日,敏感度得分=0.215
+sensitivity,slippage,滑点,敏感度得分=0.005
+sensitivity,stock_redline,股票红线,敏感度得分=0.000
+recommendation,adjustment_mode,保留，但需备注限制,当前 `adj_none` 未成功完成，证据不足以支持更换默认复权模式；应继续保留 forward，并在报告中注明 none 模式证据不完整。
+recommendation,monthly_buy_rule,保留,月末买入在当前样本下收益略弱、回撤略高，说明每月第 1 个交易日更贴近 baseline 的平衡表现。
+recommendation,etf_redline,保留,ETF 红线收紧会明显增加现金拖累与 RED 触发，放宽则会降低触发但抬升回撤；15% / 25% 更符合长期定投且不轻易卖出的定位。
+recommendation,stock_redline,证据不足，暂不调整,当前测试几乎未观察到股票红线变动对结果的影响，更像样本证据不足；在股票仅占 20% 且当前仓位利用有限的前提下，暂不建议主动改动默认值。
+recommendation,baseline_default,建议保留但需备注限制,baseline 当前更像可执行的中性默认配置：ETF 红线与月初执行日有明确支撑，但复权模式与股票红线仍存在证据不完整的备注项。

@@ -1,0 +1,37 @@
+{
+  "manual_risk_flags": {
+    "notice": "此文件仅用于验收，不构成投资建议，不应直接覆盖正式生产配置。",
+    "symbols": {
+      "600519": {
+        "asset_type": "stock",
+        "effective_from": "2025-01-01",
+        "manual_pause_buy": true,
+        "manual_force_review": false,
+        "thesis_broken": false,
+        "note": "用于验收暂停新增逻辑",
+        "updated_at": "2026-04-01",
+        "updated_by": "acceptance_sample"
+      },
+      "515180": {
+        "asset_type": "etf",
+        "effective_from": "2025-06-01",
+        "manual_pause_buy": false,
+        "manual_force_review": true,
+        "thesis_broken": false,
+        "note": "用于验收强制复核逻辑，并观察与价格红线合并后的最终动作",
+        "updated_at": "2026-04-01",
+        "updated_by": "acceptance_sample"
+      },
+      "000858": {
+        "asset_type": "stock",
+        "effective_from": "2025-03-01",
+        "manual_pause_buy": false,
+        "manual_force_review": false,
+        "thesis_broken": true,
+        "note": "用于验收逻辑失效处理；故意不额外打开 manual_force_review，以验证 thesis_broken 可独立生效",
+        "updated_at": "2026-04-01",
+        "updated_by": "acceptance_sample"
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "portfolio": {
+    "monthly_budget": 10000.0,
+    "max_stock_count": 5,
+    "min_trade_lot": 100,
+    "keep_cash_if_not_tradeable": true,
+    "allow_auto_sell": false,
+    "allow_auto_replace_stock": false,
+    "sell_policy": {
+      "enabled": false,
+      "trigger_mode": "manual_review_only",
+      "reason": "第一版不自动卖出，仅在人工复核后执行"
+    }
+  },
+  "asset_allocation": {
+    "etf_total_weight": 0.8,
+    "stock_total_weight": 0.2
+  },
+  "etf_pool": [
+    {
+      "symbol": "510300",
+      "name": "沪深300ETF",
+      "target_weight": 0.3,
+      "category": "broad_index"
+    },
+    {
+      "symbol": "510500",
+      "name": "中证500ETF",
+      "target_weight": 0.2,
+      "category": "broad_index"
+    },
+    {
+      "symbol": "515180",
+      "name": "红利ETF",
+      "target_weight": 0.2,
+      "category": "dividend"
+    },
+    {
+      "symbol": "518880",
+      "name": "黄金ETF",
+      "target_weight": 0.1,
+      "category": "defensive"
+    }
+  ],
+  "stock_pool": [
+    {
+      "symbol": "600519",
+      "name": "贵州茅台",
+      "target_weight": 0.04
+    },
+    {
+      "symbol": "000858",
+      "name": "五粮液",
+      "target_weight": 0.04
+    },
+    {
+      "symbol": "600036",
+      "name": "招商银行",
+      "target_weight": 0.04
+    },
+    {
+      "symbol": "000333",
+      "name": "美的集团",
+      "target_weight": 0.04
+    },
+    {
+      "symbol": "601318",
+      "name": "中国平安",
+      "target_weight": 0.04
+    }
+  ]
+}

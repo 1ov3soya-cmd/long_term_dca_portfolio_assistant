@@ -1,0 +1,10 @@
+﻿symbol,asset_type,effective_from,active_on_end_date,effective_window_state,manual_pause_buy,manual_force_review,thesis_broken,final_pause_buy,final_force_review,final_priority_level,final_reason_codes,final_human_readable_action,expected_behavior,note,updated_at,updated_by,in_current_universe
+000333,stock,1900-01-01,True,回测起点前已生效,False,False,False,False,False,6,green,正常,当前无人工逻辑动作,,2026-04-01,user,True
+000858,stock,1900-01-01,True,回测起点前已生效,False,False,False,False,False,6,green,正常,当前无人工逻辑动作,,2026-04-01,user,True
+510300,etf,1900-01-01,True,回测起点前已生效,False,False,False,False,False,6,green,正常,当前无人工逻辑动作,,2026-04-01,user,True
+510500,etf,1900-01-01,True,回测起点前已生效,False,False,False,False,False,6,green,正常,当前无人工逻辑动作,,2026-04-01,user,True
+515180,etf,1900-01-01,True,回测起点前已生效,False,False,False,False,False,6,green,正常,当前无人工逻辑动作,,2026-04-01,user,True
+518880,etf,1900-01-01,True,回测起点前已生效,False,False,False,False,False,6,green,正常,当前无人工逻辑动作,,2026-04-01,user,True
+600036,stock,1900-01-01,True,回测起点前已生效,False,False,False,False,False,6,green,正常,当前无人工逻辑动作,,2026-04-01,user,True
+600519,stock,1900-01-01,True,回测起点前已生效,False,False,False,False,False,6,green,正常,当前无人工逻辑动作,,2026-04-01,user,True
+601318,stock,1900-01-01,True,回测起点前已生效,False,False,False,False,False,6,green,正常,当前无人工逻辑动作,,2026-04-01,user,True

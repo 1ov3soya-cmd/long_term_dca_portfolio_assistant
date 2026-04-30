@@ -1,0 +1,10 @@
+﻿symbol,name,asset_type,category,target_weight,quantity,avg_cost,last_price,market_value,current_weight,weight_gap
+510300,沪深300ETF,etf,broad_index,0.3,0,0.0,0.0,0.0,0.0,0.3
+510500,中证500ETF,etf,broad_index,0.2,0,0.0,0.0,0.0,0.0,0.2
+515180,红利ETF,etf,dividend,0.2,0,0.0,0.0,0.0,0.0,0.2
+518880,黄金ETF,etf,defensive,0.1,0,0.0,0.0,0.0,0.0,0.1
+000333,美的集团,stock,,0.04,0,0.0,0.0,0.0,0.0,0.04
+000858,五粮液,stock,,0.04,0,0.0,0.0,0.0,0.0,0.04
+600036,招商银行,stock,,0.04,0,0.0,0.0,0.0,0.0,0.04
+600519,贵州茅台,stock,,0.04,0,0.0,0.0,0.0,0.0,0.04
+601318,中国平安,stock,,0.04,0,0.0,0.0,0.0,0.0,0.04

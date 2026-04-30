@@ -1,0 +1,1290 @@
+{
+  "run_a": {
+    "run_ref": "20260402_204500_886643_validate_manual_risk_flags",
+    "run_dir": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\runs\\20260402_204500_886643_validate_manual_risk_flags"
+  },
+  "run_b": {
+    "run_ref": "20260402_204500_906783_summarize_robustness",
+    "run_dir": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\runs\\20260402_204500_906783_summarize_robustness"
+  },
+  "cli_args_diff": {
+    "added_keys": [],
+    "removed_keys": [],
+    "changed_values": [
+      {
+        "path": "all_args.command",
+        "value_a": "validate-manual-risk-flags",
+        "value_b": "summarize-robustness"
+      },
+      {
+        "path": "command",
+        "value_a": "validate-manual-risk-flags",
+        "value_b": "summarize-robustness"
+      }
+    ],
+    "same_keys": [
+      {
+        "path": "all_args.end_date",
+        "value": "2025-12-31"
+      },
+      {
+        "path": "all_args.manual_risk_file",
+        "value": null
+      },
+      {
+        "path": "end_date",
+        "value": "2025-12-31"
+      },
+      {
+        "path": "manual_risk_file",
+        "value": null
+      }
+    ]
+  },
+  "config_snapshot_diff": {
+    "added_keys": [],
+    "removed_keys": [],
+    "changed_values": [],
+    "same_keys": [
+      {
+        "path": "app.efinance.adjustment_mode",
+        "value": "forward"
+      },
+      {
+        "path": "app.efinance.diagnose_on_load",
+        "value": true
+      },
+      {
+        "path": "app.efinance.fallback_to_cache_on_error",
+        "value": true
+      },
+      {
+        "path": "app.efinance.preferred_history_api",
+        "value": "stock"
+      },
+      {
+        "path": "app.efinance.runtime_state_dir",
+        "value": "data/provider_state/efinance"
+      },
+      {
+        "path": "app.paths.cache_data_dir",
+        "value": "data/cache"
+      },
+      {
+        "path": "app.paths.data_root",
+        "value": "data"
+      },
+      {
+        "path": "app.paths.manual_data_dir",
+        "value": "data/manual"
+      },
+      {
+        "path": "app.paths.processed_data_dir",
+        "value": "data/processed"
+      },
+      {
+        "path": "app.paths.raw_data_dir",
+        "value": "data/raw"
+      },
+      {
+        "path": "app.paths.reports_dir",
+        "value": "reports"
+      },
+      {
+        "path": "app.project.currency",
+        "value": "CNY"
+      },
+      {
+        "path": "app.project.name",
+        "value": "长期定投组合助手"
+      },
+      {
+        "path": "app.project.timezone",
+        "value": "Asia/Shanghai"
+      },
+      {
+        "path": "app.project.version",
+        "value": "0.1.0"
+      },
+      {
+        "path": "app.runtime.cache_format",
+        "value": "csv"
+      },
+      {
+        "path": "app.runtime.daily_update_only",
+        "value": true
+      },
+      {
+        "path": "app.runtime.data_provider",
+        "value": "efinance"
+      },
+      {
+        "path": "app.runtime.enable_incremental_update",
+        "value": true
+      },
+      {
+        "path": "app.runtime.log_level",
+        "value": "INFO"
+      },
+      {
+        "path": "app.runtime.max_retry",
+        "value": 3
+      },
+      {
+        "path": "app.runtime.retry_sleep_seconds",
+        "value": 1.5
+      },
+      {
+        "path": "app.schedule.daily_data_update",
+        "value": true
+      },
+      {
+        "path": "app.schedule.monthly_invest_day_rule",
+        "value": "first_trading_day"
+      },
+      {
+        "path": "app.schedule.weekly_risk_check_rule",
+        "value": "last_trading_day_of_week"
+      },
+      {
+        "path": "archive.archive.archive_copy_reports",
+        "value": false
+      },
+      {
+        "path": "archive.archive.archive_enabled",
+        "value": true
+      },
+      {
+        "path": "archive.archive.archive_include_manual_risk_snapshot",
+        "value": true
+      },
+      {
+        "path": "archive.archive.archive_root_dir",
+        "value": "reports/runs"
+      },
+      {
+        "path": "archive.archive.update_latest_index",
+        "value": true
+      },
+      {
+        "path": "backtest.backtest.end_date",
+        "value": "2025-12-31"
+      },
+      {
+        "path": "backtest.backtest.engine",
+        "value": "mvp"
+      },
+      {
+        "path": "backtest.backtest.execution_rule",
+        "value": "first_trading_day"
+      },
+      {
+        "path": "backtest.backtest.initial_cash",
+        "value": 0.0
+      },
+      {
+        "path": "backtest.backtest.monthly_budget",
+        "value": 10000.0
+      },
+      {
+        "path": "backtest.backtest.qlib_enabled",
+        "value": false
+      },
+      {
+        "path": "backtest.backtest.rebalance_frequency",
+        "value": "monthly"
+      },
+      {
+        "path": "backtest.backtest.reinvest_dividend",
+        "value": false
+      },
+      {
+        "path": "backtest.backtest.risk_check_rule",
+        "value": "last_trading_day_of_week"
+      },
+      {
+        "path": "backtest.backtest.start_date",
+        "value": "2019-01-01"
+      },
+      {
+        "path": "backtest.trading_rules.keep_cash_if_unfilled",
+        "value": true
+      },
+      {
+        "path": "backtest.trading_rules.min_trade_lot",
+        "value": 100
+      },
+      {
+        "path": "backtest.trading_rules.price_limit_check_enabled",
+        "value": false
+      },
+      {
+        "path": "backtest.trading_rules.round_down_to_lot",
+        "value": true
+      },
+      {
+        "path": "backtest.trading_rules.skip_if_suspended",
+        "value": true
+      },
+      {
+        "path": "backtest.transaction_cost.etf.buy_commission",
+        "value": 0.0003
+      },
+      {
+        "path": "backtest.transaction_cost.etf.sell_commission",
+        "value": 0.0003
+      },
+      {
+        "path": "backtest.transaction_cost.etf.sell_stamp_tax",
+        "value": 0.0
+      },
+      {
+        "path": "backtest.transaction_cost.etf.slippage",
+        "value": 0.001
+      },
+      {
+        "path": "backtest.transaction_cost.stock.buy_commission",
+        "value": 0.0003
+      },
+      {
+        "path": "backtest.transaction_cost.stock.sell_commission",
+        "value": 0.0003
+      },
+      {
+        "path": "backtest.transaction_cost.stock.sell_stamp_tax",
+        "value": 0.001
+      },
+      {
+        "path": "backtest.transaction_cost.stock.slippage",
+        "value": 0.002
+      },
+      {
+        "path": "manual_risk_file_path",
+        "value": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\config\\manual_risk_flags.yaml"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.000333.asset_type",
+        "value": "stock"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.000333.effective_from",
+        "value": "1900-01-01"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.000333.manual_force_review",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.000333.manual_pause_buy",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.000333.note",
+        "value": ""
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.000333.thesis_broken",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.000333.updated_at",
+        "value": "2026-04-01"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.000333.updated_by",
+        "value": "user"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.000858.asset_type",
+        "value": "stock"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.000858.effective_from",
+        "value": "1900-01-01"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.000858.manual_force_review",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.000858.manual_pause_buy",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.000858.note",
+        "value": ""
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.000858.thesis_broken",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.000858.updated_at",
+        "value": "2026-04-01"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.000858.updated_by",
+        "value": "user"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.510300.asset_type",
+        "value": "etf"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.510300.effective_from",
+        "value": "1900-01-01"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.510300.manual_force_review",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.510300.manual_pause_buy",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.510300.note",
+        "value": ""
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.510300.thesis_broken",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.510300.updated_at",
+        "value": "2026-04-01"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.510300.updated_by",
+        "value": "user"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.510500.asset_type",
+        "value": "etf"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.510500.effective_from",
+        "value": "1900-01-01"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.510500.manual_force_review",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.510500.manual_pause_buy",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.510500.note",
+        "value": ""
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.510500.thesis_broken",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.510500.updated_at",
+        "value": "2026-04-01"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.510500.updated_by",
+        "value": "user"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.515180.asset_type",
+        "value": "etf"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.515180.effective_from",
+        "value": "1900-01-01"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.515180.manual_force_review",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.515180.manual_pause_buy",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.515180.note",
+        "value": ""
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.515180.thesis_broken",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.515180.updated_at",
+        "value": "2026-04-01"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.515180.updated_by",
+        "value": "user"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.518880.asset_type",
+        "value": "etf"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.518880.effective_from",
+        "value": "1900-01-01"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.518880.manual_force_review",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.518880.manual_pause_buy",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.518880.note",
+        "value": ""
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.518880.thesis_broken",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.518880.updated_at",
+        "value": "2026-04-01"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.518880.updated_by",
+        "value": "user"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.600036.asset_type",
+        "value": "stock"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.600036.effective_from",
+        "value": "1900-01-01"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.600036.manual_force_review",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.600036.manual_pause_buy",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.600036.note",
+        "value": ""
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.600036.thesis_broken",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.600036.updated_at",
+        "value": "2026-04-01"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.600036.updated_by",
+        "value": "user"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.600519.asset_type",
+        "value": "stock"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.600519.effective_from",
+        "value": "1900-01-01"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.600519.manual_force_review",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.600519.manual_pause_buy",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.600519.note",
+        "value": ""
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.600519.thesis_broken",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.600519.updated_at",
+        "value": "2026-04-01"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.600519.updated_by",
+        "value": "user"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.601318.asset_type",
+        "value": "stock"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.601318.effective_from",
+        "value": "1900-01-01"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.601318.manual_force_review",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.601318.manual_pause_buy",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.601318.note",
+        "value": ""
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.601318.thesis_broken",
+        "value": false
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.601318.updated_at",
+        "value": "2026-04-01"
+      },
+      {
+        "path": "manual_risk_flags_snapshot.manual_risk_flags.symbols.601318.updated_by",
+        "value": "user"
+      },
+      {
+        "path": "portfolio.asset_allocation.etf_total_weight",
+        "value": 0.8
+      },
+      {
+        "path": "portfolio.asset_allocation.stock_total_weight",
+        "value": 0.2
+      },
+      {
+        "path": "portfolio.etf_pool[0].category",
+        "value": "broad_index"
+      },
+      {
+        "path": "portfolio.etf_pool[0].name",
+        "value": "沪深300ETF"
+      },
+      {
+        "path": "portfolio.etf_pool[0].symbol",
+        "value": "510300"
+      },
+      {
+        "path": "portfolio.etf_pool[0].target_weight",
+        "value": 0.3
+      },
+      {
+        "path": "portfolio.etf_pool[1].category",
+        "value": "broad_index"
+      },
+      {
+        "path": "portfolio.etf_pool[1].name",
+        "value": "中证500ETF"
+      },
+      {
+        "path": "portfolio.etf_pool[1].symbol",
+        "value": "510500"
+      },
+      {
+        "path": "portfolio.etf_pool[1].target_weight",
+        "value": 0.2
+      },
+      {
+        "path": "portfolio.etf_pool[2].category",
+        "value": "dividend"
+      },
+      {
+        "path": "portfolio.etf_pool[2].name",
+        "value": "红利ETF"
+      },
+      {
+        "path": "portfolio.etf_pool[2].symbol",
+        "value": "515180"
+      },
+      {
+        "path": "portfolio.etf_pool[2].target_weight",
+        "value": 0.2
+      },
+      {
+        "path": "portfolio.etf_pool[3].category",
+        "value": "defensive"
+      },
+      {
+        "path": "portfolio.etf_pool[3].name",
+        "value": "黄金ETF"
+      },
+      {
+        "path": "portfolio.etf_pool[3].symbol",
+        "value": "518880"
+      },
+      {
+        "path": "portfolio.etf_pool[3].target_weight",
+        "value": 0.1
+      },
+      {
+        "path": "portfolio.portfolio.allow_auto_replace_stock",
+        "value": false
+      },
+      {
+        "path": "portfolio.portfolio.allow_auto_sell",
+        "value": false
+      },
+      {
+        "path": "portfolio.portfolio.keep_cash_if_not_tradeable",
+        "value": true
+      },
+      {
+        "path": "portfolio.portfolio.max_stock_count",
+        "value": 5
+      },
+      {
+        "path": "portfolio.portfolio.min_trade_lot",
+        "value": 100
+      },
+      {
+        "path": "portfolio.portfolio.monthly_budget",
+        "value": 10000.0
+      },
+      {
+        "path": "portfolio.portfolio.sell_policy.enabled",
+        "value": false
+      },
+      {
+        "path": "portfolio.portfolio.sell_policy.reason",
+        "value": "第一版不自动卖出，仅在人工复核后执行"
+      },
+      {
+        "path": "portfolio.portfolio.sell_policy.trigger_mode",
+        "value": "manual_review_only"
+      },
+      {
+        "path": "portfolio.stock_pool[0].name",
+        "value": "贵州茅台"
+      },
+      {
+        "path": "portfolio.stock_pool[0].symbol",
+        "value": "600519"
+      },
+      {
+        "path": "portfolio.stock_pool[0].target_weight",
+        "value": 0.04
+      },
+      {
+        "path": "portfolio.stock_pool[1].name",
+        "value": "五粮液"
+      },
+      {
+        "path": "portfolio.stock_pool[1].symbol",
+        "value": "000858"
+      },
+      {
+        "path": "portfolio.stock_pool[1].target_weight",
+        "value": 0.04
+      },
+      {
+        "path": "portfolio.stock_pool[2].name",
+        "value": "招商银行"
+      },
+      {
+        "path": "portfolio.stock_pool[2].symbol",
+        "value": "600036"
+      },
+      {
+        "path": "portfolio.stock_pool[2].target_weight",
+        "value": 0.04
+      },
+      {
+        "path": "portfolio.stock_pool[3].name",
+        "value": "美的集团"
+      },
+      {
+        "path": "portfolio.stock_pool[3].symbol",
+        "value": "000333"
+      },
+      {
+        "path": "portfolio.stock_pool[3].target_weight",
+        "value": 0.04
+      },
+      {
+        "path": "portfolio.stock_pool[4].name",
+        "value": "中国平安"
+      },
+      {
+        "path": "portfolio.stock_pool[4].symbol",
+        "value": "601318"
+      },
+      {
+        "path": "portfolio.stock_pool[4].target_weight",
+        "value": 0.04
+      },
+      {
+        "path": "risk.etf.action_on_red",
+        "value": "manual_review_required"
+      },
+      {
+        "path": "risk.etf.action_on_yellow",
+        "value": "pause_buy_and_review"
+      },
+      {
+        "path": "risk.etf.ma_weakness_enabled",
+        "value": true
+      },
+      {
+        "path": "risk.etf.red_drawdown_from_high",
+        "value": 0.25
+      },
+      {
+        "path": "risk.etf.weakness_days",
+        "value": 10
+      },
+      {
+        "path": "risk.etf.yellow_drawdown_from_high",
+        "value": 0.15
+      },
+      {
+        "path": "risk.manual_logic.actions.green",
+        "value": "正常"
+      },
+      {
+        "path": "risk.manual_logic.actions.manual_force_review",
+        "value": "暂停新增，强制人工复核"
+      },
+      {
+        "path": "risk.manual_logic.actions.manual_pause_buy",
+        "value": "暂停新增，等待人工解除"
+      },
+      {
+        "path": "risk.manual_logic.actions.price_red",
+        "value": "价格 RED，强制人工复核"
+      },
+      {
+        "path": "risk.manual_logic.actions.price_yellow",
+        "value": "价格 YELLOW，暂停新增并人工复核"
+      },
+      {
+        "path": "risk.manual_logic.actions.thesis_broken",
+        "value": "停止新增，最高优先级人工处理"
+      },
+      {
+        "path": "risk.manual_logic.manual_force_review_pause_buy",
+        "value": true
+      },
+      {
+        "path": "risk.manual_logic.priority_levels.green",
+        "value": 6
+      },
+      {
+        "path": "risk.manual_logic.priority_levels.manual_force_review",
+        "value": 2
+      },
+      {
+        "path": "risk.manual_logic.priority_levels.manual_pause_buy",
+        "value": 3
+      },
+      {
+        "path": "risk.manual_logic.priority_levels.price_red",
+        "value": 4
+      },
+      {
+        "path": "risk.manual_logic.priority_levels.price_yellow",
+        "value": 5
+      },
+      {
+        "path": "risk.manual_logic.priority_levels.thesis_broken",
+        "value": 1
+      },
+      {
+        "path": "risk.manual_logic.thesis_broken_force_review",
+        "value": true
+      },
+      {
+        "path": "risk.manual_logic.thesis_broken_pause_buy",
+        "value": true
+      },
+      {
+        "path": "risk.portfolio.action_on_red",
+        "value": "portfolio_manual_review_required"
+      },
+      {
+        "path": "risk.portfolio.red_max_drawdown",
+        "value": 0.2
+      },
+      {
+        "path": "risk.risk.moving_average_window",
+        "value": 120
+      },
+      {
+        "path": "risk.risk.reference_high_mode",
+        "value": "expanding_peak"
+      },
+      {
+        "path": "risk.risk.use_logic_redline",
+        "value": true
+      },
+      {
+        "path": "risk.stock.action_on_red",
+        "value": "manual_review_required"
+      },
+      {
+        "path": "risk.stock.action_on_yellow",
+        "value": "pause_buy_and_review"
+      },
+      {
+        "path": "risk.stock.red_drawdown_from_cost",
+        "value": 0.2
+      },
+      {
+        "path": "risk.stock.yellow_drawdown_from_cost",
+        "value": 0.12
+      },
+      {
+        "path": "robustness.robustness.baseline_name",
+        "value": "baseline"
+      },
+      {
+        "path": "robustness.robustness.classification_thresholds.robust_score_max",
+        "value": 0.25
+      },
+      {
+        "path": "robustness.robustness.classification_thresholds.sensitive_score_min",
+        "value": 0.8
+      },
+      {
+        "path": "robustness.robustness.inputs.baseline_diff_csv",
+        "value": "reports/sensitivity_baseline_diff.csv"
+      },
+      {
+        "path": "robustness.robustness.inputs.details_json",
+        "value": "reports/sensitivity_details.json"
+      },
+      {
+        "path": "robustness.robustness.inputs.summary_csv",
+        "value": "reports/sensitivity_summary.csv"
+      },
+      {
+        "path": "robustness.robustness.materiality_thresholds.annualized_return_diff",
+        "value": 0.002
+      },
+      {
+        "path": "robustness.robustness.materiality_thresholds.invested_ratio_diff",
+        "value": 0.02
+      },
+      {
+        "path": "robustness.robustness.materiality_thresholds.max_drawdown_diff",
+        "value": 0.01
+      },
+      {
+        "path": "robustness.robustness.materiality_thresholds.total_red_triggers_diff",
+        "value": 50.0
+      },
+      {
+        "path": "robustness.robustness.materiality_thresholds.total_uninvested_cash_diff",
+        "value": 10000.0
+      },
+      {
+        "path": "robustness.robustness.materiality_thresholds.unfilled_amount_diff",
+        "value": 10000.0
+      },
+      {
+        "path": "robustness.robustness.metric_weights.annualized_return_diff",
+        "value": 1.0
+      },
+      {
+        "path": "robustness.robustness.metric_weights.invested_ratio_diff",
+        "value": 0.8
+      },
+      {
+        "path": "robustness.robustness.metric_weights.max_drawdown_diff",
+        "value": 1.0
+      },
+      {
+        "path": "robustness.robustness.metric_weights.total_red_triggers_diff",
+        "value": 0.8
+      },
+      {
+        "path": "robustness.robustness.metric_weights.total_uninvested_cash_diff",
+        "value": 0.8
+      },
+      {
+        "path": "robustness.robustness.metric_weights.unfilled_amount_diff",
+        "value": 0.7
+      },
+      {
+        "path": "robustness.robustness.outputs.key_findings_csv",
+        "value": "reports/robustness_key_findings.csv"
+      },
+      {
+        "path": "robustness.robustness.outputs.recommendation_markdown",
+        "value": "reports/default_parameter_recommendation.md"
+      },
+      {
+        "path": "robustness.robustness.outputs.summary_json",
+        "value": "reports/robustness_summary.json"
+      },
+      {
+        "path": "robustness.robustness.outputs.summary_markdown",
+        "value": "reports/robustness_summary.md"
+      },
+      {
+        "path": "sensitivity.sensitivity.baseline.description",
+        "value": "默认基准参数组"
+      },
+      {
+        "path": "sensitivity.sensitivity.baseline.name",
+        "value": "baseline"
+      },
+      {
+        "path": "sensitivity.sensitivity.baseline.overrides.app.efinance.adjustment_mode",
+        "value": "forward"
+      },
+      {
+        "path": "sensitivity.sensitivity.baseline.overrides.app.schedule.monthly_invest_day_rule",
+        "value": "first_trading_day"
+      },
+      {
+        "path": "sensitivity.sensitivity.baseline.overrides.backtest.backtest.execution_rule",
+        "value": "first_trading_day"
+      },
+      {
+        "path": "sensitivity.sensitivity.baseline.overrides.risk.etf.red_drawdown_from_high",
+        "value": 0.25
+      },
+      {
+        "path": "sensitivity.sensitivity.baseline.overrides.risk.etf.yellow_drawdown_from_high",
+        "value": 0.15
+      },
+      {
+        "path": "sensitivity.sensitivity.baseline.overrides.risk.stock.red_drawdown_from_cost",
+        "value": 0.2
+      },
+      {
+        "path": "sensitivity.sensitivity.baseline.overrides.risk.stock.yellow_drawdown_from_cost",
+        "value": 0.12
+      },
+      {
+        "path": "sensitivity.sensitivity.data_mode",
+        "value": "real"
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[0].description",
+        "value": "仅切换为不复权，其余保持 baseline"
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[0].name",
+        "value": "adj_none"
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[0].overrides.app.efinance.adjustment_mode",
+        "value": "none"
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[1].description",
+        "value": "仅收紧 ETF 红线到 0.12 / 0.20"
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[1].name",
+        "value": "etf_redline_tighter"
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[1].overrides.risk.etf.red_drawdown_from_high",
+        "value": 0.2
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[1].overrides.risk.etf.yellow_drawdown_from_high",
+        "value": 0.12
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[2].description",
+        "value": "仅放宽 ETF 红线到 0.18 / 0.30"
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[2].name",
+        "value": "etf_redline_looser"
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[2].overrides.risk.etf.red_drawdown_from_high",
+        "value": 0.3
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[2].overrides.risk.etf.yellow_drawdown_from_high",
+        "value": 0.18
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[3].description",
+        "value": "仅收紧股票红线到 0.10 / 0.18"
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[3].name",
+        "value": "stock_redline_tighter"
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[3].overrides.risk.stock.red_drawdown_from_cost",
+        "value": 0.18
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[3].overrides.risk.stock.yellow_drawdown_from_cost",
+        "value": 0.1
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[4].description",
+        "value": "仅放宽股票红线到 0.15 / 0.25"
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[4].name",
+        "value": "stock_redline_looser"
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[4].overrides.risk.stock.red_drawdown_from_cost",
+        "value": 0.25
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[4].overrides.risk.stock.yellow_drawdown_from_cost",
+        "value": 0.15
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[5].description",
+        "value": "仅切换月度正式买入日为每月最后一个交易日"
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[5].name",
+        "value": "monthly_buy_last_trading_day"
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[5].overrides.app.schedule.monthly_invest_day_rule",
+        "value": "last_trading_day"
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[5].overrides.backtest.backtest.execution_rule",
+        "value": "last_trading_day"
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[6].description",
+        "value": "轻量滑点敏感性：ETF 0.15%，股票 0.30%"
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[6].name",
+        "value": "higher_slippage"
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[6].overrides.backtest.transaction_cost.etf.slippage",
+        "value": 0.0015
+      },
+      {
+        "path": "sensitivity.sensitivity.scenarios[6].overrides.backtest.transaction_cost.stock.slippage",
+        "value": 0.003
+      },
+      {
+        "path": "universe.field_mapping.amount",
+        "value": "amount"
+      },
+      {
+        "path": "universe.field_mapping.close",
+        "value": "close"
+      },
+      {
+        "path": "universe.field_mapping.date",
+        "value": "date"
+      },
+      {
+        "path": "universe.field_mapping.high",
+        "value": "high"
+      },
+      {
+        "path": "universe.field_mapping.low",
+        "value": "low"
+      },
+      {
+        "path": "universe.field_mapping.open",
+        "value": "open"
+      },
+      {
+        "path": "universe.field_mapping.symbol",
+        "value": "symbol"
+      },
+      {
+        "path": "universe.field_mapping.volume",
+        "value": "volume"
+      },
+      {
+        "path": "universe.manual_flags.holdings_file",
+        "value": "data/manual/holdings.csv"
+      },
+      {
+        "path": "universe.manual_flags.logic_risk_flag_file",
+        "value": "config/manual_risk_flags.yaml"
+      },
+      {
+        "path": "universe.manual_flags.notes_file",
+        "value": "data/manual/manual_notes.csv"
+      },
+      {
+        "path": "universe.manual_flags.thesis_flag_file",
+        "value": "data/manual/thesis_flags.csv"
+      },
+      {
+        "path": "universe.universe.benchmark_symbol",
+        "value": "510300"
+      },
+      {
+        "path": "universe.universe.end_date",
+        "value": "2026-03-31"
+      },
+      {
+        "path": "universe.universe.frequency",
+        "value": "1d"
+      },
+      {
+        "path": "universe.universe.market",
+        "value": "CN"
+      },
+      {
+        "path": "universe.universe.price_field",
+        "value": "close"
+      },
+      {
+        "path": "universe.universe.start_date",
+        "value": "2019-01-01"
+      }
+    ]
+  },
+  "artifact_diff": {
+    "added_keys": [
+      {
+        "path": "original_outputs.key_findings_csv",
+        "value_b": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\robustness_key_findings.csv"
+      },
+      {
+        "path": "original_outputs.recommendation_markdown",
+        "value_b": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\default_parameter_recommendation.md"
+      },
+      {
+        "path": "original_outputs.summary_json",
+        "value_b": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\robustness_summary.json"
+      },
+      {
+        "path": "original_outputs.summary_markdown",
+        "value_b": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\robustness_summary.md"
+      }
+    ],
+    "removed_keys": [
+      {
+        "path": "original_outputs.acceptance_artifacts.checklist_markdown",
+        "value_a": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\manual_logic_risk_acceptance_checklist.md"
+      },
+      {
+        "path": "original_outputs.acceptance_artifacts.preview_csv",
+        "value_a": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\manual\\manual_logic_risk_acceptance_preview.csv"
+      },
+      {
+        "path": "original_outputs.acceptance_artifacts.report_json",
+        "value_a": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\manual\\manual_logic_risk_acceptance_report.json"
+      },
+      {
+        "path": "original_outputs.acceptance_artifacts.report_markdown",
+        "value_a": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\manual\\manual_logic_risk_acceptance_report.md"
+      },
+      {
+        "path": "original_outputs.validation_report.csv",
+        "value_a": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\manual\\manual_risk_flags_validation.csv"
+      },
+      {
+        "path": "original_outputs.validation_report.json",
+        "value_a": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\manual\\manual_risk_flags_validation.json"
+      },
+      {
+        "path": "original_outputs.validation_report.markdown",
+        "value_a": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\manual\\manual_risk_flags_validation.md"
+      }
+    ],
+    "changed_values": [],
+    "same_keys": []
+  },
+  "notes_diff": {
+    "warnings": {
+      "same_items": [],
+      "only_a_items": [
+        "当前无关键告警。"
+      ],
+      "only_b_items": [
+        "稳健性结论基于部分敏感性测试结果，失败组数量: 1。"
+      ]
+    },
+    "limitations": {
+      "same_items": [
+        "当前无失败信息。"
+      ],
+      "only_a_items": [],
+      "only_b_items": []
+    },
+    "extra_notes": {
+      "same_items": [],
+      "only_a_items": [],
+      "only_b_items": [
+        "稳健性总结基于 sensitivity-test 既有输出生成。"
+      ]
+    }
+  },
+  "manifest_diff": {
+    "same_items": [
+      {
+        "key": "started_at",
+        "value": "2026-04-02 20:45:00"
+      },
+      {
+        "key": "end_date",
+        "value": "2025-12-31"
+      },
+      {
+        "key": "provider_name",
+        "value": "efinance"
+      },
+      {
+        "key": "adj_mode",
+        "value": "forward"
+      },
+      {
+        "key": "manual_risk_file",
+        "value": "config/manual_risk_flags.yaml"
+      },
+      {
+        "key": "errors_count",
+        "value": 0
+      }
+    ],
+    "changed_items": [
+      {
+        "key": "command_name",
+        "value_a": "validate-manual-risk-flags",
+        "value_b": "summarize-robustness"
+      },
+      {
+        "key": "status",
+        "value_a": "success",
+        "value_b": "partial"
+      },
+      {
+        "key": "finished_at",
+        "value_a": "2026-04-02 20:45:00",
+        "value_b": "2026-04-02 20:45:01"
+      },
+      {
+        "key": "duration_seconds",
+        "value_a": 0.068,
+        "value_b": 0.12
+      },
+      {
+        "key": "data_mode",
+        "value_a": "",
+        "value_b": "real"
+      },
+      {
+        "key": "warnings_count",
+        "value_a": 0,
+        "value_b": 1
+      }
+    ],
+    "only_a_items": [],
+    "only_b_items": []
+  }
+}

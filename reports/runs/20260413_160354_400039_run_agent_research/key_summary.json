@@ -1,0 +1,10 @@
+{
+  "symbol": "600519",
+  "analysis_date": "2025-12-31",
+  "final_research_label": "force_review_candidate",
+  "suggest_manual_pause_buy": false,
+  "suggest_force_review": true,
+  "suggest_thesis_broken": false,
+  "confidence": 0.79,
+  "source": "tradingagents_poc"
+}

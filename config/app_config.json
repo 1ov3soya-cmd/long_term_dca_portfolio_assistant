@@ -1,0 +1,37 @@
+{
+  "project": {
+    "name": "长期定投组合助手",
+    "version": "0.1.0",
+    "timezone": "Asia/Shanghai",
+    "currency": "CNY"
+  },
+  "runtime": {
+    "data_provider": "efinance",
+    "cache_format": "csv",
+    "log_level": "INFO",
+    "max_retry": 3,
+    "retry_sleep_seconds": 1.5,
+    "enable_incremental_update": true,
+    "daily_update_only": true
+  },
+  "efinance": {
+    "preferred_history_api": "stock",
+    "adjustment_mode": "forward",
+    "diagnose_on_load": true,
+    "runtime_state_dir": "data/provider_state/efinance",
+    "fallback_to_cache_on_error": true
+  },
+  "schedule": {
+    "monthly_invest_day_rule": "first_trading_day",
+    "weekly_risk_check_rule": "last_trading_day_of_week",
+    "daily_data_update": true
+  },
+  "paths": {
+    "data_root": "data",
+    "raw_data_dir": "data/raw",
+    "cache_data_dir": "data/cache",
+    "processed_data_dir": "data/processed",
+    "manual_data_dir": "data/manual",
+    "reports_dir": "reports"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "run_id": "20260402_204415_491299_summarize_robustness",
+  "command_name": "summarize-robustness",
+  "started_at": "2026-04-02 20:44:15",
+  "finished_at": "2026-04-02 20:44:15",
+  "duration_seconds": 0.005,
+  "status": "failed",
+  "end_date": "2025-12-31",
+  "data_mode": "",
+  "provider_name": "efinance",
+  "adj_mode": "forward",
+  "manual_risk_file": "config/manual_risk_flags.yaml",
+  "code_version_hint": "",
+  "warnings_count": 1,
+  "errors_count": 1
+}

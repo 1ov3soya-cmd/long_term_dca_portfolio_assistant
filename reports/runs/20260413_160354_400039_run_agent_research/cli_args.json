@@ -1,0 +1,22 @@
+{
+  "command": "run-agent-research",
+  "end_date": "2025-12-31",
+  "manual_risk_file": null,
+  "symbol": "600519",
+  "run_a": null,
+  "run_b": null,
+  "latest": null,
+  "suggest_run": null,
+  "brief": false,
+  "all_args": {
+    "command": "run-agent-research",
+    "end_date": "2025-12-31",
+    "manual_risk_file": null,
+    "symbol": "600519",
+    "run_a": null,
+    "run_b": null,
+    "latest": null,
+    "suggest_run": null,
+    "brief": false
+  }
+}

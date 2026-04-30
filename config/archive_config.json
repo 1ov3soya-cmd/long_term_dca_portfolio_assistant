@@ -1,0 +1,9 @@
+{
+  "archive": {
+    "archive_enabled": true,
+    "archive_root_dir": "reports/runs",
+    "archive_copy_reports": false,
+    "archive_include_manual_risk_snapshot": true,
+    "update_latest_index": true
+  }
+}

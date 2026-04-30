@@ -1,0 +1,487 @@
+{
+  "app": {
+    "project": {
+      "name": "长期定投组合助手",
+      "version": "0.1.0",
+      "timezone": "Asia/Shanghai",
+      "currency": "CNY"
+    },
+    "runtime": {
+      "data_provider": "efinance",
+      "cache_format": "csv",
+      "log_level": "INFO",
+      "max_retry": 3,
+      "retry_sleep_seconds": 1.5,
+      "enable_incremental_update": true,
+      "daily_update_only": true
+    },
+    "efinance": {
+      "preferred_history_api": "stock",
+      "adjustment_mode": "forward",
+      "diagnose_on_load": true,
+      "runtime_state_dir": "data/provider_state/efinance",
+      "fallback_to_cache_on_error": true
+    },
+    "schedule": {
+      "monthly_invest_day_rule": "first_trading_day",
+      "weekly_risk_check_rule": "last_trading_day_of_week",
+      "daily_data_update": true
+    },
+    "paths": {
+      "data_root": "data",
+      "raw_data_dir": "data/raw",
+      "cache_data_dir": "data/cache",
+      "processed_data_dir": "data/processed",
+      "manual_data_dir": "data/manual",
+      "reports_dir": "reports"
+    }
+  },
+  "portfolio": {
+    "portfolio": {
+      "monthly_budget": 10000.0,
+      "max_stock_count": 5,
+      "min_trade_lot": 100,
+      "keep_cash_if_not_tradeable": true,
+      "allow_auto_sell": false,
+      "allow_auto_replace_stock": false,
+      "sell_policy": {
+        "enabled": false,
+        "trigger_mode": "manual_review_only",
+        "reason": "第一版不自动卖出，仅在人工复核后执行"
+      }
+    },
+    "asset_allocation": {
+      "etf_total_weight": 0.8,
+      "stock_total_weight": 0.2
+    },
+    "etf_pool": [
+      {
+        "symbol": "510300",
+        "name": "沪深300ETF",
+        "target_weight": 0.3,
+        "category": "broad_index"
+      },
+      {
+        "symbol": "510500",
+        "name": "中证500ETF",
+        "target_weight": 0.2,
+        "category": "broad_index"
+      },
+      {
+        "symbol": "515180",
+        "name": "红利ETF",
+        "target_weight": 0.2,
+        "category": "dividend"
+      },
+      {
+        "symbol": "518880",
+        "name": "黄金ETF",
+        "target_weight": 0.1,
+        "category": "defensive"
+      }
+    ],
+    "stock_pool": [
+      {
+        "symbol": "600519",
+        "name": "贵州茅台",
+        "target_weight": 0.04
+      },
+      {
+        "symbol": "000858",
+        "name": "五粮液",
+        "target_weight": 0.04
+      },
+      {
+        "symbol": "600036",
+        "name": "招商银行",
+        "target_weight": 0.04
+      },
+      {
+        "symbol": "000333",
+        "name": "美的集团",
+        "target_weight": 0.04
+      },
+      {
+        "symbol": "601318",
+        "name": "中国平安",
+        "target_weight": 0.04
+      }
+    ]
+  },
+  "universe": {
+    "universe": {
+      "benchmark_symbol": "510300",
+      "market": "CN",
+      "frequency": "1d",
+      "price_field": "close",
+      "start_date": "2019-01-01",
+      "end_date": "2026-03-31"
+    },
+    "field_mapping": {
+      "date": "date",
+      "open": "open",
+      "high": "high",
+      "low": "low",
+      "close": "close",
+      "volume": "volume",
+      "amount": "amount",
+      "symbol": "symbol"
+    },
+    "manual_flags": {
+      "logic_risk_flag_file": "config/manual_risk_flags.yaml",
+      "thesis_flag_file": "data/manual/thesis_flags.csv",
+      "holdings_file": "data/manual/holdings.csv",
+      "notes_file": "data/manual/manual_notes.csv"
+    }
+  },
+  "risk": {
+    "risk": {
+      "use_logic_redline": true,
+      "moving_average_window": 120,
+      "reference_high_mode": "expanding_peak"
+    },
+    "etf": {
+      "yellow_drawdown_from_high": 0.15,
+      "red_drawdown_from_high": 0.25,
+      "ma_weakness_enabled": true,
+      "weakness_days": 10,
+      "action_on_yellow": "pause_buy_and_review",
+      "action_on_red": "manual_review_required"
+    },
+    "stock": {
+      "yellow_drawdown_from_cost": 0.12,
+      "red_drawdown_from_cost": 0.2,
+      "action_on_yellow": "pause_buy_and_review",
+      "action_on_red": "manual_review_required"
+    },
+    "portfolio": {
+      "red_max_drawdown": 0.2,
+      "action_on_red": "portfolio_manual_review_required"
+    },
+    "manual_logic": {
+      "manual_force_review_pause_buy": true,
+      "thesis_broken_pause_buy": true,
+      "thesis_broken_force_review": true,
+      "priority_levels": {
+        "thesis_broken": 1,
+        "manual_force_review": 2,
+        "manual_pause_buy": 3,
+        "price_red": 4,
+        "price_yellow": 5,
+        "green": 6
+      },
+      "actions": {
+        "thesis_broken": "停止新增，最高优先级人工处理",
+        "manual_force_review": "暂停新增，强制人工复核",
+        "manual_pause_buy": "暂停新增，等待人工解除",
+        "price_red": "价格 RED，强制人工复核",
+        "price_yellow": "价格 YELLOW，暂停新增并人工复核",
+        "green": "正常"
+      }
+    }
+  },
+  "backtest": {
+    "backtest": {
+      "engine": "mvp",
+      "qlib_enabled": false,
+      "start_date": "2019-01-01",
+      "end_date": "2025-12-31",
+      "initial_cash": 0.0,
+      "monthly_budget": 10000.0,
+      "reinvest_dividend": false,
+      "rebalance_frequency": "monthly",
+      "execution_rule": "first_trading_day",
+      "risk_check_rule": "last_trading_day_of_week"
+    },
+    "transaction_cost": {
+      "etf": {
+        "buy_commission": 0.0003,
+        "sell_commission": 0.0003,
+        "sell_stamp_tax": 0.0,
+        "slippage": 0.001
+      },
+      "stock": {
+        "buy_commission": 0.0003,
+        "sell_commission": 0.0003,
+        "sell_stamp_tax": 0.001,
+        "slippage": 0.002
+      }
+    },
+    "trading_rules": {
+      "min_trade_lot": 100,
+      "round_down_to_lot": true,
+      "skip_if_suspended": true,
+      "price_limit_check_enabled": false,
+      "keep_cash_if_unfilled": true
+    }
+  },
+  "sensitivity": {
+    "sensitivity": {
+      "data_mode": "real",
+      "baseline": {
+        "name": "baseline",
+        "description": "默认基准参数组",
+        "overrides": {
+          "app": {
+            "efinance": {
+              "adjustment_mode": "forward"
+            },
+            "schedule": {
+              "monthly_invest_day_rule": "first_trading_day"
+            }
+          },
+          "risk": {
+            "etf": {
+              "yellow_drawdown_from_high": 0.15,
+              "red_drawdown_from_high": 0.25
+            },
+            "stock": {
+              "yellow_drawdown_from_cost": 0.12,
+              "red_drawdown_from_cost": 0.2
+            }
+          },
+          "backtest": {
+            "backtest": {
+              "execution_rule": "first_trading_day"
+            }
+          }
+        }
+      },
+      "scenarios": [
+        {
+          "name": "adj_none",
+          "description": "仅切换为不复权，其余保持 baseline",
+          "overrides": {
+            "app": {
+              "efinance": {
+                "adjustment_mode": "none"
+              }
+            }
+          }
+        },
+        {
+          "name": "etf_redline_tighter",
+          "description": "仅收紧 ETF 红线到 0.12 / 0.20",
+          "overrides": {
+            "risk": {
+              "etf": {
+                "yellow_drawdown_from_high": 0.12,
+                "red_drawdown_from_high": 0.2
+              }
+            }
+          }
+        },
+        {
+          "name": "etf_redline_looser",
+          "description": "仅放宽 ETF 红线到 0.18 / 0.30",
+          "overrides": {
+            "risk": {
+              "etf": {
+                "yellow_drawdown_from_high": 0.18,
+                "red_drawdown_from_high": 0.3
+              }
+            }
+          }
+        },
+        {
+          "name": "stock_redline_tighter",
+          "description": "仅收紧股票红线到 0.10 / 0.18",
+          "overrides": {
+            "risk": {
+              "stock": {
+                "yellow_drawdown_from_cost": 0.1,
+                "red_drawdown_from_cost": 0.18
+              }
+            }
+          }
+        },
+        {
+          "name": "stock_redline_looser",
+          "description": "仅放宽股票红线到 0.15 / 0.25",
+          "overrides": {
+            "risk": {
+              "stock": {
+                "yellow_drawdown_from_cost": 0.15,
+                "red_drawdown_from_cost": 0.25
+              }
+            }
+          }
+        },
+        {
+          "name": "monthly_buy_last_trading_day",
+          "description": "仅切换月度正式买入日为每月最后一个交易日",
+          "overrides": {
+            "backtest": {
+              "backtest": {
+                "execution_rule": "last_trading_day"
+              }
+            },
+            "app": {
+              "schedule": {
+                "monthly_invest_day_rule": "last_trading_day"
+              }
+            }
+          }
+        },
+        {
+          "name": "higher_slippage",
+          "description": "轻量滑点敏感性：ETF 0.15%，股票 0.30%",
+          "overrides": {
+            "backtest": {
+              "transaction_cost": {
+                "etf": {
+                  "slippage": 0.0015
+                },
+                "stock": {
+                  "slippage": 0.003
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  },
+  "robustness": {
+    "robustness": {
+      "baseline_name": "baseline",
+      "inputs": {
+        "summary_csv": "reports/sensitivity_summary.csv",
+        "baseline_diff_csv": "reports/sensitivity_baseline_diff.csv",
+        "details_json": "reports/sensitivity_details.json"
+      },
+      "outputs": {
+        "summary_markdown": "reports/robustness_summary.md",
+        "recommendation_markdown": "reports/default_parameter_recommendation.md",
+        "summary_json": "reports/robustness_summary.json",
+        "key_findings_csv": "reports/robustness_key_findings.csv"
+      },
+      "metric_weights": {
+        "annualized_return_diff": 1.0,
+        "max_drawdown_diff": 1.0,
+        "invested_ratio_diff": 0.8,
+        "total_uninvested_cash_diff": 0.8,
+        "unfilled_amount_diff": 0.7,
+        "total_red_triggers_diff": 0.8
+      },
+      "materiality_thresholds": {
+        "annualized_return_diff": 0.002,
+        "max_drawdown_diff": 0.01,
+        "invested_ratio_diff": 0.02,
+        "total_uninvested_cash_diff": 10000.0,
+        "unfilled_amount_diff": 10000.0,
+        "total_red_triggers_diff": 50.0
+      },
+      "classification_thresholds": {
+        "robust_score_max": 0.25,
+        "sensitive_score_min": 0.8
+      }
+    }
+  },
+  "archive": {
+    "archive": {
+      "archive_enabled": true,
+      "archive_root_dir": "reports/runs",
+      "archive_copy_reports": false,
+      "archive_include_manual_risk_snapshot": true,
+      "update_latest_index": true
+    }
+  },
+  "manual_risk_file_path": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\config\\manual_risk_flags.yaml",
+  "manual_risk_flags_snapshot": {
+    "manual_risk_flags": {
+      "symbols": {
+        "510300": {
+          "asset_type": "etf",
+          "effective_from": "1900-01-01",
+          "manual_pause_buy": false,
+          "manual_force_review": false,
+          "thesis_broken": false,
+          "note": "",
+          "updated_at": "2026-04-01",
+          "updated_by": "user"
+        },
+        "510500": {
+          "asset_type": "etf",
+          "effective_from": "1900-01-01",
+          "manual_pause_buy": false,
+          "manual_force_review": false,
+          "thesis_broken": false,
+          "note": "",
+          "updated_at": "2026-04-01",
+          "updated_by": "user"
+        },
+        "515180": {
+          "asset_type": "etf",
+          "effective_from": "1900-01-01",
+          "manual_pause_buy": false,
+          "manual_force_review": false,
+          "thesis_broken": false,
+          "note": "",
+          "updated_at": "2026-04-01",
+          "updated_by": "user"
+        },
+        "518880": {
+          "asset_type": "etf",
+          "effective_from": "1900-01-01",
+          "manual_pause_buy": false,
+          "manual_force_review": false,
+          "thesis_broken": false,
+          "note": "",
+          "updated_at": "2026-04-01",
+          "updated_by": "user"
+        },
+        "600519": {
+          "asset_type": "stock",
+          "effective_from": "1900-01-01",
+          "manual_pause_buy": false,
+          "manual_force_review": false,
+          "thesis_broken": false,
+          "note": "",
+          "updated_at": "2026-04-01",
+          "updated_by": "user"
+        },
+        "000858": {
+          "asset_type": "stock",
+          "effective_from": "1900-01-01",
+          "manual_pause_buy": false,
+          "manual_force_review": false,
+          "thesis_broken": false,
+          "note": "",
+          "updated_at": "2026-04-01",
+          "updated_by": "user"
+        },
+        "600036": {
+          "asset_type": "stock",
+          "effective_from": "1900-01-01",
+          "manual_pause_buy": false,
+          "manual_force_review": false,
+          "thesis_broken": false,
+          "note": "",
+          "updated_at": "2026-04-01",
+          "updated_by": "user"
+        },
+        "000333": {
+          "asset_type": "stock",
+          "effective_from": "1900-01-01",
+          "manual_pause_buy": false,
+          "manual_force_review": false,
+          "thesis_broken": false,
+          "note": "",
+          "updated_at": "2026-04-01",
+          "updated_by": "user"
+        },
+        "601318": {
+          "asset_type": "stock",
+          "effective_from": "1900-01-01",
+          "manual_pause_buy": false,
+          "manual_force_review": false,
+          "thesis_broken": false,
+          "note": "",
+          "updated_at": "2026-04-01",
+          "updated_by": "user"
+        }
+      }
+    }
+  }
+}

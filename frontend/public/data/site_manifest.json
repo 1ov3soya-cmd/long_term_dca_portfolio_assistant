@@ -1,0 +1,19 @@
+{
+  "generated_at": "2026-04-30 10:28:28",
+  "project_name": "long_term_dca_portfolio_assistant",
+  "data_mode": "efinance",
+  "end_date": "2025-12-31",
+  "snapshot_version": "1.0",
+  "available_snapshots": {
+    "site_manifest": "site_manifest.json",
+    "archive_compat": "archive_compat_snapshot.json",
+    "dashboard": "dashboard_snapshot.json",
+    "monthly_research": "monthly_research_snapshot.json",
+    "manual_risk": "manual_risk_snapshot.json",
+    "research_vs_manual_risk": "research_vs_manual_risk_snapshot.json",
+    "run_compare": "run_compare_snapshot.json",
+    "research": "research_snapshot.json"
+  },
+  "warnings": [],
+  "static_site_note": "该快照仅用于静态只读展示，不会自动下单、自动卖出或修改 manual risk flags。"
+}

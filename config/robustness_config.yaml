@@ -1,0 +1,28 @@
+robustness:
+  baseline_name: "baseline"
+  inputs:
+    summary_csv: "reports/sensitivity_summary.csv"
+    baseline_diff_csv: "reports/sensitivity_baseline_diff.csv"
+    details_json: "reports/sensitivity_details.json"
+  outputs:
+    summary_markdown: "reports/robustness_summary.md"
+    recommendation_markdown: "reports/default_parameter_recommendation.md"
+    summary_json: "reports/robustness_summary.json"
+    key_findings_csv: "reports/robustness_key_findings.csv"
+  metric_weights:
+    annualized_return_diff: 1.0
+    max_drawdown_diff: 1.0
+    invested_ratio_diff: 0.8
+    total_uninvested_cash_diff: 0.8
+    unfilled_amount_diff: 0.7
+    total_red_triggers_diff: 0.8
+  materiality_thresholds:
+    annualized_return_diff: 0.002
+    max_drawdown_diff: 0.01
+    invested_ratio_diff: 0.02
+    total_uninvested_cash_diff: 10000.0
+    unfilled_amount_diff: 10000.0
+    total_red_triggers_diff: 50.0
+  classification_thresholds:
+    robust_score_max: 0.25
+    sensitive_score_min: 0.80

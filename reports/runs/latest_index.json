@@ -1,0 +1,38 @@
+{
+  "summarize-robustness": {
+    "run_id": "20260402_211232_442927_summarize_robustness",
+    "run_dir": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\runs\\20260402_211232_442927_summarize_robustness",
+    "status": "success",
+    "finished_at": "2026-04-02 21:12:32"
+  },
+  "validate-manual-risk-flags": {
+    "run_id": "20260402_204500_886643_validate_manual_risk_flags",
+    "run_dir": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\runs\\20260402_204500_886643_validate_manual_risk_flags",
+    "status": "success",
+    "finished_at": "2026-04-02 20:45:00"
+  },
+  "compare-runs": {
+    "run_id": "20260402_211225_985735_compare_runs",
+    "run_dir": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\runs\\20260402_211225_985735_compare_runs",
+    "status": "success",
+    "finished_at": "2026-04-02 21:12:26"
+  },
+  "run-agent-research": {
+    "run_id": "20260413_160354_413947_run_agent_research",
+    "run_dir": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\runs\\20260413_160354_413947_run_agent_research",
+    "status": "success",
+    "finished_at": "2026-04-13 16:03:54"
+  },
+  "run-monthly-research": {
+    "run_id": "20260413_160354_428270_run_monthly_research",
+    "run_dir": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\runs\\20260413_160354_428270_run_monthly_research",
+    "status": "success",
+    "finished_at": "2026-04-13 16:03:54"
+  },
+  "build-frontend-snapshot": {
+    "run_id": "20260430_102828_930961_build_frontend_snapshot",
+    "run_dir": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\runs\\20260430_102828_930961_build_frontend_snapshot",
+    "status": "success",
+    "finished_at": "2026-04-30 10:28:29"
+  }
+}

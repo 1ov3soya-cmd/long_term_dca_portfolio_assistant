@@ -1,0 +1,10 @@
+﻿symbol,asset_type,status,reasons,pause_buy,manual_review,metric_value
+510300,etf,RED,相对参考高点回撤 36.95%，超过 RED 阈值,True,True,0.3694572896351096
+510500,etf,RED,相对参考高点回撤 31.24%，超过 RED 阈值,True,True,0.3123724956462043
+515180,etf,GREEN,ETF 风险状态正常,False,False,0.031233921170797596
+518880,etf,RED,相对参考高点回撤 35.77%，超过 RED 阈值,True,True,0.3576982068789255
+600519,stock,GREEN,尚无持仓成本，允许按计划定投,False,False,
+000858,stock,GREEN,尚无持仓成本，允许按计划定投,False,False,
+600036,stock,GREEN,尚无持仓成本，允许按计划定投,False,False,
+000333,stock,GREEN,尚无持仓成本，允许按计划定投,False,False,
+601318,stock,GREEN,尚无持仓成本，允许按计划定投,False,False,

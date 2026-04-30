@@ -1,0 +1,127 @@
+{
+  "sensitivity": {
+    "data_mode": "real",
+    "baseline": {
+      "name": "baseline",
+      "description": "默认基准参数组",
+      "overrides": {
+        "app": {
+          "efinance": {
+            "adjustment_mode": "forward"
+          },
+          "schedule": {
+            "monthly_invest_day_rule": "first_trading_day"
+          }
+        },
+        "risk": {
+          "etf": {
+            "yellow_drawdown_from_high": 0.15,
+            "red_drawdown_from_high": 0.25
+          },
+          "stock": {
+            "yellow_drawdown_from_cost": 0.12,
+            "red_drawdown_from_cost": 0.2
+          }
+        },
+        "backtest": {
+          "backtest": {
+            "execution_rule": "first_trading_day"
+          }
+        }
+      }
+    },
+    "scenarios": [
+      {
+        "name": "adj_none",
+        "description": "仅切换为不复权，其余保持 baseline",
+        "overrides": {
+          "app": {
+            "efinance": {
+              "adjustment_mode": "none"
+            }
+          }
+        }
+      },
+      {
+        "name": "etf_redline_tighter",
+        "description": "仅收紧 ETF 红线到 0.12 / 0.20",
+        "overrides": {
+          "risk": {
+            "etf": {
+              "yellow_drawdown_from_high": 0.12,
+              "red_drawdown_from_high": 0.2
+            }
+          }
+        }
+      },
+      {
+        "name": "etf_redline_looser",
+        "description": "仅放宽 ETF 红线到 0.18 / 0.30",
+        "overrides": {
+          "risk": {
+            "etf": {
+              "yellow_drawdown_from_high": 0.18,
+              "red_drawdown_from_high": 0.3
+            }
+          }
+        }
+      },
+      {
+        "name": "stock_redline_tighter",
+        "description": "仅收紧股票红线到 0.10 / 0.18",
+        "overrides": {
+          "risk": {
+            "stock": {
+              "yellow_drawdown_from_cost": 0.1,
+              "red_drawdown_from_cost": 0.18
+            }
+          }
+        }
+      },
+      {
+        "name": "stock_redline_looser",
+        "description": "仅放宽股票红线到 0.15 / 0.25",
+        "overrides": {
+          "risk": {
+            "stock": {
+              "yellow_drawdown_from_cost": 0.15,
+              "red_drawdown_from_cost": 0.25
+            }
+          }
+        }
+      },
+      {
+        "name": "monthly_buy_last_trading_day",
+        "description": "仅切换月度正式买入日为每月最后一个交易日",
+        "overrides": {
+          "backtest": {
+            "backtest": {
+              "execution_rule": "last_trading_day"
+            }
+          },
+          "app": {
+            "schedule": {
+              "monthly_invest_day_rule": "last_trading_day"
+            }
+          }
+        }
+      },
+      {
+        "name": "higher_slippage",
+        "description": "轻量滑点敏感性：ETF 0.15%，股票 0.30%",
+        "overrides": {
+          "backtest": {
+            "transaction_cost": {
+              "etf": {
+                "slippage": 0.0015
+              },
+              "stock": {
+                "slippage": 0.003
+              }
+            }
+          }
+        }
+      }
+    ]
+  }
+}

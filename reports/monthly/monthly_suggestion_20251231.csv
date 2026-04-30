@@ -1,0 +1,10 @@
+﻿symbol,asset_type,target_weight,current_weight,recommended_amount,status,pause_buy,manual_review,reasons,manual_pause_buy,manual_force_review,thesis_broken,final_priority_level,final_reason_codes,final_human_readable_action,logic_note
+510300,etf,0.3,0.0,4000.0,GREEN,False,False,ETF 风险状态正常,False,False,False,6,green,正常,
+510500,etf,0.2,0.0,2666.666666666667,GREEN,False,False,ETF 风险状态正常,False,False,False,6,green,正常,
+515180,etf,0.2,0.0,0.0,RED,True,True,人工标记 manual_force_review=true；相对参考高点回撤 4.72%，进入 YELLOW 区域；跌破长期均线且持续弱势,False,True,False,2,"manual_force_review,price_yellow",暂停新增，强制人工复核,用于验收强制复核逻辑，并观察与价格红线合并后的最终动作
+518880,etf,0.1,0.0,1333.3333333333335,GREEN,False,False,ETF 风险状态正常,False,False,False,6,green,正常,
+600519,stock,0.04,0.0,0.0,YELLOW,True,False,人工标记 manual_pause_buy=true；尚无持仓成本，允许按计划定投,True,False,False,3,manual_pause_buy,暂停新增，等待人工解除,用于验收暂停新增逻辑
+000858,stock,0.04,0.0,0.0,RED,True,True,人工标记 thesis_broken=true；尚无持仓成本，允许按计划定投,False,False,True,1,thesis_broken,停止新增，最高优先级人工处理,用于验收逻辑失效处理；故意不额外打开 manual_force_review，以验证 thesis_broken 可独立生效
+600036,stock,0.04,0.0,666.6666666666667,GREEN,False,False,尚无持仓成本，允许按计划定投,False,False,False,6,green,正常,
+000333,stock,0.04,0.0,666.6666666666667,GREEN,False,False,尚无持仓成本，允许按计划定投,False,False,False,6,green,正常,
+601318,stock,0.04,0.0,666.6666666666667,GREEN,False,False,尚无持仓成本，允许按计划定投,False,False,False,6,green,正常,

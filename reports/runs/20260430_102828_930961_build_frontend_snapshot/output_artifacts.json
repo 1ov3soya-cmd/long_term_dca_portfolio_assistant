@@ -1,0 +1,15 @@
+{
+  "original_outputs": {
+    "frontend_snapshot": {
+      "archive_compat": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\frontend\\public\\data\\archive_compat_snapshot.json",
+      "dashboard": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\frontend\\public\\data\\dashboard_snapshot.json",
+      "monthly_research": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\frontend\\public\\data\\monthly_research_snapshot.json",
+      "manual_risk": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\frontend\\public\\data\\manual_risk_snapshot.json",
+      "research_vs_manual_risk": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\frontend\\public\\data\\research_vs_manual_risk_snapshot.json",
+      "run_compare": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\frontend\\public\\data\\run_compare_snapshot.json",
+      "research": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\frontend\\public\\data\\research_snapshot.json",
+      "site_manifest": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\frontend\\public\\data\\site_manifest.json"
+    }
+  },
+  "copied_outputs": {}
+}

@@ -1,0 +1,10 @@
+﻿symbol,asset_type,provider,source_api,adjustment_mode,cache_variant,rows,start_date,end_date,sorted_ok,duplicate_dates,missing_required_rows,raw_columns,standardized_columns,fallback_used,cache_hit,latest_update,note
+510300,etf,demo,synthetic_generator,demo,demo,1369,2019-01-01,2024-03-29,True,0,0,,"date,symbol,asset_type,open,high,low,close,volume,amount",False,False,2026-03-31 19:34:50,synthetic_data
+510500,etf,demo,synthetic_generator,demo,demo,1369,2019-01-01,2024-03-29,True,0,0,,"date,symbol,asset_type,open,high,low,close,volume,amount",False,False,2026-03-31 19:34:50,synthetic_data
+515180,etf,demo,synthetic_generator,demo,demo,1369,2019-01-01,2024-03-29,True,0,0,,"date,symbol,asset_type,open,high,low,close,volume,amount",False,False,2026-03-31 19:34:50,synthetic_data
+518880,etf,demo,synthetic_generator,demo,demo,1369,2019-01-01,2024-03-29,True,0,0,,"date,symbol,asset_type,open,high,low,close,volume,amount",False,False,2026-03-31 19:34:50,synthetic_data
+600519,stock,demo,synthetic_generator,demo,demo,1369,2019-01-01,2024-03-29,True,0,0,,"date,symbol,asset_type,open,high,low,close,volume,amount",False,False,2026-03-31 19:34:50,synthetic_data
+000858,stock,demo,synthetic_generator,demo,demo,1369,2019-01-01,2024-03-29,True,0,0,,"date,symbol,asset_type,open,high,low,close,volume,amount",False,False,2026-03-31 19:34:50,synthetic_data
+600036,stock,demo,synthetic_generator,demo,demo,1369,2019-01-01,2024-03-29,True,0,0,,"date,symbol,asset_type,open,high,low,close,volume,amount",False,False,2026-03-31 19:34:50,synthetic_data
+000333,stock,demo,synthetic_generator,demo,demo,1369,2019-01-01,2024-03-29,True,0,0,,"date,symbol,asset_type,open,high,low,close,volume,amount",False,False,2026-03-31 19:34:50,synthetic_data
+601318,stock,demo,synthetic_generator,demo,demo,1369,2019-01-01,2024-03-29,True,0,0,,"date,symbol,asset_type,open,high,low,close,volume,amount",False,False,2026-03-31 19:34:50,synthetic_data

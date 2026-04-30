@@ -1,0 +1,28 @@
+{
+  "updated_at": "2026-04-13 16:03:54",
+  "latest": {
+    "batch_id": "20260413_160354_428270_run_monthly_research",
+    "source_suggest_run": "",
+    "source_type": "shared_monthly_report",
+    "summary_relative_path": "reports/agent_research/monthly/20260413_160354_428270_run_monthly_research/monthly_research_summary.json",
+    "items_relative_path": "reports/agent_research/monthly/20260413_160354_428270_run_monthly_research/debate_items.json",
+    "report_relative_path": "reports/agent_research/monthly/20260413_160354_428270_run_monthly_research/monthly_research_report.md",
+    "manifest_relative_path": "reports/agent_research/monthly/20260413_160354_428270_run_monthly_research/batch_manifest.json",
+    "summary": {
+      "batch_id": "20260413_160354_428270_run_monthly_research",
+      "source_suggest_run": "",
+      "generated_at": "2026-04-13 16:03:54",
+      "total_targets": 9,
+      "processed_targets": 9,
+      "pause_candidate_count": 2,
+      "force_review_candidate_count": 2,
+      "thesis_broken_candidate_count": 1,
+      "average_confidence": 0.6744,
+      "top_attention_symbols": [
+        "000858",
+        "600036",
+        "600519"
+      ]
+    }
+  }
+}

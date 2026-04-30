@@ -1,0 +1,83 @@
+manual_risk_flags:
+  symbols:
+    "510300":
+      asset_type: "etf"
+      effective_from: "1900-01-01"
+      manual_pause_buy: false
+      manual_force_review: false
+      thesis_broken: false
+      note: ""
+      updated_at: "2026-04-01"
+      updated_by: "user"
+    "510500":
+      asset_type: "etf"
+      effective_from: "1900-01-01"
+      manual_pause_buy: false
+      manual_force_review: false
+      thesis_broken: false
+      note: ""
+      updated_at: "2026-04-01"
+      updated_by: "user"
+    "515180":
+      asset_type: "etf"
+      effective_from: "1900-01-01"
+      manual_pause_buy: false
+      manual_force_review: false
+      thesis_broken: false
+      note: ""
+      updated_at: "2026-04-01"
+      updated_by: "user"
+    "518880":
+      asset_type: "etf"
+      effective_from: "1900-01-01"
+      manual_pause_buy: false
+      manual_force_review: false
+      thesis_broken: false
+      note: ""
+      updated_at: "2026-04-01"
+      updated_by: "user"
+    "600519":
+      asset_type: "stock"
+      effective_from: "1900-01-01"
+      manual_pause_buy: false
+      manual_force_review: false
+      thesis_broken: false
+      note: ""
+      updated_at: "2026-04-01"
+      updated_by: "user"
+    "000858":
+      asset_type: "stock"
+      effective_from: "1900-01-01"
+      manual_pause_buy: false
+      manual_force_review: false
+      thesis_broken: false
+      note: ""
+      updated_at: "2026-04-01"
+      updated_by: "user"
+    "600036":
+      asset_type: "stock"
+      effective_from: "1900-01-01"
+      manual_pause_buy: false
+      manual_force_review: false
+      thesis_broken: false
+      note: ""
+      updated_at: "2026-04-01"
+      updated_by: "user"
+    "000333":
+      asset_type: "stock"
+      effective_from: "1900-01-01"
+      manual_pause_buy: false
+      manual_force_review: false
+      thesis_broken: false
+      note: ""
+      updated_at: "2026-04-01"
+      updated_by: "user"
+    "601318":
+      asset_type: "stock"
+      effective_from: "1900-01-01"
+      manual_pause_buy: false
+      manual_force_review: false
+      thesis_broken: false
+      note: ""
+      updated_at: "2026-04-01"
+      updated_by: "user"

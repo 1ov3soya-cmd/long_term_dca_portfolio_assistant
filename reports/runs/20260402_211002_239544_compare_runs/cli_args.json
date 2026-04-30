@@ -1,0 +1,18 @@
+{
+  "command": "compare-runs",
+  "end_date": null,
+  "manual_risk_file": null,
+  "run_a": "20260402_204500_886643_validate_manual_risk_flags",
+  "run_b": "20260402_204500_906783_summarize_robustness",
+  "latest": null,
+  "brief": true,
+  "all_args": {
+    "command": "compare-runs",
+    "end_date": null,
+    "manual_risk_file": null,
+    "run_a": "20260402_204500_886643_validate_manual_risk_flags",
+    "run_b": "20260402_204500_906783_summarize_robustness",
+    "latest": null,
+    "brief": true
+  }
+}

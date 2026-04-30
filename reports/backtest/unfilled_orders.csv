@@ -1,0 +1,614 @@
+﻿date,symbol,asset_type,recommended_amount,status,final_human_readable_action,final_reason_codes,logic_note,reason
+2019-01-02,515180,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2019-01-02,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-01-02,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-01-02,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-01-02,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-01-02,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-02-01,515180,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2019-02-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-02-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-02-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-02-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-02-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-03-01,515180,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2019-03-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-03-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-03-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-03-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-03-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-04-01,510300,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2019-04-01,515180,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2019-04-01,518880,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2019-04-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-04-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-04-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-04-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-04-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-05-06,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2019-05-06,515180,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2019-05-06,518880,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2019-05-06,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-05-06,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-05-06,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-05-06,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-05-06,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-06-03,510300,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2019-06-03,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2019-06-03,515180,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2019-06-03,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-06-03,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-06-03,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-06-03,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-06-03,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-07-01,510300,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2019-07-01,515180,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2019-07-01,518880,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2019-07-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-07-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-07-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-07-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-07-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-08-01,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2019-08-01,515180,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2019-08-01,518880,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2019-08-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-08-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-08-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-08-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-08-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-09-02,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2019-09-02,515180,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2019-09-02,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-09-02,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-09-02,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-09-02,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-09-02,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-10-08,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2019-10-08,515180,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2019-10-08,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-10-08,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-10-08,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-10-08,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-10-08,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-11-01,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2019-11-01,515180,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2019-11-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-11-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-11-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-11-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-11-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-12-02,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2019-12-02,515180,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2019-12-02,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-12-02,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-12-02,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-12-02,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2019-12-02,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-01-02,510300,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2020-01-02,518880,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2020-01-02,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-01-02,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-01-02,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-01-02,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-01-02,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-02-03,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2020-02-03,515180,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2020-02-03,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-02-03,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-02-03,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-02-03,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-02-03,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-03-02,510300,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2020-03-02,518880,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2020-03-02,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-03-02,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-03-02,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-03-02,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-03-02,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-04-01,510300,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2020-04-01,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2020-04-01,515180,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2020-04-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-04-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-04-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-04-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-04-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-05-06,510300,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2020-05-06,515180,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2020-05-06,518880,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2020-05-06,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-05-06,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-05-06,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-05-06,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-05-06,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-06-01,510300,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2020-06-01,515180,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2020-06-01,518880,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2020-06-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-06-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-06-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-06-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-06-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-07-01,510300,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2020-07-01,510500,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2020-07-01,518880,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2020-07-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-07-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-07-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-07-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-07-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-08-03,510300,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2020-08-03,510500,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2020-08-03,518880,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2020-08-03,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-08-03,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-08-03,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-08-03,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-08-03,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-09-01,510300,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2020-09-01,510500,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2020-09-01,518880,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2020-09-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-09-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-09-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-09-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-09-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-10-09,518880,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2020-10-09,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-10-09,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-10-09,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-10-09,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-10-09,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-11-02,518880,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2020-11-02,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-11-02,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-11-02,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-11-02,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-11-02,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-12-01,518880,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2020-12-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-12-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-12-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-12-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2020-12-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-01-04,518880,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2021-01-04,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-01-04,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-01-04,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-01-04,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-01-04,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-02-01,510300,etf,177.2099971248186,GREEN,正常,green,,below_min_trade_lot
+2021-02-01,518880,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2021-02-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-02-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-02-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-02-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-02-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-03-01,515180,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2021-03-01,518880,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2021-03-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-03-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-03-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-03-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-03-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-04-01,510300,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2021-04-01,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2021-04-01,518880,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2021-04-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-04-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-04-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-04-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-04-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-05-06,515180,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2021-05-06,518880,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2021-05-06,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-05-06,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-05-06,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-05-06,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-05-06,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-06-01,515180,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2021-06-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-06-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-06-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-06-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-06-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-07-01,515180,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2021-07-01,518880,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2021-07-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-07-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-07-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-07-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-07-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-08-02,510300,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2021-08-02,515180,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2021-08-02,518880,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2021-08-02,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-08-02,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-08-02,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-08-02,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-08-02,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-09-01,510300,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2021-09-01,518880,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2021-09-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-09-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-09-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-09-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-09-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-10-08,510300,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2021-10-08,518880,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2021-10-08,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-10-08,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-10-08,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-10-08,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-10-08,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-11-01,510300,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2021-11-01,515180,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2021-11-01,518880,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2021-11-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-11-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-11-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-11-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-11-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-12-01,510300,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2021-12-01,518880,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2021-12-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-12-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-12-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-12-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2021-12-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-01-04,510300,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2022-01-04,518880,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2022-01-04,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-01-04,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-01-04,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-01-04,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-01-04,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-02-07,510300,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2022-02-07,518880,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2022-02-07,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-02-07,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-02-07,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-02-07,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-02-07,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-03-01,510300,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2022-03-01,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2022-03-01,515180,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2022-03-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-03-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-03-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-03-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-03-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-04-01,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2022-04-01,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2022-04-01,515180,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2022-04-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-04-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-04-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-04-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-04-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-05-05,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2022-05-05,510500,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2022-05-05,515180,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2022-05-05,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-05-05,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-05-05,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-05-05,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-05-05,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-06-01,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2022-06-01,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2022-06-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-06-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-06-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-06-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-06-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-07-01,510300,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2022-07-01,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2022-07-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-07-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-07-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-07-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-07-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-08-01,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2022-08-01,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2022-08-01,518880,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2022-08-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-08-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-08-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-08-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-08-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-09-01,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2022-09-01,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2022-09-01,518880,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2022-09-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-09-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-09-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-09-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-09-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-10-10,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2022-10-10,510500,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2022-10-10,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-10-10,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-10-10,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-10-10,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-10-10,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-11-01,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2022-11-01,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2022-11-01,515180,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2022-11-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-11-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-11-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-11-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-11-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-12-01,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2022-12-01,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2022-12-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-12-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-12-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-12-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2022-12-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-01-03,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2023-01-03,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2023-01-03,515180,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2023-01-03,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-01-03,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-01-03,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-01-03,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-01-03,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-02-01,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2023-02-01,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2023-02-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-02-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-02-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-02-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-02-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-03-01,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2023-03-01,515180,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2023-03-01,518880,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2023-03-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-03-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-03-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-03-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-03-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-04-03,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2023-04-03,515180,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2023-04-03,518880,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2023-04-03,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-04-03,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-04-03,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-04-03,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-04-03,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-05-04,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2023-05-04,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2023-05-04,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-05-04,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-05-04,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-05-04,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-05-04,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-06-01,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2023-06-01,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2023-06-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-06-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-06-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-06-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-06-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-07-03,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2023-07-03,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2023-07-03,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-07-03,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-07-03,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-07-03,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-07-03,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-08-01,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2023-08-01,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2023-08-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-08-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-08-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-08-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-08-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-09-01,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2023-09-01,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2023-09-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-09-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-09-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-09-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-09-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-10-09,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2023-10-09,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2023-10-09,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-10-09,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-10-09,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-10-09,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-10-09,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-11-01,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2023-11-01,510500,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2023-11-01,515180,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2023-11-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-11-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-11-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-11-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-11-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-12-01,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2023-12-01,510500,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2023-12-01,515180,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2023-12-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-12-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-12-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-12-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2023-12-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-01-02,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2024-01-02,510500,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2024-01-02,515180,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2024-01-02,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-01-02,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-01-02,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-01-02,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-01-02,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-02-01,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2024-02-01,510500,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2024-02-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-02-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-02-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-02-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-02-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-03-01,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2024-03-01,510500,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2024-03-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-03-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-03-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-03-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-03-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-04-01,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2024-04-01,510500,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2024-04-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-04-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-04-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-04-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-04-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-05-06,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2024-05-06,510500,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2024-05-06,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-05-06,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-05-06,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-05-06,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-05-06,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-06-03,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2024-06-03,510500,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2024-06-03,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-06-03,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-06-03,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-06-03,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-06-03,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-07-01,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2024-07-01,510500,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2024-07-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-07-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-07-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-07-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-07-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-08-01,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2024-08-01,510500,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2024-08-01,515180,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2024-08-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-08-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-08-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-08-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-08-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-09-02,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2024-09-02,510500,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2024-09-02,515180,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2024-09-02,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-09-02,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-09-02,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-09-02,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-09-02,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-10-08,510300,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2024-10-08,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2024-10-08,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-10-08,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-10-08,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-10-08,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-10-08,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-11-01,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2024-11-01,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2024-11-01,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-11-01,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-11-01,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-11-01,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-11-01,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-12-02,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2024-12-02,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2024-12-02,600519,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-12-02,000858,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-12-02,600036,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-12-02,000333,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2024-12-02,601318,stock,400.0,GREEN,正常,green,,below_min_trade_lot
+2025-01-02,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2025-01-02,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2025-01-02,600519,stock,0.0,YELLOW,暂停新增，等待人工解除,manual_pause_buy,用于验收暂停新增逻辑,recommended_amount_zero
+2025-01-02,000858,stock,500.0,GREEN,正常,green,,below_min_trade_lot
+2025-01-02,600036,stock,500.0,GREEN,正常,green,,below_min_trade_lot
+2025-01-02,000333,stock,500.0,GREEN,正常,green,,below_min_trade_lot
+2025-01-02,601318,stock,500.0,GREEN,正常,green,,below_min_trade_lot
+2025-02-05,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2025-02-05,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2025-02-05,600519,stock,0.0,YELLOW,暂停新增，等待人工解除,manual_pause_buy,用于验收暂停新增逻辑,recommended_amount_zero
+2025-02-05,000858,stock,500.0,GREEN,正常,green,,below_min_trade_lot
+2025-02-05,600036,stock,500.0,GREEN,正常,green,,below_min_trade_lot
+2025-02-05,000333,stock,500.0,GREEN,正常,green,,below_min_trade_lot
+2025-02-05,601318,stock,500.0,GREEN,正常,green,,below_min_trade_lot
+2025-03-03,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2025-03-03,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2025-03-03,600519,stock,0.0,YELLOW,暂停新增，等待人工解除,manual_pause_buy,用于验收暂停新增逻辑,recommended_amount_zero
+2025-03-03,000858,stock,0.0,RED,停止新增，最高优先级人工处理,thesis_broken,用于验收逻辑失效处理；故意不额外打开 manual_force_review，以验证 thesis_broken 可独立生效,recommended_amount_zero
+2025-03-03,600036,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-03-03,000333,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-03-03,601318,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-04-01,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2025-04-01,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2025-04-01,600519,stock,0.0,YELLOW,暂停新增，等待人工解除,manual_pause_buy,用于验收暂停新增逻辑,recommended_amount_zero
+2025-04-01,000858,stock,0.0,RED,停止新增，最高优先级人工处理,thesis_broken,用于验收逻辑失效处理；故意不额外打开 manual_force_review，以验证 thesis_broken 可独立生效,recommended_amount_zero
+2025-04-01,600036,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-04-01,000333,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-04-01,601318,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-05-06,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2025-05-06,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2025-05-06,600519,stock,0.0,YELLOW,暂停新增，等待人工解除,manual_pause_buy,用于验收暂停新增逻辑,recommended_amount_zero
+2025-05-06,000858,stock,0.0,RED,停止新增，最高优先级人工处理,thesis_broken,用于验收逻辑失效处理；故意不额外打开 manual_force_review，以验证 thesis_broken 可独立生效,recommended_amount_zero
+2025-05-06,600036,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-05-06,000333,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-05-06,601318,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-06-03,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2025-06-03,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2025-06-03,515180,etf,0.0,RED,暂停新增，强制人工复核,manual_force_review,用于验收强制复核逻辑，并观察与价格红线合并后的最终动作,recommended_amount_zero
+2025-06-03,600519,stock,0.0,YELLOW,暂停新增，等待人工解除,manual_pause_buy,用于验收暂停新增逻辑,recommended_amount_zero
+2025-06-03,000858,stock,0.0,RED,停止新增，最高优先级人工处理,thesis_broken,用于验收逻辑失效处理；故意不额外打开 manual_force_review，以验证 thesis_broken 可独立生效,recommended_amount_zero
+2025-06-03,600036,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-06-03,000333,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-06-03,601318,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-07-01,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2025-07-01,510500,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2025-07-01,515180,etf,0.0,RED,暂停新增，强制人工复核,manual_force_review,用于验收强制复核逻辑，并观察与价格红线合并后的最终动作,recommended_amount_zero
+2025-07-01,600519,stock,0.0,YELLOW,暂停新增，等待人工解除,manual_pause_buy,用于验收暂停新增逻辑,recommended_amount_zero
+2025-07-01,000858,stock,0.0,RED,停止新增，最高优先级人工处理,thesis_broken,用于验收逻辑失效处理；故意不额外打开 manual_force_review，以验证 thesis_broken 可独立生效,recommended_amount_zero
+2025-07-01,600036,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-07-01,000333,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-07-01,601318,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-08-01,510300,etf,0.0,RED,价格 RED，强制人工复核,price_red,,recommended_amount_zero
+2025-08-01,515180,etf,0.0,RED,暂停新增，强制人工复核,manual_force_review,用于验收强制复核逻辑，并观察与价格红线合并后的最终动作,recommended_amount_zero
+2025-08-01,518880,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2025-08-01,600519,stock,0.0,YELLOW,暂停新增，等待人工解除,manual_pause_buy,用于验收暂停新增逻辑,recommended_amount_zero
+2025-08-01,000858,stock,0.0,RED,停止新增，最高优先级人工处理,thesis_broken,用于验收逻辑失效处理；故意不额外打开 manual_force_review，以验证 thesis_broken 可独立生效,recommended_amount_zero
+2025-08-01,600036,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-08-01,000333,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-08-01,601318,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-09-01,510300,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2025-09-01,515180,etf,0.0,RED,暂停新增，强制人工复核,manual_force_review,用于验收强制复核逻辑，并观察与价格红线合并后的最终动作,recommended_amount_zero
+2025-09-01,518880,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2025-09-01,600519,stock,0.0,YELLOW,暂停新增，等待人工解除,manual_pause_buy,用于验收暂停新增逻辑,recommended_amount_zero
+2025-09-01,000858,stock,0.0,RED,停止新增，最高优先级人工处理,thesis_broken,用于验收逻辑失效处理；故意不额外打开 manual_force_review，以验证 thesis_broken 可独立生效,recommended_amount_zero
+2025-09-01,600036,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-09-01,000333,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-09-01,601318,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-10-09,515180,etf,0.0,RED,暂停新增，强制人工复核,manual_force_review,用于验收强制复核逻辑，并观察与价格红线合并后的最终动作,recommended_amount_zero
+2025-10-09,518880,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2025-10-09,600519,stock,0.0,YELLOW,暂停新增，等待人工解除,manual_pause_buy,用于验收暂停新增逻辑,recommended_amount_zero
+2025-10-09,000858,stock,0.0,RED,停止新增，最高优先级人工处理,thesis_broken,用于验收逻辑失效处理；故意不额外打开 manual_force_review，以验证 thesis_broken 可独立生效,recommended_amount_zero
+2025-10-09,600036,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-10-09,000333,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-10-09,601318,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-11-03,515180,etf,0.0,RED,暂停新增，强制人工复核,manual_force_review,用于验收强制复核逻辑，并观察与价格红线合并后的最终动作,recommended_amount_zero
+2025-11-03,518880,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2025-11-03,600519,stock,0.0,YELLOW,暂停新增，等待人工解除,manual_pause_buy,用于验收暂停新增逻辑,recommended_amount_zero
+2025-11-03,000858,stock,0.0,RED,停止新增，最高优先级人工处理,thesis_broken,用于验收逻辑失效处理；故意不额外打开 manual_force_review，以验证 thesis_broken 可独立生效,recommended_amount_zero
+2025-11-03,600036,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-11-03,000333,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-11-03,601318,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-12-01,510300,etf,0.0,YELLOW,价格 YELLOW，暂停新增并人工复核,price_yellow,,recommended_amount_zero
+2025-12-01,515180,etf,0.0,RED,暂停新增，强制人工复核,manual_force_review,用于验收强制复核逻辑，并观察与价格红线合并后的最终动作,recommended_amount_zero
+2025-12-01,518880,etf,0.0,GREEN,正常,green,,recommended_amount_zero
+2025-12-01,600519,stock,0.0,YELLOW,暂停新增，等待人工解除,manual_pause_buy,用于验收暂停新增逻辑,recommended_amount_zero
+2025-12-01,000858,stock,0.0,RED,停止新增，最高优先级人工处理,thesis_broken,用于验收逻辑失效处理；故意不额外打开 manual_force_review，以验证 thesis_broken 可独立生效,recommended_amount_zero
+2025-12-01,600036,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-12-01,000333,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot
+2025-12-01,601318,stock,666.6666666666667,GREEN,正常,green,,below_min_trade_lot

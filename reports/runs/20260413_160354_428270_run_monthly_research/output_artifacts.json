@@ -1,0 +1,11 @@
+{
+  "original_outputs": {
+    "monthly_research": {
+      "batch_manifest": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\agent_research\\monthly\\20260413_160354_428270_run_monthly_research\\batch_manifest.json",
+      "monthly_research_summary": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\agent_research\\monthly\\20260413_160354_428270_run_monthly_research\\monthly_research_summary.json",
+      "debate_items": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\agent_research\\monthly\\20260413_160354_428270_run_monthly_research\\debate_items.json",
+      "monthly_research_report": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\agent_research\\monthly\\20260413_160354_428270_run_monthly_research\\monthly_research_report.md"
+    }
+  },
+  "copied_outputs": {}
+}
