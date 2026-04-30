@@ -1,6 +1,6 @@
 {
   "snapshot_version": "1.0",
-  "generated_at": "2026-04-30 10:28:29",
+  "generated_at": "2026-04-30 11:27:44",
   "json_files": {
     "reports/data_validation_diagnostics.json": {
       "metadata": {
@@ -4648,10 +4648,10 @@
         "finished_at": "2026-04-13 16:03:54"
       },
       "build-frontend-snapshot": {
-        "run_id": "20260430_102448_685532_build_frontend_snapshot",
-        "run_dir": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\runs\\20260430_102448_685532_build_frontend_snapshot",
+        "run_id": "20260430_102828_930961_build_frontend_snapshot",
+        "run_dir": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\runs\\20260430_102828_930961_build_frontend_snapshot",
         "status": "success",
-        "finished_at": "2026-04-30 10:24:48"
+        "finished_at": "2026-04-30 10:28:29"
       }
     },
     "reports/run_compare/latest_compare_index.json": {
@@ -19049,6 +19049,552 @@
       "warnings_count": 0,
       "errors_count": 0
     },
+    "reports/runs/20260430_102828_930961_build_frontend_snapshot/cli_args.json": {
+      "command": "build-frontend-snapshot",
+      "end_date": "2025-12-31",
+      "manual_risk_file": null,
+      "symbol": null,
+      "run_a": null,
+      "run_b": null,
+      "latest": null,
+      "suggest_run": null,
+      "brief": false,
+      "all_args": {
+        "command": "build-frontend-snapshot",
+        "end_date": "2025-12-31",
+        "manual_risk_file": null,
+        "symbol": null,
+        "run_a": null,
+        "run_b": null,
+        "latest": null,
+        "suggest_run": null,
+        "brief": false
+      }
+    },
+    "reports/runs/20260430_102828_930961_build_frontend_snapshot/effective_config_snapshot.json": {
+      "app": {
+        "project": {
+          "name": "长期定投组合助手",
+          "version": "0.1.0",
+          "timezone": "Asia/Shanghai",
+          "currency": "CNY"
+        },
+        "runtime": {
+          "data_provider": "efinance",
+          "cache_format": "csv",
+          "log_level": "INFO",
+          "max_retry": 3,
+          "retry_sleep_seconds": 1.5,
+          "enable_incremental_update": true,
+          "daily_update_only": true
+        },
+        "efinance": {
+          "preferred_history_api": "stock",
+          "adjustment_mode": "forward",
+          "diagnose_on_load": true,
+          "runtime_state_dir": "data/provider_state/efinance",
+          "fallback_to_cache_on_error": true
+        },
+        "schedule": {
+          "monthly_invest_day_rule": "first_trading_day",
+          "weekly_risk_check_rule": "last_trading_day_of_week",
+          "daily_data_update": true
+        },
+        "paths": {
+          "data_root": "data",
+          "raw_data_dir": "data/raw",
+          "cache_data_dir": "data/cache",
+          "processed_data_dir": "data/processed",
+          "manual_data_dir": "data/manual",
+          "reports_dir": "reports"
+        }
+      },
+      "portfolio": {
+        "portfolio": {
+          "monthly_budget": 10000.0,
+          "max_stock_count": 5,
+          "min_trade_lot": 100,
+          "keep_cash_if_not_tradeable": true,
+          "allow_auto_sell": false,
+          "allow_auto_replace_stock": false,
+          "sell_policy": {
+            "enabled": false,
+            "trigger_mode": "manual_review_only",
+            "reason": "第一版不自动卖出，仅在人工复核后执行"
+          }
+        },
+        "asset_allocation": {
+          "etf_total_weight": 0.8,
+          "stock_total_weight": 0.2
+        },
+        "etf_pool": [
+          {
+            "symbol": "510300",
+            "name": "沪深300ETF",
+            "target_weight": 0.3,
+            "category": "broad_index"
+          },
+          {
+            "symbol": "510500",
+            "name": "中证500ETF",
+            "target_weight": 0.2,
+            "category": "broad_index"
+          },
+          {
+            "symbol": "515180",
+            "name": "红利ETF",
+            "target_weight": 0.2,
+            "category": "dividend"
+          },
+          {
+            "symbol": "518880",
+            "name": "黄金ETF",
+            "target_weight": 0.1,
+            "category": "defensive"
+          }
+        ],
+        "stock_pool": [
+          {
+            "symbol": "600519",
+            "name": "贵州茅台",
+            "target_weight": 0.04
+          },
+          {
+            "symbol": "000858",
+            "name": "五粮液",
+            "target_weight": 0.04
+          },
+          {
+            "symbol": "600036",
+            "name": "招商银行",
+            "target_weight": 0.04
+          },
+          {
+            "symbol": "000333",
+            "name": "美的集团",
+            "target_weight": 0.04
+          },
+          {
+            "symbol": "601318",
+            "name": "中国平安",
+            "target_weight": 0.04
+          }
+        ]
+      },
+      "universe": {
+        "universe": {
+          "benchmark_symbol": "510300",
+          "market": "CN",
+          "frequency": "1d",
+          "price_field": "close",
+          "start_date": "2019-01-01",
+          "end_date": "2026-03-31"
+        },
+        "field_mapping": {
+          "date": "date",
+          "open": "open",
+          "high": "high",
+          "low": "low",
+          "close": "close",
+          "volume": "volume",
+          "amount": "amount",
+          "symbol": "symbol"
+        },
+        "manual_flags": {
+          "logic_risk_flag_file": "config/manual_risk_flags.yaml",
+          "thesis_flag_file": "data/manual/thesis_flags.csv",
+          "holdings_file": "data/manual/holdings.csv",
+          "notes_file": "data/manual/manual_notes.csv"
+        }
+      },
+      "risk": {
+        "risk": {
+          "use_logic_redline": true,
+          "moving_average_window": 120,
+          "reference_high_mode": "expanding_peak"
+        },
+        "etf": {
+          "yellow_drawdown_from_high": 0.15,
+          "red_drawdown_from_high": 0.25,
+          "ma_weakness_enabled": true,
+          "weakness_days": 10,
+          "action_on_yellow": "pause_buy_and_review",
+          "action_on_red": "manual_review_required"
+        },
+        "stock": {
+          "yellow_drawdown_from_cost": 0.12,
+          "red_drawdown_from_cost": 0.2,
+          "action_on_yellow": "pause_buy_and_review",
+          "action_on_red": "manual_review_required"
+        },
+        "portfolio": {
+          "red_max_drawdown": 0.2,
+          "action_on_red": "portfolio_manual_review_required"
+        },
+        "manual_logic": {
+          "manual_force_review_pause_buy": true,
+          "thesis_broken_pause_buy": true,
+          "thesis_broken_force_review": true,
+          "priority_levels": {
+            "thesis_broken": 1,
+            "manual_force_review": 2,
+            "manual_pause_buy": 3,
+            "price_red": 4,
+            "price_yellow": 5,
+            "green": 6
+          },
+          "actions": {
+            "thesis_broken": "停止新增，最高优先级人工处理",
+            "manual_force_review": "暂停新增，强制人工复核",
+            "manual_pause_buy": "暂停新增，等待人工解除",
+            "price_red": "价格 RED，强制人工复核",
+            "price_yellow": "价格 YELLOW，暂停新增并人工复核",
+            "green": "正常"
+          }
+        }
+      },
+      "backtest": {
+        "backtest": {
+          "engine": "mvp",
+          "qlib_enabled": false,
+          "start_date": "2019-01-01",
+          "end_date": "2025-12-31",
+          "initial_cash": 0.0,
+          "monthly_budget": 10000.0,
+          "reinvest_dividend": false,
+          "rebalance_frequency": "monthly",
+          "execution_rule": "first_trading_day",
+          "risk_check_rule": "last_trading_day_of_week"
+        },
+        "transaction_cost": {
+          "etf": {
+            "buy_commission": 0.0003,
+            "sell_commission": 0.0003,
+            "sell_stamp_tax": 0.0,
+            "slippage": 0.001
+          },
+          "stock": {
+            "buy_commission": 0.0003,
+            "sell_commission": 0.0003,
+            "sell_stamp_tax": 0.001,
+            "slippage": 0.002
+          }
+        },
+        "trading_rules": {
+          "min_trade_lot": 100,
+          "round_down_to_lot": true,
+          "skip_if_suspended": true,
+          "price_limit_check_enabled": false,
+          "keep_cash_if_unfilled": true
+        }
+      },
+      "sensitivity": {
+        "sensitivity": {
+          "data_mode": "real",
+          "baseline": {
+            "name": "baseline",
+            "description": "默认基准参数组",
+            "overrides": {
+              "app": {
+                "efinance": {
+                  "adjustment_mode": "forward"
+                },
+                "schedule": {
+                  "monthly_invest_day_rule": "first_trading_day"
+                }
+              },
+              "risk": {
+                "etf": {
+                  "yellow_drawdown_from_high": 0.15,
+                  "red_drawdown_from_high": 0.25
+                },
+                "stock": {
+                  "yellow_drawdown_from_cost": 0.12,
+                  "red_drawdown_from_cost": 0.2
+                }
+              },
+              "backtest": {
+                "backtest": {
+                  "execution_rule": "first_trading_day"
+                }
+              }
+            }
+          },
+          "scenarios": [
+            {
+              "name": "adj_none",
+              "description": "仅切换为不复权，其余保持 baseline",
+              "overrides": {
+                "app": {
+                  "efinance": {
+                    "adjustment_mode": "none"
+                  }
+                }
+              }
+            },
+            {
+              "name": "etf_redline_tighter",
+              "description": "仅收紧 ETF 红线到 0.12 / 0.20",
+              "overrides": {
+                "risk": {
+                  "etf": {
+                    "yellow_drawdown_from_high": 0.12,
+                    "red_drawdown_from_high": 0.2
+                  }
+                }
+              }
+            },
+            {
+              "name": "etf_redline_looser",
+              "description": "仅放宽 ETF 红线到 0.18 / 0.30",
+              "overrides": {
+                "risk": {
+                  "etf": {
+                    "yellow_drawdown_from_high": 0.18,
+                    "red_drawdown_from_high": 0.3
+                  }
+                }
+              }
+            },
+            {
+              "name": "stock_redline_tighter",
+              "description": "仅收紧股票红线到 0.10 / 0.18",
+              "overrides": {
+                "risk": {
+                  "stock": {
+                    "yellow_drawdown_from_cost": 0.1,
+                    "red_drawdown_from_cost": 0.18
+                  }
+                }
+              }
+            },
+            {
+              "name": "stock_redline_looser",
+              "description": "仅放宽股票红线到 0.15 / 0.25",
+              "overrides": {
+                "risk": {
+                  "stock": {
+                    "yellow_drawdown_from_cost": 0.15,
+                    "red_drawdown_from_cost": 0.25
+                  }
+                }
+              }
+            },
+            {
+              "name": "monthly_buy_last_trading_day",
+              "description": "仅切换月度正式买入日为每月最后一个交易日",
+              "overrides": {
+                "backtest": {
+                  "backtest": {
+                    "execution_rule": "last_trading_day"
+                  }
+                },
+                "app": {
+                  "schedule": {
+                    "monthly_invest_day_rule": "last_trading_day"
+                  }
+                }
+              }
+            },
+            {
+              "name": "higher_slippage",
+              "description": "轻量滑点敏感性：ETF 0.15%，股票 0.30%",
+              "overrides": {
+                "backtest": {
+                  "transaction_cost": {
+                    "etf": {
+                      "slippage": 0.0015
+                    },
+                    "stock": {
+                      "slippage": 0.003
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "robustness": {
+        "robustness": {
+          "baseline_name": "baseline",
+          "inputs": {
+            "summary_csv": "reports/sensitivity_summary.csv",
+            "baseline_diff_csv": "reports/sensitivity_baseline_diff.csv",
+            "details_json": "reports/sensitivity_details.json"
+          },
+          "outputs": {
+            "summary_markdown": "reports/robustness_summary.md",
+            "recommendation_markdown": "reports/default_parameter_recommendation.md",
+            "summary_json": "reports/robustness_summary.json",
+            "key_findings_csv": "reports/robustness_key_findings.csv"
+          },
+          "metric_weights": {
+            "annualized_return_diff": 1.0,
+            "max_drawdown_diff": 1.0,
+            "invested_ratio_diff": 0.8,
+            "total_uninvested_cash_diff": 0.8,
+            "unfilled_amount_diff": 0.7,
+            "total_red_triggers_diff": 0.8
+          },
+          "materiality_thresholds": {
+            "annualized_return_diff": 0.002,
+            "max_drawdown_diff": 0.01,
+            "invested_ratio_diff": 0.02,
+            "total_uninvested_cash_diff": 10000.0,
+            "unfilled_amount_diff": 10000.0,
+            "total_red_triggers_diff": 50.0
+          },
+          "classification_thresholds": {
+            "robust_score_max": 0.25,
+            "sensitive_score_min": 0.8
+          }
+        }
+      },
+      "archive": {
+        "archive": {
+          "archive_enabled": true,
+          "archive_root_dir": "reports/runs",
+          "archive_copy_reports": false,
+          "archive_include_manual_risk_snapshot": true,
+          "update_latest_index": true
+        }
+      },
+      "manual_risk_file_path": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\config\\manual_risk_flags.yaml",
+      "manual_risk_flags_snapshot": {
+        "manual_risk_flags": {
+          "symbols": {
+            "510300": {
+              "asset_type": "etf",
+              "effective_from": "1900-01-01",
+              "manual_pause_buy": false,
+              "manual_force_review": false,
+              "thesis_broken": false,
+              "note": "",
+              "updated_at": "2026-04-01",
+              "updated_by": "user"
+            },
+            "510500": {
+              "asset_type": "etf",
+              "effective_from": "1900-01-01",
+              "manual_pause_buy": false,
+              "manual_force_review": false,
+              "thesis_broken": false,
+              "note": "",
+              "updated_at": "2026-04-01",
+              "updated_by": "user"
+            },
+            "515180": {
+              "asset_type": "etf",
+              "effective_from": "1900-01-01",
+              "manual_pause_buy": false,
+              "manual_force_review": false,
+              "thesis_broken": false,
+              "note": "",
+              "updated_at": "2026-04-01",
+              "updated_by": "user"
+            },
+            "518880": {
+              "asset_type": "etf",
+              "effective_from": "1900-01-01",
+              "manual_pause_buy": false,
+              "manual_force_review": false,
+              "thesis_broken": false,
+              "note": "",
+              "updated_at": "2026-04-01",
+              "updated_by": "user"
+            },
+            "600519": {
+              "asset_type": "stock",
+              "effective_from": "1900-01-01",
+              "manual_pause_buy": false,
+              "manual_force_review": false,
+              "thesis_broken": false,
+              "note": "",
+              "updated_at": "2026-04-01",
+              "updated_by": "user"
+            },
+            "000858": {
+              "asset_type": "stock",
+              "effective_from": "1900-01-01",
+              "manual_pause_buy": false,
+              "manual_force_review": false,
+              "thesis_broken": false,
+              "note": "",
+              "updated_at": "2026-04-01",
+              "updated_by": "user"
+            },
+            "600036": {
+              "asset_type": "stock",
+              "effective_from": "1900-01-01",
+              "manual_pause_buy": false,
+              "manual_force_review": false,
+              "thesis_broken": false,
+              "note": "",
+              "updated_at": "2026-04-01",
+              "updated_by": "user"
+            },
+            "000333": {
+              "asset_type": "stock",
+              "effective_from": "1900-01-01",
+              "manual_pause_buy": false,
+              "manual_force_review": false,
+              "thesis_broken": false,
+              "note": "",
+              "updated_at": "2026-04-01",
+              "updated_by": "user"
+            },
+            "601318": {
+              "asset_type": "stock",
+              "effective_from": "1900-01-01",
+              "manual_pause_buy": false,
+              "manual_force_review": false,
+              "thesis_broken": false,
+              "note": "",
+              "updated_at": "2026-04-01",
+              "updated_by": "user"
+            }
+          }
+        }
+      }
+    },
+    "reports/runs/20260430_102828_930961_build_frontend_snapshot/key_summary.json": {
+      "snapshot_version": "1.0",
+      "generated_at": "2026-04-30 10:28:28",
+      "warnings_count": 0,
+      "snapshot_files_count": 8
+    },
+    "reports/runs/20260430_102828_930961_build_frontend_snapshot/output_artifacts.json": {
+      "original_outputs": {
+        "frontend_snapshot": {
+          "archive_compat": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\frontend\\public\\data\\archive_compat_snapshot.json",
+          "dashboard": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\frontend\\public\\data\\dashboard_snapshot.json",
+          "monthly_research": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\frontend\\public\\data\\monthly_research_snapshot.json",
+          "manual_risk": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\frontend\\public\\data\\manual_risk_snapshot.json",
+          "research_vs_manual_risk": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\frontend\\public\\data\\research_vs_manual_risk_snapshot.json",
+          "run_compare": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\frontend\\public\\data\\run_compare_snapshot.json",
+          "research": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\frontend\\public\\data\\research_snapshot.json",
+          "site_manifest": "D:\\新建文件夹\\long_term_dca_portfolio_assistant\\frontend\\public\\data\\site_manifest.json"
+        }
+      },
+      "copied_outputs": {}
+    },
+    "reports/runs/20260430_102828_930961_build_frontend_snapshot/run_manifest.json": {
+      "run_id": "20260430_102828_930961_build_frontend_snapshot",
+      "command_name": "build-frontend-snapshot",
+      "started_at": "2026-04-30 10:28:28",
+      "finished_at": "2026-04-30 10:28:29",
+      "duration_seconds": 0.138,
+      "status": "success",
+      "end_date": "2025-12-31",
+      "data_mode": "static_snapshot",
+      "provider_name": "frontend_snapshot_builder",
+      "adj_mode": "forward",
+      "manual_risk_file": "config/manual_risk_flags.yaml",
+      "code_version_hint": "",
+      "warnings_count": 0,
+      "errors_count": 0
+    },
     "reports/agent_research/monthly/latest_monthly_research_index.json": {
       "updated_at": "2026-04-13 16:03:54",
       "latest": {
@@ -20302,6 +20848,7 @@
     "reports/runs/20260413_160354_413947_run_agent_research/notes.md": "# 运行说明\n\n- command_name: run-agent-research\n- run_id: 20260413_160354_413947_run_agent_research\n- status: success\n- started_at: 2026-04-13 16:03:54\n- finished_at: 2026-04-13 16:03:54\n- duration_seconds: 0.006\n\n## 本次运行做了什么\n- 已执行 `run-agent-research` 命令，并记录本次运行的配置快照、输入参数、输出产物索引与关键摘要。\n\n## 关键告警\n- 当前无关键告警。\n\n## 失败或限制\n- 当前无失败信息。\n\n## 额外说明\n- TradingAgents PoC 当前为研究增强层，不直接输出交易执行动作。\n- 本次研究结果不会自动改写正式 manual risk flags，需要人工确认后再采纳。\n- 第一版仅分析股票增强仓，不分析 ETF 主底仓。\n\n## 关键摘要\n- symbol: 600036\n- analysis_date: 2025-12-31\n- final_research_label: force_review_candidate\n- suggest_manual_pause_buy: False\n- suggest_force_review: True\n- suggest_thesis_broken: False\n- confidence: 0.79\n- source: tradingagents_poc\n\n## 建议优先查看的输出文件\n- agent_research: {'json': 'D:\\\\新建文件夹\\\\long_term_dca_portfolio_assistant\\\\reports\\\\agent_research\\\\600036_20251231_agent_research.json', 'markdown': 'D:\\\\新建文件夹\\\\long_term_dca_portfolio_assistant\\\\reports\\\\agent_research\\\\600036_20251231_agent_research.md'}\n",
     "reports/runs/20260413_160354_428270_run_monthly_research/notes.md": "# 运行说明\n\n- command_name: run-monthly-research\n- run_id: 20260413_160354_428270_run_monthly_research\n- status: success\n- started_at: 2026-04-13 16:03:54\n- finished_at: 2026-04-13 16:03:54\n- duration_seconds: 0.009\n\n## 本次运行做了什么\n- 已执行 `run-monthly-research` 命令，并记录本次运行的配置快照、输入参数、输出产物索引与关键摘要。\n\n## 关键告警\n- 当前无关键告警。\n\n## 失败或限制\n- 当前无失败信息。\n\n## 额外说明\n- Monthly research debate 只围绕某次月度建议清单生成研究增强摘要。\n- 本批次输出不会自动改写 manual risk flags，也不会自动执行交易。\n- 股票增强仓使用 TradingAgents PoC；ETF 底仓使用中性占位研究摘要。\n\n## 关键摘要\n- batch_id: 20260413_160354_428270_run_monthly_research\n- source_suggest_run: \n- total_targets: 9\n- processed_targets: 9\n- pause_candidate_count: 2\n- force_review_candidate_count: 2\n- thesis_broken_candidate_count: 1\n- average_confidence: 0.6744\n- top_attention_symbols: ['000858', '600036', '600519']\n\n## 建议优先查看的输出文件\n- monthly_research: {'batch_manifest': 'D:\\\\新建文件夹\\\\long_term_dca_portfolio_assistant\\\\reports\\\\agent_research\\\\monthly\\\\20260413_160354_428270_run_monthly_research\\\\batch_manifest.json', 'monthly_research_summary': 'D:\\\\新建文件夹\\\\long_term_dca_portfolio_assistant\\\\reports\\\\agent_research\\\\monthly\\\\20260413_160354_428270_run_monthly_research\\\\monthly_research_summary.json', 'debate_items': 'D:\\\\新建文件夹\\\\long_term_dca_portfolio_assistant\\\\reports\\\\agent_research\\\\monthly\\\\20260413_160354_428270_run_monthly_research\\\\debate_items.json', 'monthly_research_report': 'D:\\\\新建文件夹\\\\long_term_dca_portfolio_assistant\\\\reports\\\\agent_research\\\\monthly\\\\20260413_160354_428270_run_monthly_research\\\\monthly_research_report.md'}\n",
     "reports/runs/20260430_102448_685532_build_frontend_snapshot/notes.md": "# 运行说明\n\n- command_name: build-frontend-snapshot\n- run_id: 20260430_102448_685532_build_frontend_snapshot\n- status: success\n- started_at: 2026-04-30 10:24:48\n- finished_at: 2026-04-30 10:24:48\n- duration_seconds: 0.203\n\n## 本次运行做了什么\n- 已执行 `build-frontend-snapshot` 命令，并记录本次运行的配置快照、输入参数、输出产物索引与关键摘要。\n\n## 关键告警\n- 当前无关键告警。\n\n## 失败或限制\n- 当前无失败信息。\n\n## 额外说明\n- 该命令只聚合既有归档为前端静态快照，不重跑策略、不改配置、不生成交易执行。\n- 生成结果位于 frontend/public/data，可随 frontend build 一起部署为静态网站。\n\n## 关键摘要\n- snapshot_version: 1.0\n- generated_at: 2026-04-30 10:24:48\n- warnings_count: 0\n- snapshot_files_count: 8\n\n## 建议优先查看的输出文件\n- frontend_snapshot: {'archive_compat': 'D:\\\\新建文件夹\\\\long_term_dca_portfolio_assistant\\\\frontend\\\\public\\\\data\\\\archive_compat_snapshot.json', 'dashboard': 'D:\\\\新建文件夹\\\\long_term_dca_portfolio_assistant\\\\frontend\\\\public\\\\data\\\\dashboard_snapshot.json', 'monthly_research': 'D:\\\\新建文件夹\\\\long_term_dca_portfolio_assistant\\\\frontend\\\\public\\\\data\\\\monthly_research_snapshot.json', 'manual_risk': 'D:\\\\新建文件夹\\\\long_term_dca_portfolio_assistant\\\\frontend\\\\public\\\\data\\\\manual_risk_snapshot.json', 'research_vs_manual_risk': 'D:\\\\新建文件夹\\\\long_term_dca_portfolio_assistant\\\\frontend\\\\public\\\\data\\\\research_vs_manual_risk_snapshot.json', 'run_compare': 'D:\\\\新建文件夹\\\\long_term_dca_portfolio_assistant\\\\frontend\\\\public\\\\data\\\\run_compare_snapshot.json', 'research': 'D:\\\\新建文件夹\\\\long_term_dca_portfolio_assistant\\\\frontend\\\\public\\\\data\\\\research_snapshot.json', 'site_manifest': 'D:\\\\新建文件夹\\\\long_term_dca_portfolio_assistant\\\\frontend\\\\public\\\\data\\\\site_manifest.json'}\n",
+    "reports/runs/20260430_102828_930961_build_frontend_snapshot/notes.md": "# 运行说明\n\n- command_name: build-frontend-snapshot\n- run_id: 20260430_102828_930961_build_frontend_snapshot\n- status: success\n- started_at: 2026-04-30 10:28:28\n- finished_at: 2026-04-30 10:28:29\n- duration_seconds: 0.138\n\n## 本次运行做了什么\n- 已执行 `build-frontend-snapshot` 命令，并记录本次运行的配置快照、输入参数、输出产物索引与关键摘要。\n\n## 关键告警\n- 当前无关键告警。\n\n## 失败或限制\n- 当前无失败信息。\n\n## 额外说明\n- 该命令只聚合既有归档为前端静态快照，不重跑策略、不改配置、不生成交易执行。\n- 生成结果位于 frontend/public/data，可随 frontend build 一起部署为静态网站。\n\n## 关键摘要\n- snapshot_version: 1.0\n- generated_at: 2026-04-30 10:28:28\n- warnings_count: 0\n- snapshot_files_count: 8\n\n## 建议优先查看的输出文件\n- frontend_snapshot: {'archive_compat': 'D:\\\\新建文件夹\\\\long_term_dca_portfolio_assistant\\\\frontend\\\\public\\\\data\\\\archive_compat_snapshot.json', 'dashboard': 'D:\\\\新建文件夹\\\\long_term_dca_portfolio_assistant\\\\frontend\\\\public\\\\data\\\\dashboard_snapshot.json', 'monthly_research': 'D:\\\\新建文件夹\\\\long_term_dca_portfolio_assistant\\\\frontend\\\\public\\\\data\\\\monthly_research_snapshot.json', 'manual_risk': 'D:\\\\新建文件夹\\\\long_term_dca_portfolio_assistant\\\\frontend\\\\public\\\\data\\\\manual_risk_snapshot.json', 'research_vs_manual_risk': 'D:\\\\新建文件夹\\\\long_term_dca_portfolio_assistant\\\\frontend\\\\public\\\\data\\\\research_vs_manual_risk_snapshot.json', 'run_compare': 'D:\\\\新建文件夹\\\\long_term_dca_portfolio_assistant\\\\frontend\\\\public\\\\data\\\\run_compare_snapshot.json', 'research': 'D:\\\\新建文件夹\\\\long_term_dca_portfolio_assistant\\\\frontend\\\\public\\\\data\\\\research_snapshot.json', 'site_manifest': 'D:\\\\新建文件夹\\\\long_term_dca_portfolio_assistant\\\\frontend\\\\public\\\\data\\\\site_manifest.json'}\n",
     "reports/agent_research/monthly/20260409_174508_789238_run_monthly_research/monthly_research_report.md": "# Monthly Research Debate\n\n- batch_id: 20260409_174508_789238_run_monthly_research\n- generated_at: 2026-04-09 17:45:08\n- source_type: shared_monthly_report\n- source_suggest_run: N/A\n- source_csv_path: D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\monthly\\monthly_suggestion_20251231.csv\n\n## Summary\n\n- total_targets: 9\n- processed_targets: 9\n- pause_candidate_count: 0\n- force_review_candidate_count: 3\n- thesis_broken_candidate_count: 2\n- average_confidence: 0.68\n- top_attention_symbols: 600519, 600036, 000333\n\n## Debate Items\n\n### 510300 (etf)\n- suggested_amount: 4000.0\n- final_research_label: neutral_watch\n- suggest_manual_pause_buy: False\n- suggest_force_review: False\n- suggest_thesis_broken: False\n- confidence: 0.58\n- source_suggest_run: N/A\n\n**Bull Case**\n\n510300 属于本月建议中的 ETF 底仓标的。其 bull case 更偏向长期配置角色，核心价值在于维持资产配置纪律，而不是依靠短线研究结论驱动交易。\n\n**Bear Case**\n\n510300 的 bear case 主要体现在价格红线、回撤压力和趋势走弱场景下。这类风险仍应优先通过现有价格红线与人工复核流程处理。\n\n**Risk Summary**\n\nETF monthly research 目前只提供摘要性说明，不主动给出 thesis broken 类建议。TradingAgents 月度批次研究的主要覆盖对象仍是股票增强仓。\n\n**Note**\n\nETF 风险状态正常\n\n### 510500 (etf)\n- suggested_amount: 2666.666666666667\n- final_research_label: neutral_watch\n- suggest_manual_pause_buy: False\n- suggest_force_review: False\n- suggest_thesis_broken: False\n- confidence: 0.58\n- source_suggest_run: N/A\n\n**Bull Case**\n\n510500 属于本月建议中的 ETF 底仓标的。其 bull case 更偏向长期配置角色，核心价值在于维持资产配置纪律，而不是依靠短线研究结论驱动交易。\n\n**Bear Case**\n\n510500 的 bear case 主要体现在价格红线、回撤压力和趋势走弱场景下。这类风险仍应优先通过现有价格红线与人工复核流程处理。\n\n**Risk Summary**\n\nETF monthly research 目前只提供摘要性说明，不主动给出 thesis broken 类建议。TradingAgents 月度批次研究的主要覆盖对象仍是股票增强仓。\n\n**Note**\n\nETF 风险状态正常\n\n### 515180 (etf)\n- suggested_amount: 0.0\n- final_research_label: neutral_watch\n- suggest_manual_pause_buy: False\n- suggest_force_review: False\n- suggest_thesis_broken: False\n- confidence: 0.58\n- source_suggest_run: N/A\n\n**Bull Case**\n\n515180 属于本月建议中的 ETF 底仓标的。其 bull case 更偏向长期配置角色，核心价值在于维持资产配置纪律，而不是依靠短线研究结论驱动交易。\n\n**Bear Case**\n\n515180 的 bear case 主要体现在价格红线、回撤压力和趋势走弱场景下。这类风险仍应优先通过现有价格红线与人工复核流程处理。\n\n**Risk Summary**\n\nETF monthly research 目前只提供摘要性说明，不主动给出 thesis broken 类建议。TradingAgents 月度批次研究的主要覆盖对象仍是股票增强仓。\n\n**Note**\n\n用于验收强制复核逻辑，并观察与价格红线合并后的最终动作\n\n### 518880 (etf)\n- suggested_amount: 1333.3333333333335\n- final_research_label: neutral_watch\n- suggest_manual_pause_buy: False\n- suggest_force_review: False\n- suggest_thesis_broken: False\n- confidence: 0.58\n- source_suggest_run: N/A\n\n**Bull Case**\n\n518880 属于本月建议中的 ETF 底仓标的。其 bull case 更偏向长期配置角色，核心价值在于维持资产配置纪律，而不是依靠短线研究结论驱动交易。\n\n**Bear Case**\n\n518880 的 bear case 主要体现在价格红线、回撤压力和趋势走弱场景下。这类风险仍应优先通过现有价格红线与人工复核流程处理。\n\n**Risk Summary**\n\nETF monthly research 目前只提供摘要性说明，不主动给出 thesis broken 类建议。TradingAgents 月度批次研究的主要覆盖对象仍是股票增强仓。\n\n**Note**\n\nETF 风险状态正常\n\n### 600519 (stock)\n- suggested_amount: 0.0\n- final_research_label: thesis_broken_candidate\n- suggest_manual_pause_buy: False\n- suggest_force_review: True\n- suggest_thesis_broken: True\n- confidence: 0.9\n- source_suggest_run: N/A\n\n**Bull Case**\n\n贵州茅台 仍具备长期配置观察价值。若基本面改善、现金流保持稳健、估值回到可接受区间，则适合作为股票 20% 增强仓中的低频跟踪标的。\n\n**Bear Case**\n\n贵州茅台 当前仍存在需要继续验证的研究不确定性。若后续经营数据、竞争格局或估值约束持续恶化，更适合进入 manual risk 的暂停新增或复核清单。\n\n**Risk Summary**\n\n本 PoC 只输出研究标签与风险摘要，用于辅助人工复核。它不会替代价格红线，也不会直接改写正式 manual risk flags。\n\n**Note**\n\n用于验收暂停新增逻辑\n\n### 000858 (stock)\n- suggested_amount: 0.0\n- final_research_label: neutral_watch\n- suggest_manual_pause_buy: False\n- suggest_force_review: False\n- suggest_thesis_broken: False\n- confidence: 0.61\n- source_suggest_run: N/A\n\n**Bull Case**\n\n五粮液 仍具备长期配置观察价值。若基本面改善、现金流保持稳健、估值回到可接受区间，则适合作为股票 20% 增强仓中的低频跟踪标的。\n\n**Bear Case**\n\n五粮液 当前仍存在需要继续验证的研究不确定性。若后续经营数据、竞争格局或估值约束持续恶化，更适合进入 manual risk 的暂停新增或复核清单。\n\n**Risk Summary**\n\n本 PoC 只输出研究标签与风险摘要，用于辅助人工复核。它不会替代价格红线，也不会直接改写正式 manual risk flags。\n\n**Note**\n\n用于验收逻辑失效处理；故意不额外打开 manual_force_review，以验证 thesis_broken 可独立生效\n\n### 600036 (stock)\n- suggested_amount: 666.6666666666667\n- final_research_label: thesis_broken_candidate\n- suggest_manual_pause_buy: False\n- suggest_force_review: True\n- suggest_thesis_broken: True\n- confidence: 0.84\n- source_suggest_run: N/A\n\n**Bull Case**\n\n招商银行 仍具备长期配置观察价值。若基本面改善、现金流保持稳健、估值回到可接受区间，则适合作为股票 20% 增强仓中的低频跟踪标的。\n\n**Bear Case**\n\n招商银行 当前仍存在需要继续验证的研究不确定性。若后续经营数据、竞争格局或估值约束持续恶化，更适合进入 manual risk 的暂停新增或复核清单。\n\n**Risk Summary**\n\n本 PoC 只输出研究标签与风险摘要，用于辅助人工复核。它不会替代价格红线，也不会直接改写正式 manual risk flags。\n\n**Note**\n\n尚无持仓成本，允许按计划定投\n\n### 000333 (stock)\n- suggested_amount: 666.6666666666667\n- final_research_label: force_review_candidate\n- suggest_manual_pause_buy: False\n- suggest_force_review: True\n- suggest_thesis_broken: False\n- confidence: 0.8\n- source_suggest_run: N/A\n\n**Bull Case**\n\n美的集团 仍具备长期配置观察价值。若基本面改善、现金流保持稳健、估值回到可接受区间，则适合作为股票 20% 增强仓中的低频跟踪标的。\n\n**Bear Case**\n\n美的集团 当前仍存在需要继续验证的研究不确定性。若后续经营数据、竞争格局或估值约束持续恶化，更适合进入 manual risk 的暂停新增或复核清单。\n\n**Risk Summary**\n\n本 PoC 只输出研究标签与风险摘要，用于辅助人工复核。它不会替代价格红线，也不会直接改写正式 manual risk flags。\n\n**Note**\n\n尚无持仓成本，允许按计划定投\n\n### 601318 (stock)\n- suggested_amount: 666.6666666666667\n- final_research_label: neutral_watch\n- suggest_manual_pause_buy: False\n- suggest_force_review: False\n- suggest_thesis_broken: False\n- confidence: 0.65\n- source_suggest_run: N/A\n\n**Bull Case**\n\n中国平安 仍具备长期配置观察价值。若基本面改善、现金流保持稳健、估值回到可接受区间，则适合作为股票 20% 增强仓中的低频跟踪标的。\n\n**Bear Case**\n\n中国平安 当前仍存在需要继续验证的研究不确定性。若后续经营数据、竞争格局或估值约束持续恶化，更适合进入 manual risk 的暂停新增或复核清单。\n\n**Risk Summary**\n\n本 PoC 只输出研究标签与风险摘要，用于辅助人工复核。它不会替代价格红线，也不会直接改写正式 manual risk flags。\n\n**Note**\n\n尚无持仓成本，允许按计划定投\n\n## Manual Risk Notice\n\n- 本批次 monthly research 仅提供研究增强建议。\n- suggest_* 字段不会自动写回 manual risk flags。\n- 本报告不会触发自动交易或自动调仓。\n",
     "reports/agent_research/monthly/20260413_160354_428270_run_monthly_research/monthly_research_report.md": "# Monthly Research Debate\n\n- batch_id: 20260413_160354_428270_run_monthly_research\n- generated_at: 2026-04-13 16:03:54\n- source_type: shared_monthly_report\n- source_suggest_run: N/A\n- source_csv_path: D:\\新建文件夹\\long_term_dca_portfolio_assistant\\reports\\monthly\\monthly_suggestion_20251231.csv\n\n## Summary\n\n- total_targets: 9\n- processed_targets: 9\n- pause_candidate_count: 2\n- force_review_candidate_count: 2\n- thesis_broken_candidate_count: 1\n- average_confidence: 0.6744\n- top_attention_symbols: 000858, 600036, 600519\n\n## Debate Items\n\n### 510300 (etf)\n- suggested_amount: 4000.0\n- final_research_label: neutral_watch\n- suggest_manual_pause_buy: False\n- suggest_force_review: False\n- suggest_thesis_broken: False\n- confidence: 0.58\n- source_suggest_run: N/A\n- debate_focus: ETF 在组合中的配置角色是否需要被价格或人工风险信号临时压低新增资格。\n- key_uncertainty: 风险信号是否已经强到需要暂停新增，而不是继续按常规定投推进。\n\n**Bull Case**\n\nBull researcher 对 510300 的立场更偏中性配置派：它的价值在于维持“宽基核心底仓”的长期配置功能。本月建议金额为 4,000 元，如果价格红线未进一步恶化，就没有必要把 ETF 底仓的研究讨论写成个股式 thesis 辩论。\n\n**Bull Evidence Points**\n- 配置角色：510300 在组合中承担“宽基核心底仓”职责，优先服务于资产配置纪律，而不是个股 alpha 辩论。\n- 执行上下文：本月建议金额 4,000 元，状态为 GREEN，说明它当前更适合由既有价格红线和配置框架管理。\n- 系统边界：ETF 是 80% 主底仓的一部分，研究层只做轻量解释，不替代主配置逻辑。\n\n**Bull Action Implication**\n\n继续把 ETF 作为配置底仓来解释，优先遵循现有定投与红线规则。\n\n**Bear Case**\n\nBear researcher 对 510300 的提醒也偏治理层：如果价格红线、manual review 或新增限制已经出现，则应优先遵守现有风险框架，而不是通过更激进的研究表述改变底仓逻辑。\n\n**Bear Evidence Points**\n- 风险信号：若 ETF 已进入 YELLOW/RED 或 manual review，则优先触发既有红线机制，而不是扩写 thesis debate。\n- 组合含义：ETF debate 不应像股票增强仓那样过度拟人化，因为它的主要职责是稳定配置而非主观选股。\n- 治理动作：若有暂停新增或复核需要，也应直接映射到风险治理动作，而不是放大研究措辞。\n\n**Bear Action Implication**\n\n若风险信号升级，则交给既有价格红线和人工复核流程，不由 research 层放大解释。\n\n**Risk Summary**\n\nETF monthly research 只提供角色说明和风险提示，不主动输出 thesis broken 风格结论。它依然是 advisory-only，用来解释配置角色，而不是替代既有 ETF 红线机制。\n\n**Recommendation Rationale**\n\nETF 仍以配置纪律为先，因此研究层保持中性标签，只补充角色说明和风险提示。\n\n**Note**\n\nETF 风险状态正常\n\n### 510500 (etf)\n- suggested_amount: 2666.666666666667\n- final_research_label: neutral_watch\n- suggest_manual_pause_buy: False\n- suggest_force_review: False\n- suggest_thesis_broken: False\n- confidence: 0.58\n- source_suggest_run: N/A\n- debate_focus: ETF 在组合中的配置角色是否需要被价格或人工风险信号临时压低新增资格。\n- key_uncertainty: 风险信号是否已经强到需要暂停新增，而不是继续按常规定投推进。\n\n**Bull Case**\n\nBull researcher 对 510500 的立场更偏中性配置派：它的价值在于维持“中盘宽基补充底仓”的长期配置功能。本月建议金额为 2,667 元，如果价格红线未进一步恶化，就没有必要把 ETF 底仓的研究讨论写成个股式 thesis 辩论。\n\n**Bull Evidence Points**\n- 配置角色：510500 在组合中承担“中盘宽基补充底仓”职责，优先服务于资产配置纪律，而不是个股 alpha 辩论。\n- 执行上下文：本月建议金额 2,667 元，状态为 GREEN，说明它当前更适合由既有价格红线和配置框架管理。\n- 系统边界：ETF 是 80% 主底仓的一部分，研究层只做轻量解释，不替代主配置逻辑。\n\n**Bull Action Implication**\n\n继续把 ETF 作为配置底仓来解释，优先遵循现有定投与红线规则。\n\n**Bear Case**\n\nBear researcher 对 510500 的提醒也偏治理层：如果价格红线、manual review 或新增限制已经出现，则应优先遵守现有风险框架，而不是通过更激进的研究表述改变底仓逻辑。\n\n**Bear Evidence Points**\n- 风险信号：若 ETF 已进入 YELLOW/RED 或 manual review，则优先触发既有红线机制，而不是扩写 thesis debate。\n- 组合含义：ETF debate 不应像股票增强仓那样过度拟人化，因为它的主要职责是稳定配置而非主观选股。\n- 治理动作：若有暂停新增或复核需要，也应直接映射到风险治理动作，而不是放大研究措辞。\n\n**Bear Action Implication**\n\n若风险信号升级，则交给既有价格红线和人工复核流程，不由 research 层放大解释。\n\n**Risk Summary**\n\nETF monthly research 只提供角色说明和风险提示，不主动输出 thesis broken 风格结论。它依然是 advisory-only，用来解释配置角色，而不是替代既有 ETF 红线机制。\n\n**Recommendation Rationale**\n\nETF 仍以配置纪律为先，因此研究层保持中性标签，只补充角色说明和风险提示。\n\n**Note**\n\nETF 风险状态正常\n\n### 515180 (etf)\n- suggested_amount: 0.0\n- final_research_label: neutral_watch\n- suggest_manual_pause_buy: False\n- suggest_force_review: False\n- suggest_thesis_broken: False\n- confidence: 0.58\n- source_suggest_run: N/A\n- debate_focus: ETF 在组合中的配置角色是否需要被价格或人工风险信号临时压低新增资格。\n- key_uncertainty: 风险信号是否已经强到需要暂停新增，而不是继续按常规定投推进。\n\n**Bull Case**\n\nBull researcher 对 515180 的立场更偏中性配置派：它的价值在于维持“红利风格底仓”的长期配置功能。本月建议金额为 0 元，如果价格红线未进一步恶化，就没有必要把 ETF 底仓的研究讨论写成个股式 thesis 辩论。\n\n**Bull Evidence Points**\n- 配置角色：515180 在组合中承担“红利风格底仓”职责，优先服务于资产配置纪律，而不是个股 alpha 辩论。\n- 执行上下文：本月建议金额 0 元，状态为 RED，说明它当前更适合由既有价格红线和配置框架管理。\n- 系统边界：ETF 是 80% 主底仓的一部分，研究层只做轻量解释，不替代主配置逻辑。\n\n**Bull Action Implication**\n\n继续把 ETF 作为配置底仓来解释，优先遵循现有定投与红线规则。\n\n**Bear Case**\n\nBear researcher 对 515180 的提醒也偏治理层：如果价格红线、manual review 或新增限制已经出现，则应优先遵守现有风险框架，而不是通过更激进的研究表述改变底仓逻辑。\n\n**Bear Evidence Points**\n- 风险信号：若 ETF 已进入 YELLOW/RED 或 manual review，则优先触发既有红线机制，而不是扩写 thesis debate。\n- 组合含义：ETF debate 不应像股票增强仓那样过度拟人化，因为它的主要职责是稳定配置而非主观选股。\n- 治理动作：若有暂停新增或复核需要，也应直接映射到风险治理动作，而不是放大研究措辞。\n\n**Bear Action Implication**\n\n若风险信号升级，则交给既有价格红线和人工复核流程，不由 research 层放大解释。\n\n**Risk Summary**\n\nETF monthly research 只提供角色说明和风险提示，不主动输出 thesis broken 风格结论。它依然是 advisory-only，用来解释配置角色，而不是替代既有 ETF 红线机制。\n\n**Recommendation Rationale**\n\nETF 仍以配置纪律为先，因此研究层保持中性标签，只补充角色说明和风险提示。\n\n**Note**\n\n用于验收强制复核逻辑，并观察与价格红线合并后的最终动作\n\n### 518880 (etf)\n- suggested_amount: 1333.3333333333335\n- final_research_label: neutral_watch\n- suggest_manual_pause_buy: False\n- suggest_force_review: False\n- suggest_thesis_broken: False\n- confidence: 0.58\n- source_suggest_run: N/A\n- debate_focus: ETF 在组合中的配置角色是否需要被价格或人工风险信号临时压低新增资格。\n- key_uncertainty: 风险信号是否已经强到需要暂停新增，而不是继续按常规定投推进。\n\n**Bull Case**\n\nBull researcher 对 518880 的立场更偏中性配置派：它的价值在于维持“防御型黄金配置仓”的长期配置功能。本月建议金额为 1,333 元，如果价格红线未进一步恶化，就没有必要把 ETF 底仓的研究讨论写成个股式 thesis 辩论。\n\n**Bull Evidence Points**\n- 配置角色：518880 在组合中承担“防御型黄金配置仓”职责，优先服务于资产配置纪律，而不是个股 alpha 辩论。\n- 执行上下文：本月建议金额 1,333 元，状态为 GREEN，说明它当前更适合由既有价格红线和配置框架管理。\n- 系统边界：ETF 是 80% 主底仓的一部分，研究层只做轻量解释，不替代主配置逻辑。\n\n**Bull Action Implication**\n\n继续把 ETF 作为配置底仓来解释，优先遵循现有定投与红线规则。\n\n**Bear Case**\n\nBear researcher 对 518880 的提醒也偏治理层：如果价格红线、manual review 或新增限制已经出现，则应优先遵守现有风险框架，而不是通过更激进的研究表述改变底仓逻辑。\n\n**Bear Evidence Points**\n- 风险信号：若 ETF 已进入 YELLOW/RED 或 manual review，则优先触发既有红线机制，而不是扩写 thesis debate。\n- 组合含义：ETF debate 不应像股票增强仓那样过度拟人化，因为它的主要职责是稳定配置而非主观选股。\n- 治理动作：若有暂停新增或复核需要，也应直接映射到风险治理动作，而不是放大研究措辞。\n\n**Bear Action Implication**\n\n若风险信号升级，则交给既有价格红线和人工复核流程，不由 research 层放大解释。\n\n**Risk Summary**\n\nETF monthly research 只提供角色说明和风险提示，不主动输出 thesis broken 风格结论。它依然是 advisory-only，用来解释配置角色，而不是替代既有 ETF 红线机制。\n\n**Recommendation Rationale**\n\nETF 仍以配置纪律为先，因此研究层保持中性标签，只补充角色说明和风险提示。\n\n**Note**\n\nETF 风险状态正常\n\n### 600519 (stock)\n- suggested_amount: 0.0\n- final_research_label: pause_candidate\n- suggest_manual_pause_buy: True\n- suggest_force_review: False\n- suggest_thesis_broken: False\n- confidence: 0.74\n- source_suggest_run: N/A\n- debate_focus: 高质量消费资产的长期稀缺性，能否抵消估值与需求验证的不确定性。\n- key_uncertainty: 消费复苏强度与高估值之间，究竟哪一方会在未来几个季度占主导。\n\n**Bull Case**\n\nBull researcher 的立场是：贵州茅台 仍值得留在长期定投系统的低频观察池里，但前提是把它当作股票 20% 增强仓中的高质量消费观察标的来理解，而不是当作需要立即执行的高优先级标的。支持这一判断的证据主要来自四个层面：第一，品牌资产和渠道掌控力仍是高端白酒里最强的一档，这决定了它在行业放缓时仍有防守属性。；第二，自由现金流、盈利质量和分红能力通常是这类资产长期被资金反复定价的核心依据。；第三，本月建议金额为 0 元，说明系统并没有彻底把它移出候选清单；第四，当前系统强调 ETF 80% / 股票 20%，股票增强仓本来就允许保留少量“继续跟踪但不提高主观信心”的观察仓位。Bull 立场也承认 bear 侧关于“消费复苏强度与高估值之间，究竟哪一方会在未来几个季度占主导。”的担忧并非无效，但在缺少明确 thesis 崩坏证据之前，更合理的动作仍是保留研究覆盖、维持低频跟踪，而不是把它直接从观察池中剔除。对当前系统的行动含义是：它可以继续留在候选池或观察名单中，但不应因为单月情绪改善就自动提升执行优先级。\n\n**Bull Evidence Points**\n- 组合角色：股票 20% 增强仓中的高质量消费观察标的，不是主底仓，因此更看重是否值得保留在低频观察和候选名单里。\n- 经营与资产质量：品牌资产和渠道掌控力仍是高端白酒里最强的一档，这决定了它在行业放缓时仍有防守属性。\n- 研究语境：本月建议金额 0 元，suggest 状态为 YELLOW，说明它当前至少仍在建议清单或观察边界之内。\n- 风险治理关系：manual risk 当前动作是“暂停新增，等待人工解除”，bull 立场的核心不是直接放宽边界，而是论证它是否仍配得上继续跟踪。\n\n**Bull Action Implication**\n\n保留在观察池，继续作为股票 20% 增强仓中的高质量消费观察标的的一部分做低频跟踪；如果后续证据改善，可讨论是否恢复更积极的新增资格。\n\n**Bear Case**\n\nBear researcher 的立场是：贵州茅台 当前更接近“先复核、再决定是否继续新增”的对象，因为它面临的争议点不是短期波动，而是高质量消费资产的长期稀缺性，能否抵消估值与需求验证的不确定性。。支持这一判断的证据也至少有四个：第一，高端消费恢复的节奏一旦低于预期，估值就会从稀缺溢价转向耐心折价。；第二，当市场对确定性资产的要求变高时，茅台的下行风险常常不是业绩崩塌，而是估值缓慢压缩。；第三，本月建议上下文里已经出现“人工标记 manual_pause_buy=true；尚无持仓成本，允许按计划定投”这类需要解释的信号；第四，在股票只是 20% 增强仓的前提下，研究证据如果没有明显占优，就不值得继续消耗新增预算。Bear 立场同样承认 bull 侧关于“如果本月建议只是把它放回低频观察池，而不是抬高优先级，这种安排和长期定投框架是相容的。”的观点并非全错，但这最多说明它还能被研究，并不能直接证明本月就应该继续新增。对当前系统的行动含义是：更适合把它推向 manual pause / force review / thesis broken 候选讨论，至少不要轻易提高新增优先级。\n\n**Bear Evidence Points**\n- 风险薄弱点：高端消费恢复的节奏一旦低于预期，估值就会从稀缺溢价转向耐心折价。\n- 估值与胜率：当市场对确定性资产的要求变高时，茅台的下行风险常常不是业绩崩塌，而是估值缓慢压缩。\n- 系统边界：股票只占组合 20% 的增强仓，意味着证据不足时应优先保守，而不是强行给它更高执行权重。\n- 当前建议上下文：reason / logic_note 提示“人工标记 manual_pause_buy=true；尚无持仓成本，允许按计划定投”，bear 立场会把这视为需要先复核而非直接放行的信号。\n\n**Bear Action Implication**\n\n在当前证据结构下，更合理的处理是把它靠近 manual risk 人工治理层，先讨论暂停新增或强制复核，而不是给出更高执行信心。\n\n**Risk Summary**\n\n本次 debate 的焦点是：高质量消费资产的长期稀缺性，能否抵消估值与需求验证的不确定性。。关键不确定性在于“消费复苏强度与高估值之间，究竟哪一方会在未来几个季度占主导。”。综合 bull 与 bear 两侧后，当前输出标签为 pause_candidate，对应的建议性 manual risk 映射是 pause=True, review=False, thesis_broken=False。这只是 advisory-only 研究结论，用来帮助人工判断是否需要暂停新增、强制复核或讨论 thesis 是否接近失效，不会自动执行。\n\n**Recommendation Rationale**\n\n最终给出 pause_candidate，不是因为系统要自动交易，而是因为在当前 suggest 上下文、manual risk 信号和增强仓定位下，bear 侧关于“消费复苏强度与高估值之间，究竟哪一方会在未来几个季度占主导。”的约束程度 高于 bull 侧继续保留观察的理由。因此，本次更适合把研究结论服务于人工治理，而不是服务于直接买卖。\n\n**Note**\n\n用于验收暂停新增逻辑\n\n### 000858 (stock)\n- suggested_amount: 0.0\n- final_research_label: thesis_broken_candidate\n- suggest_manual_pause_buy: False\n- suggest_force_review: True\n- suggest_thesis_broken: True\n- confidence: 0.9\n- source_suggest_run: N/A\n- debate_focus: 修复弹性是否还值得跟踪，还是 thesis 已经劣化到不应继续新增。\n- key_uncertainty: 渠道和品牌修复到底是暂时失速，还是更深层的竞争力下滑。\n\n**Bull Case**\n\nBull researcher 的立场是：五粮液 仍值得留在长期定投系统的低频观察池里，但前提是把它当作股票增强仓中的消费替代观察标的来理解，而不是当作需要立即执行的高优先级标的。支持这一判断的证据主要来自四个层面：第一，次高端到高端带的品牌力仍有存量价值，若渠道库存和价盘重新稳定，估值修复弹性会比龙头更大。；第二，市场通常会在悲观阶段低估管理改善和渠道修复的速度，这给长期观察留出空间。；第三，本月建议金额为 0 元，说明系统并没有彻底把它移出候选清单；第四，当前系统强调 ETF 80% / 股票 20%，股票增强仓本来就允许保留少量“继续跟踪但不提高主观信心”的观察仓位。Bull 立场也承认 bear 侧关于“渠道和品牌修复到底是暂时失速，还是更深层的竞争力下滑。”的担忧并非无效，但在缺少明确 thesis 崩坏证据之前，更合理的动作仍是保留研究覆盖、维持低频跟踪，而不是把它直接从观察池中剔除。对当前系统的行动含义是：它可以继续留在候选池或观察名单中，但不应因为单月情绪改善就自动提升执行优先级。\n\n**Bull Evidence Points**\n- 组合角色：股票增强仓中的消费替代观察标的，不是主底仓，因此更看重是否值得保留在低频观察和候选名单里。\n- 经营与资产质量：次高端到高端带的品牌力仍有存量价值，若渠道库存和价盘重新稳定，估值修复弹性会比龙头更大。\n- 研究语境：本月建议金额 0 元，suggest 状态为 RED，说明它当前至少仍在建议清单或观察边界之内。\n- 风险治理关系：manual risk 当前动作是“停止新增，最高优先级人工处理”，bull 立场的核心不是直接放宽边界，而是论证它是否仍配得上继续跟踪。\n\n**Bull Action Implication**\n\n保留在观察池，继续作为股票增强仓中的消费替代观察标的的一部分做低频跟踪；如果后续证据改善，可讨论是否恢复更积极的新增资格。\n\n**Bear Case**\n\nBear researcher 的立场是：五粮液 当前更接近“先复核、再决定是否继续新增”的对象，因为它面临的争议点不是短期波动，而是修复弹性是否还值得跟踪，还是 thesis 已经劣化到不应继续新增。。支持这一判断的证据也至少有四个：第一，它面临的问题不只是行业周期，而是品牌心智、价盘稳定和渠道执行能否重新形成正反馈。；第二，一旦 thesis 已经被人工标记为 broken，说明系统当前更需要保守治理，而不是继续寻找看多理由。；第三，本月建议上下文里已经出现“人工标记 thesis_broken=true；尚无持仓成本，允许按计划定投”这类需要解释的信号；第四，在股票只是 20% 增强仓的前提下，研究证据如果没有明显占优，就不值得继续消耗新增预算。Bear 立场同样承认 bull 侧关于“如果只是保留在观察名单而不是提升优先级，研究上仍可以持续跟踪而不违反保守边界。”的观点并非全错，但这最多说明它还能被研究，并不能直接证明本月就应该继续新增。对当前系统的行动含义是：更适合把它推向 manual pause / force review / thesis broken 候选讨论，至少不要轻易提高新增优先级。\n\n**Bear Evidence Points**\n- 风险薄弱点：它面临的问题不只是行业周期，而是品牌心智、价盘稳定和渠道执行能否重新形成正反馈。\n- 估值与胜率：一旦 thesis 已经被人工标记为 broken，说明系统当前更需要保守治理，而不是继续寻找看多理由。\n- 系统边界：股票只占组合 20% 的增强仓，意味着证据不足时应优先保守，而不是强行给它更高执行权重。\n- 当前建议上下文：reason / logic_note 提示“人工标记 thesis_broken=true；尚无持仓成本，允许按计划定投”，bear 立场会把这视为需要先复核而非直接放行的信号。\n\n**Bear Action Implication**\n\n在当前证据结构下，更合理的处理是把它靠近 manual risk 人工治理层，先讨论暂停新增或强制复核，而不是给出更高执行信心。\n\n**Risk Summary**\n\n本次 debate 的焦点是：修复弹性是否还值得跟踪，还是 thesis 已经劣化到不应继续新增。。关键不确定性在于“渠道和品牌修复到底是暂时失速，还是更深层的竞争力下滑。”。综合 bull 与 bear 两侧后，当前输出标签为 thesis_broken_candidate，对应的建议性 manual risk 映射是 pause=False, review=True, thesis_broken=True。这只是 advisory-only 研究结论，用来帮助人工判断是否需要暂停新增、强制复核或讨论 thesis 是否接近失效，不会自动执行。\n\n**Recommendation Rationale**\n\n最终给出 thesis_broken_candidate，不是因为系统要自动交易，而是因为在当前 suggest 上下文、manual risk 信号和增强仓定位下，bear 侧关于“渠道和品牌修复到底是暂时失速，还是更深层的竞争力下滑。”的约束程度 高于 bull 侧继续保留观察的理由。因此，本次更适合把研究结论服务于人工治理，而不是服务于直接买卖。\n\n**Note**\n\n用于验收逻辑失效处理；故意不额外打开 manual_force_review，以验证 thesis_broken 可独立生效\n\n### 600036 (stock)\n- suggested_amount: 666.6666666666667\n- final_research_label: force_review_candidate\n- suggest_manual_pause_buy: False\n- suggest_force_review: True\n- suggest_thesis_broken: False\n- confidence: 0.79\n- source_suggest_run: N/A\n- debate_focus: 高质量银行的稳定性，是否足以覆盖信用周期和息差压力的慢变量风险。\n- key_uncertainty: 息差、资产质量和市场风险偏好，哪一个会率先改变对银行股的定价。\n\n**Bull Case**\n\nBull researcher 的立场是：招商银行 仍值得留在长期定投系统的低频观察池里，但前提是把它当作股票增强仓中的高 ROE 金融观察标的来理解，而不是当作需要立即执行的高优先级标的。支持这一判断的证据主要来自四个层面：第一，零售银行能力、负债成本管理和风险控制体系，仍然使它在银行板块里具备结构性优势。；第二，如果市场对银行股的担忧主要集中在宏观预期而不是个体基本面，那么招行更容易成为低频增强仓的优先候选。；第三，本月建议金额为 667 元，说明系统并没有彻底把它移出候选清单；第四，当前系统强调 ETF 80% / 股票 20%，股票增强仓本来就允许保留少量“继续跟踪但不提高主观信心”的观察仓位。Bull 立场也承认 bear 侧关于“息差、资产质量和市场风险偏好，哪一个会率先改变对银行股的定价。”的担忧并非无效，但在缺少明确 thesis 崩坏证据之前，更合理的动作仍是保留研究覆盖、维持低频跟踪，而不是把它直接从观察池中剔除。对当前系统的行动含义是：它可以继续留在候选池或观察名单中，但不应因为单月情绪改善就自动提升执行优先级。\n\n**Bull Evidence Points**\n- 组合角色：股票增强仓中的高 ROE 金融观察标的，不是主底仓，因此更看重是否值得保留在低频观察和候选名单里。\n- 经营与资产质量：零售银行能力、负债成本管理和风险控制体系，仍然使它在银行板块里具备结构性优势。\n- 研究语境：本月建议金额 667 元，suggest 状态为 GREEN，说明它当前至少仍在建议清单或观察边界之内。\n- 风险治理关系：manual risk 当前动作是“正常”，bull 立场的核心不是直接放宽边界，而是论证它是否仍配得上继续跟踪。\n\n**Bull Action Implication**\n\n保留在观察池，继续作为股票增强仓中的高 ROE 金融观察标的的一部分做低频跟踪；如果后续证据改善，可讨论是否恢复更积极的新增资格。\n\n**Bear Case**\n\nBear researcher 的立场是：招商银行 当前更接近“先复核、再决定是否继续新增”的对象，因为它面临的争议点不是短期波动，而是高质量银行的稳定性，是否足以覆盖信用周期和息差压力的慢变量风险。。支持这一判断的证据也至少有四个：第一，银行股最大的风险不是短期波动，而是信用周期和息差压力缓慢侵蚀估值锚。；第二，如果新增理由只是便宜，而没有看到盈利质量和风险暴露的进一步确认，那么看多逻辑并不充分。；第三，本月建议上下文里已经出现“尚无持仓成本，允许按计划定投”这类需要解释的信号；第四，在股票只是 20% 增强仓的前提下，研究证据如果没有明显占优，就不值得继续消耗新增预算。Bear 立场同样承认 bull 侧关于“对于长期定投系统，能稳定贡献股息和盈利质量的金融资产，本来就适合被持续跟踪。”的观点并非全错，但这最多说明它还能被研究，并不能直接证明本月就应该继续新增。对当前系统的行动含义是：更适合把它推向 manual pause / force review / thesis broken 候选讨论，至少不要轻易提高新增优先级。\n\n**Bear Evidence Points**\n- 风险薄弱点：银行股最大的风险不是短期波动，而是信用周期和息差压力缓慢侵蚀估值锚。\n- 估值与胜率：如果新增理由只是便宜，而没有看到盈利质量和风险暴露的进一步确认，那么看多逻辑并不充分。\n- 系统边界：股票只占组合 20% 的增强仓，意味着证据不足时应优先保守，而不是强行给它更高执行权重。\n- 当前建议上下文：reason / logic_note 提示“尚无持仓成本，允许按计划定投”，bear 立场会把这视为需要先复核而非直接放行的信号。\n\n**Bear Action Implication**\n\n在当前证据结构下，更合理的处理是把它靠近 manual risk 人工治理层，先讨论暂停新增或强制复核，而不是给出更高执行信心。\n\n**Risk Summary**\n\n本次 debate 的焦点是：高质量银行的稳定性，是否足以覆盖信用周期和息差压力的慢变量风险。。关键不确定性在于“息差、资产质量和市场风险偏好，哪一个会率先改变对银行股的定价。”。综合 bull 与 bear 两侧后，当前输出标签为 force_review_candidate，对应的建议性 manual risk 映射是 pause=False, review=True, thesis_broken=False。这只是 advisory-only 研究结论，用来帮助人工判断是否需要暂停新增、强制复核或讨论 thesis 是否接近失效，不会自动执行。\n\n**Recommendation Rationale**\n\n最终给出 force_review_candidate，不是因为系统要自动交易，而是因为在当前 suggest 上下文、manual risk 信号和增强仓定位下，bear 侧关于“息差、资产质量和市场风险偏好，哪一个会率先改变对银行股的定价。”的约束程度 高于 bull 侧继续保留观察的理由。因此，本次更适合把研究结论服务于人工治理，而不是服务于直接买卖。\n\n**Note**\n\n尚无持仓成本，允许按计划定投\n\n### 000333 (stock)\n- suggested_amount: 666.6666666666667\n- final_research_label: pause_candidate\n- suggest_manual_pause_buy: True\n- suggest_force_review: False\n- suggest_thesis_broken: False\n- confidence: 0.7\n- source_suggest_run: N/A\n- debate_focus: 制造业龙头的经营韧性，是否足以支撑在增强仓里继续维持跟踪优先级。\n- key_uncertainty: 需求端疲弱持续多久，以及成本与出海优势能否继续对冲内需波动。\n\n**Bull Case**\n\nBull researcher 的立场是：美的集团 仍值得留在长期定投系统的低频观察池里，但前提是把它当作股票增强仓中的制造业现金流观察标的来理解，而不是当作需要立即执行的高优先级标的。支持这一判断的证据主要来自四个层面：第一，美的的优势在于经营韧性、全球化制造和现金回流能力，这类特征适合低频长期跟踪。；第二，如果市场情绪过度关注短期需求波动，反而可能低估其在成本控制和产品结构上的主动权。；第三，本月建议金额为 667 元，说明系统并没有彻底把它移出候选清单；第四，当前系统强调 ETF 80% / 股票 20%，股票增强仓本来就允许保留少量“继续跟踪但不提高主观信心”的观察仓位。Bull 立场也承认 bear 侧关于“需求端疲弱持续多久，以及成本与出海优势能否继续对冲内需波动。”的担忧并非无效，但在缺少明确 thesis 崩坏证据之前，更合理的动作仍是保留研究覆盖、维持低频跟踪，而不是把它直接从观察池中剔除。对当前系统的行动含义是：它可以继续留在候选池或观察名单中，但不应因为单月情绪改善就自动提升执行优先级。\n\n**Bull Evidence Points**\n- 组合角色：股票增强仓中的制造业现金流观察标的，不是主底仓，因此更看重是否值得保留在低频观察和候选名单里。\n- 经营与资产质量：美的的优势在于经营韧性、全球化制造和现金回流能力，这类特征适合低频长期跟踪。\n- 研究语境：本月建议金额 667 元，suggest 状态为 GREEN，说明它当前至少仍在建议清单或观察边界之内。\n- 风险治理关系：manual risk 当前动作是“正常”，bull 立场的核心不是直接放宽边界，而是论证它是否仍配得上继续跟踪。\n\n**Bull Action Implication**\n\n保留在观察池，继续作为股票增强仓中的制造业现金流观察标的的一部分做低频跟踪；如果后续证据改善，可讨论是否恢复更积极的新增资格。\n\n**Bear Case**\n\nBear researcher 的立场是：美的集团 当前更接近“先复核、再决定是否继续新增”的对象，因为它面临的争议点不是短期波动，而是制造业龙头的经营韧性，是否足以支撑在增强仓里继续维持跟踪优先级。。支持这一判断的证据也至少有四个：第一，家电本质上仍受地产、出口和可选消费景气影响，防御属性并没有想象中那么强。；第二，制造业龙头的确定性来自执行力，但执行力并不能完全对冲需求放缓带来的估值压力。；第三，本月建议上下文里已经出现“尚无持仓成本，允许按计划定投”这类需要解释的信号；第四，在股票只是 20% 增强仓的前提下，研究证据如果没有明显占优，就不值得继续消耗新增预算。Bear 立场同样承认 bull 侧关于“把它放在增强仓候选池，符合系统对稳健制造业资产的观察逻辑。”的观点并非全错，但这最多说明它还能被研究，并不能直接证明本月就应该继续新增。对当前系统的行动含义是：更适合把它推向 manual pause / force review / thesis broken 候选讨论，至少不要轻易提高新增优先级。\n\n**Bear Evidence Points**\n- 风险薄弱点：家电本质上仍受地产、出口和可选消费景气影响，防御属性并没有想象中那么强。\n- 估值与胜率：制造业龙头的确定性来自执行力，但执行力并不能完全对冲需求放缓带来的估值压力。\n- 系统边界：股票只占组合 20% 的增强仓，意味着证据不足时应优先保守，而不是强行给它更高执行权重。\n- 当前建议上下文：reason / logic_note 提示“尚无持仓成本，允许按计划定投”，bear 立场会把这视为需要先复核而非直接放行的信号。\n\n**Bear Action Implication**\n\n在当前证据结构下，更合理的处理是把它靠近 manual risk 人工治理层，先讨论暂停新增或强制复核，而不是给出更高执行信心。\n\n**Risk Summary**\n\n本次 debate 的焦点是：制造业龙头的经营韧性，是否足以支撑在增强仓里继续维持跟踪优先级。。关键不确定性在于“需求端疲弱持续多久，以及成本与出海优势能否继续对冲内需波动。”。综合 bull 与 bear 两侧后，当前输出标签为 pause_candidate，对应的建议性 manual risk 映射是 pause=True, review=False, thesis_broken=False。这只是 advisory-only 研究结论，用来帮助人工判断是否需要暂停新增、强制复核或讨论 thesis 是否接近失效，不会自动执行。\n\n**Recommendation Rationale**\n\n最终给出 pause_candidate，不是因为系统要自动交易，而是因为在当前 suggest 上下文、manual risk 信号和增强仓定位下，bear 侧关于“需求端疲弱持续多久，以及成本与出海优势能否继续对冲内需波动。”的约束程度 高于 bull 侧继续保留观察的理由。因此，本次更适合把研究结论服务于人工治理，而不是服务于直接买卖。\n\n**Note**\n\n尚无持仓成本，允许按计划定投\n\n### 601318 (stock)\n- suggested_amount: 666.6666666666667\n- final_research_label: neutral_watch\n- suggest_manual_pause_buy: False\n- suggest_force_review: False\n- suggest_thesis_broken: False\n- confidence: 0.62\n- source_suggest_run: N/A\n- debate_focus: 修复型综合金融资产，当前更像等待验证的候选，还是已具备继续新增的证据。\n- key_uncertainty: 负债端恢复和投资端波动之间，哪一端会主导市场对平安的估值判断。\n\n**Bull Case**\n\nBull researcher 的立场是：中国平安 仍值得留在长期定投系统的低频观察池里，但前提是把它当作股票增强仓中的综合金融修复观察标的来理解，而不是当作需要立即执行的高优先级标的。支持这一判断的证据主要来自四个层面：第一，保险资金属性、综合金融平台和长期负债端能力，使它具备不同于纯周期股的配置意义。；第二，若市场对负债端恢复和资产端风险的担忧开始缓解，估值修复空间可能比一般高股息资产更明显。；第三，本月建议金额为 667 元，说明系统并没有彻底把它移出候选清单；第四，当前系统强调 ETF 80% / 股票 20%，股票增强仓本来就允许保留少量“继续跟踪但不提高主观信心”的观察仓位。Bull 立场也承认 bear 侧关于“负债端恢复和投资端波动之间，哪一端会主导市场对平安的估值判断。”的担忧并非无效，但在缺少明确 thesis 崩坏证据之前，更合理的动作仍是保留研究覆盖、维持低频跟踪，而不是把它直接从观察池中剔除。对当前系统的行动含义是：它可以继续留在候选池或观察名单中，但不应因为单月情绪改善就自动提升执行优先级。\n\n**Bull Evidence Points**\n- 组合角色：股票增强仓中的综合金融修复观察标的，不是主底仓，因此更看重是否值得保留在低频观察和候选名单里。\n- 经营与资产质量：保险资金属性、综合金融平台和长期负债端能力，使它具备不同于纯周期股的配置意义。\n- 研究语境：本月建议金额 667 元，suggest 状态为 GREEN，说明它当前至少仍在建议清单或观察边界之内。\n- 风险治理关系：manual risk 当前动作是“正常”，bull 立场的核心不是直接放宽边界，而是论证它是否仍配得上继续跟踪。\n\n**Bull Action Implication**\n\n保留在观察池，继续作为股票增强仓中的综合金融修复观察标的的一部分做低频跟踪；如果后续证据改善，可讨论是否恢复更积极的新增资格。\n\n**Bear Case**\n\nBear researcher 的立场是：中国平安 当前更接近“先复核、再决定是否继续新增”的对象，因为它面临的争议点不是短期波动，而是修复型综合金融资产，当前更像等待验证的候选，还是已具备继续新增的证据。。支持这一判断的证据也至少有四个：第一，保险股的复杂性在于负债端、投资端和市场情绪会同时影响定价，单一好消息往往不足以扭转预期。；第二，如果研究证据不能证明修复已经进入更高确定性的阶段，那么继续新增只是提前押注。；第三，本月建议上下文里已经出现“尚无持仓成本，允许按计划定投”这类需要解释的信号；第四，在股票只是 20% 增强仓的前提下，研究证据如果没有明显占优，就不值得继续消耗新增预算。Bear 立场同样承认 bull 侧关于“在增强仓框架里，它适合被视作修复型跟踪标的，而不是立即高优先级执行标的。”的观点并非全错，但这最多说明它还能被研究，并不能直接证明本月就应该继续新增。对当前系统的行动含义是：更适合把它推向 manual pause / force review / thesis broken 候选讨论，至少不要轻易提高新增优先级。\n\n**Bear Evidence Points**\n- 风险薄弱点：保险股的复杂性在于负债端、投资端和市场情绪会同时影响定价，单一好消息往往不足以扭转预期。\n- 估值与胜率：如果研究证据不能证明修复已经进入更高确定性的阶段，那么继续新增只是提前押注。\n- 系统边界：股票只占组合 20% 的增强仓，意味着证据不足时应优先保守，而不是强行给它更高执行权重。\n- 当前建议上下文：reason / logic_note 提示“尚无持仓成本，允许按计划定投”，bear 立场会把这视为需要先复核而非直接放行的信号。\n\n**Bear Action Implication**\n\n在当前证据结构下，更合理的处理是把它靠近 manual risk 人工治理层，先讨论暂停新增或强制复核，而不是给出更高执行信心。\n\n**Risk Summary**\n\n本次 debate 的焦点是：修复型综合金融资产，当前更像等待验证的候选，还是已具备继续新增的证据。。关键不确定性在于“负债端恢复和投资端波动之间，哪一端会主导市场对平安的估值判断。”。综合 bull 与 bear 两侧后，当前输出标签为 neutral_watch，对应的建议性 manual risk 映射是 pause=False, review=False, thesis_broken=False。这只是 advisory-only 研究结论，用来帮助人工判断是否需要暂停新增、强制复核或讨论 thesis 是否接近失效，不会自动执行。\n\n**Recommendation Rationale**\n\n最终给出 neutral_watch，不是因为系统要自动交易，而是因为在当前 suggest 上下文、manual risk 信号和增强仓定位下，bear 侧关于“负债端恢复和投资端波动之间，哪一端会主导市场对平安的估值判断。”的约束程度 尚未高于 bull 侧继续保留观察的理由。因此，本次更适合把研究结论服务于人工治理，而不是服务于直接买卖。\n\n**Note**\n\n尚无持仓成本，允许按计划定投\n\n## Manual Risk Notice\n\n- 本批次 monthly research 仅提供研究增强建议。\n- suggest_* 字段不会自动写回 manual risk flags。\n- 本报告不会触发自动交易或自动调仓。\n"
   },
